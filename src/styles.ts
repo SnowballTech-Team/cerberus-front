@@ -95,8 +95,8 @@ export const globalStyle = `
     font-stretch: normal;
     font-weight: ${fonts.weight.normal};
     font-size: ${fonts.size.medium};
-    background-color: rgb(${colors.white});
-    color: rgb(${colors.dark});
+    background-color: rgb(${colors.black});
+    color: rgb(${colors.white});
     overflow-y:auto;
     text-rendering: optimizeLegibility;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
