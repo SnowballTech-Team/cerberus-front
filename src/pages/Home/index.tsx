@@ -193,6 +193,7 @@ export function Home() {
               })}
           </ul>
         </div>
+        <div className="bottom_bg" />
       </div>
       {/* <Footer /> */}
     </div>
