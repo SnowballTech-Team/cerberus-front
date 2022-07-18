@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Header } from "../../components/HomeLayout/header/header";
-import { Footer } from "../../components/HomeLayout/footer/index";
+// import { Header } from "../../components/HomeLayout/header/header";
+// import { Footer } from "../../components/HomeLayout/footer/index";
 import "./style/web.scss";
 export function Home() {
   const list = [
@@ -36,8 +36,7 @@ export function Home() {
         "CDoge>>Berus vpool launch on ETH",
         "CSwap launch",
         "Berus lockdrop system for CSwap LPs",
-        "Berus burn mechanism for CBridge/CSwap fee"
-        
+        "Berus burn mechanism for CBridge/CSwap fee",
       ],
     },
     {
@@ -49,8 +48,7 @@ export function Home() {
         "Cerberus doge EVM chain node",
         "Cerberus doge EVM chain DApp",
         "Cerberus global investments and partners",
-        "Cerberus hackathon"
-
+        "Cerberus hackathon",
       ],
     },
     {
@@ -59,21 +57,21 @@ export function Home() {
         "Cerberus doge multi-chain Web3 protocol",
         "Cerberus multi-chain CSwap",
         "Cerberus multi-chain DApp",
-        "Invest in Elon Musk projects in 100 years"
+        "Invest in Elon Musk projects in 100 years",
       ],
     },
   ];
-  const partnerList=[
-    {id:1,imgurl:require("../../assets/home/doge.png")},
-    {id:1,imgurl:require("../../assets/home/Etherum.png")},
-    {id:1,imgurl:require("../../assets/home/images.png")},
-    {id:1,imgurl:require("../../assets/home/lbank-logo-freelogovectors.png")},
-    {id:1,imgurl:require("../../assets/home/bitcoin.png")},
-    {id:1,imgurl:require("../../assets/home/Binance-Logo.png")}
-  ]
+  const partnerList = [
+    { id: 1, imgurl: require("../../assets/home/doge.png") },
+    { id: 1, imgurl: require("../../assets/home/Etherum.png") },
+    { id: 1, imgurl: require("../../assets/home/images.png") },
+    { id: 1, imgurl: require("../../assets/home/lbank-logo-freelogovectors.png") },
+    { id: 1, imgurl: require("../../assets/home/bitcoin.png") },
+    { id: 1, imgurl: require("../../assets/home/Binance-Logo.png") },
+  ];
   return (
     <div className="home_box">
-      <Header />
+      {/* <Header /> */}
       <div className="block1">
         <video
           src={require("../../assets/home/block1.mp4")}
@@ -106,7 +104,7 @@ export function Home() {
             dogecoin to the multi-chain dogeverse Paving the path for the next-generation dogecoin
             Web69 infrastructure 1D=1D
           </p>
-        <button className="white_box">WHITEPAPER</button>
+          <button className="white_box">WHITEPAPER</button>
         </div>
       </div>
       <div className="block3">
@@ -160,18 +158,23 @@ export function Home() {
         <div className="content_box">
           <div className="container_box">
             <ul>
-              {roadmapList && roadmapList.map((item,index)=>{
-                return(<li key={index}>
-                  <p className="title_name">{item.name}</p>
-                  <div className="content_contain">
-                    {
-                      item.list.map((ite,inx)=>{
-                        return(<p className="content" key={inx+"_content"}>{ite}</p>)
-                      })
-                    }
-                  </div>
-                </li>)
-              })}
+              {roadmapList &&
+                roadmapList.map((item, index) => {
+                  return (
+                    <li key={index}>
+                      <p className="title_name">{item.name}</p>
+                      <div className="content_contain">
+                        {item.list.map((ite, inx) => {
+                          return (
+                            <p className="content" key={inx + "_content"}>
+                              {ite}
+                            </p>
+                          );
+                        })}
+                      </div>
+                    </li>
+                  );
+                })}
             </ul>
           </div>
         </div>
@@ -180,17 +183,18 @@ export function Home() {
         <p className="title">Partners</p>
         <div className="container_box">
           <ul>
-            {partnerList && partnerList.map((item,index)=>{
-              return(
-              <li key={index}>
-                <img src={item.imgurl} alt=""/>
-              </li>
-              )
-            })}
+            {partnerList &&
+              partnerList.map((item, index) => {
+                return (
+                  <li key={index}>
+                    <img src={item.imgurl} alt="" />
+                  </li>
+                );
+              })}
           </ul>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

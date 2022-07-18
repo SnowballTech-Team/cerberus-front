@@ -1,23 +1,26 @@
 import * as React from "react";
-import { AppBar, Link } from "@material-ui/core";
-export function HomeLayout({ children }: { children: React.ReactNode }) {
+import { Header } from "./header/header";
+import { Footer } from "./footer";
+import { Home } from "../../pages/Home";
+import { CNFT } from "../../pages/CNFT";
+import { CSwap } from "../../pages/CSwap";
+import { CDog } from "../../pages/CDoge";
+import "./style/web.scss";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+export function HomeLayout() {
   return (
-    <div>
-      <AppBar>
-        <Link href="#/home" underline="none">
-          home
-        </Link>
-        <Link href="#/cdog" underline="none">
-          cdog
-        </Link>
-        <Link href="#/cnft" underline="none">
-          cnft
-        </Link>
-        <Link href="#/cswap" underline="none">
-          cswap
-        </Link>
-      </AppBar>
-      {children}
+    <div className="homelayout_box">
+      <Header />
+      <Router>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/home" component={Home} />
+        <Route path="/cswap" component={CSwap} />
+        <Route path="/cnft" component={CNFT} />
+        <Route path="/cdog" component={CDog} />
+      </Router>
+      <Footer />
     </div>
   );
 }
