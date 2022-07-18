@@ -1,6 +1,10 @@
 .header_box {
   width: 100%;
-  background: linear-gradient(
+  background-image: url("../../../assets/header/header_bg.png");
+  background-repeat:no-repeat ;
+  background-position: center;
+  background-size: cover;
+  background-color: linear-gradient(
     116.29deg,
     rgba(0, 0, 0, 0.35) -29.94%,
     rgba(0, 0, 0, 0.26) -29.93%,
@@ -19,6 +23,7 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    
     .left {
       display: flex;
       align-items: center;

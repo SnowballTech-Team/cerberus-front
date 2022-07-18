@@ -1,0 +1,273 @@
+.mobile_home_box {
+  width: 100%;
+  .block1 {
+    video {
+      top: 0;
+    }
+    .center_box {
+      width: 100%;
+      height: 100%;
+      .content_box {
+        height: 100%;
+        img {
+          width: 90%;
+          margin-top: 6rem;
+        }
+        .word_content {
+          width: 100%;
+          padding: 0 1rem;
+          font-size: 20px;
+          margin-top: 4rem;
+        }
+        .bottom_centent {
+          margin-top: 5rem;
+        }
+      }
+    }
+  }
+  .block2 {
+    min-height: auto;
+    .container_box {
+      width: 100%;
+      padding: 0 26px;
+      height: auto;
+      align-items: flex-start;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      p {
+        width: 100%;
+        padding-left: 40px;
+        &::before {
+          left: 0;
+        }
+      }
+    }
+  }
+  .block3 {
+    margin-top: 105px;
+    .container {
+      width: 100%;
+      padding: 0 26px;
+      .first_nav {
+        width: 100%;
+        li {
+          width: 100%;
+          width: 375px;
+          height: 359.88px;
+          padding: 20px 12px;
+          &:nth-child(1) {
+            background: url("../../../assets/mobile/home/first_bg.png") no-repeat center;
+            background-size: 100% 100%;
+            &::after {
+              background: url("../../../assets/mobile/home/cbridge.png") no-repeat center;
+              background-size: 100% 100%;
+            }
+          }
+          &:nth-child(2) {
+            background: url("../../../assets/mobile/home/second_bg.png") no-repeat center;
+            background-size: 100% 100%;
+            &::after {
+              background: url("../../../assets/mobile/home/cbridge_dog.png") no-repeat center;
+              background-size: 100% 100%;
+            }
+          }
+          &:nth-child(3) {
+            background: url("../../../assets/mobile/home/third_bg.png") no-repeat center;
+            background-size: 100% 100%;
+            &::after {
+              background: url("../../../assets/mobile/home/cwap.png") no-repeat center;
+              background-size: 100% 100%;
+            }
+          }
+          &:nth-child(4) {
+            background: url("../../../assets/mobile/home/forth_bg.png") no-repeat center;
+            background-size: 100% 100%;
+            &::after {
+              background: url("../../../assets/mobile/home/cerbs.png") no-repeat center;
+              background-size: 100% 100%;
+            }
+          }
+          &::after {
+            width: 187.5px;
+            height: 196.57px;
+          }
+          .top {
+            .title {
+              font-size: 38px;
+            }
+            .content {
+              margin-top: 12px;
+              font-size: 14px;
+            }
+          }
+          .bottom {
+            width: 119px;
+            height: 28px;
+            background-size: cover;
+            font-size: 14px;
+          }
+        }
+      }
+      .berus_box {
+        margin-top: 75px;
+        height: 538px;
+        flex-direction: column;
+        background: url("../../../assets/mobile/home/berus_bg.png") no-repeat center;
+        background-size: cover;
+        .left {
+          width: 337.16px;
+          height: 302px;
+          background: url("../../../assets/mobile/home/beruscoin.png") no-repeat center;
+          background-size: cover;
+          &::after {
+            left: 97px;
+            top: -89px;
+            border-radius: 60px;
+            width: 151px;
+            height: 330px;
+          }
+        }
+        .right {
+          width: 100%;
+          margin-left: 0;
+          width: 307px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .title {
+            font-size: 38px;
+            margin-top: 33px;
+            margin-bottom: 30px;
+          }
+          .content {
+            font-size: 14px;
+            text-align: center;
+          }
+        }
+      }
+      .join_box {
+        margin-top: 63px;
+        .title {
+          font-size: 38px;
+          margin-bottom: 0;
+        }
+        ul {
+          width: 100%;
+          margin-top: 33px;
+          li {
+            justify-content: space-between;
+          }
+          li:nth-child(1) {
+            img {
+              width: 45px;
+              height: 37px;
+            }
+          }
+          li:nth-child(2),
+          :nth-child(3) {
+            img {
+              width: 37px;
+              height: 37px;
+            }
+          }
+          li:nth-child(4) {
+            img {
+              width: 46px;
+              height: 34px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .block4 {
+    .title {
+      margin-top: 60px;
+      font-size: 38px;
+      margin-bottom: 54px;
+    }
+    .content_box {
+      width: 100%;
+      background-size: auto;
+      .container_box {
+        width: 100%;
+        padding: 0 26px;
+
+        ul {
+          li {
+            width: 100%;
+            height: 278px;
+            padding: 30px 21px;
+            .title_name {
+              font-size: 28px;
+            }
+            .content_contain {
+              padding: 20px 30px;
+              padding-left: 10px;
+              .content {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .block5 {
+    margin-top: 0;
+    .title {
+      margin-top: 0;
+      font-size: 38px;
+      margin-bottom: 50px;
+    }
+    .container_box {
+      width: 100%;
+      padding: 0 26px;
+      ul {
+        width: 100%;
+        li {
+          width: 50%;
+          margin-bottom: 28px;
+          &:nth-child(1) {
+            img {
+              width: 142.31px;
+              height: 66.41px;
+            }
+          }
+          &:nth-child(2) {
+            img {
+              width: 133.82px;
+              height: 33.46px;
+            }
+          }
+          &:nth-child(3) {
+            img {
+              width: 142.31px;
+              height: 33.95px;
+            }
+          }
+          &:nth-child(4) {
+            img {
+              width: 147.3px;
+              height: 45.94px;
+            }
+          }
+          &:nth-child(5) {
+            img {
+              width: 159.79px;
+              height: 48.93px;
+            }
+          }
+          &:nth-child(6) {
+            img {
+              width: 153.29px;
+              height: 66.41px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

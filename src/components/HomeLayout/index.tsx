@@ -6,10 +6,14 @@ import { CNFT } from "../../pages/CNFT";
 import { CSwap } from "../../pages/CSwap";
 import { CDog } from "../../pages/CDoge";
 import "./style/web.scss";
+import "./style/mobile.scss"
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { useMediaQuery } from "@material-ui/core";
 export function HomeLayout() {
+  const isSmallScreen = useMediaQuery("(max-width: 650px)");
+    const isVerySmallScreen = useMediaQuery("(max-width: 379px)");
   return (
-    <div className="homelayout_box">
+    <div className={isSmallScreen || isVerySmallScreen ? "homelayout_box mobile_homelayout_box":"homelayout_box"}>
       <Header />
       <Router>
         <Route exact path="/">

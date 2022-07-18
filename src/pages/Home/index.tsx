@@ -2,21 +2,39 @@ import * as React from "react";
 // import { Header } from "../../components/HomeLayout/header/header";
 // import { Footer } from "../../components/HomeLayout/footer/index";
 import "./style/web.scss";
+import "./style/mobile.scss";
+import { useMediaQuery } from "@material-ui/core";
 export function Home() {
+  const isSmallScreen = useMediaQuery("(max-width: 650px)");
+  const isVerySmallScreen = useMediaQuery("(max-width: 379px)");
+  console.log(isSmallScreen, isVerySmallScreen, "isVerySmallScreen");
   const list = [
     {
       title: "CDoge",
-      content: "Cerberus Bridge is connecting dogecoin mainnet with multi-chain CDoge",
+      content:
+        "CDoge (CDoge bridge) is the core extension of dogecoin to the Web69 dogeverse. It brings dogecoin greater liquidity to DEX, DeFi, NFT, GameFi, and infinite cross-chain DApps.",
     },
-    { title: "CNFT", content: "Cerberus NFT is an NFT web3 platform supporting CDoge" },
-    { title: "CSwap", content: "Cerberus Swap is pairing CDoge with other web3 tokens" },
-    { title: "Cerbs", content: "Cerbs is the world's first web69 dogeverse forum" },
+    {
+      title: "CNFT",
+      content:
+        "CNFT is a marketplace created on Cerberus to allow users to mint and exchange NFTs with CDOGE as a payment option.",
+    },
+    {
+      title: "CSwap",
+      content:
+        "CSwap is a DEX (Decentralized Exchange) that allows shibes to start pairing their CDOGE with other tokens.",
+    },
+    {
+      title: "Cerbs",
+      content:
+        "Cerbs is a decentralized application platform, supporting Doge DApps built by Cerberus, communities, and partners.",
+    },
   ];
   const joinList = [
-    { name: "Twitter", imgurl: require("../../assets/home/tw.svg") },
-    { name: "Telegram", imgurl: require("../../assets/home/tg.svg") },
-    { name: "Github", imgurl: require("../../assets/home/git.svg") },
-    { name: "Discord", imgurl: require("../../assets/home/med.svg") },
+    { name: "Twitter", imgurl: require("../../assets/home/tw.png") },
+    { name: "Telegram", imgurl: require("../../assets/home/tg.png") },
+    { name: "Github", imgurl: require("../../assets/home/git.png") },
+    { name: "Discord", imgurl: require("../../assets/home/med.png") },
   ];
   const roadmapList = [
     {
@@ -69,12 +87,23 @@ export function Home() {
     { id: 1, imgurl: require("../../assets/home/bitcoin.png") },
     { id: 1, imgurl: require("../../assets/home/Binance-Logo.png") },
   ];
+  const partnerPhoneList = [
+    { id: 1, imgurl: require("../../assets/mobile/home/doge.png") },
+    { id: 1, imgurl: require("../../assets/mobile/home/Etherum.png") },
+    { id: 1, imgurl: require("../../assets/mobile/home/sharkteam.png") },
+    { id: 1, imgurl: require("../../assets/mobile/home/lbank-logo-freelogovectors.png") },
+    { id: 1, imgurl: require("../../assets/mobile/home/bitcoin.png") },
+    { id: 1, imgurl: require("../../assets/mobile/home/Binance-Logo.png") },
+  ];
   return (
-    <div className="home_box">
-      {/* <Header /> */}
+    <div className={isSmallScreen || isVerySmallScreen ? "home_box mobile_home_box" : "home_box"}>
       <div className="block1">
         <video
-          src={require("../../assets/home/block1.mp4")}
+          src={
+            isSmallScreen || isVerySmallScreen
+              ? require("../../assets/mobile/home/mobile.mp4")
+              : require("../../assets/home/block1.mp4")
+          }
           muted
           autoPlay
           loop
@@ -86,25 +115,61 @@ export function Home() {
           <div className="content_box">
             <img src={require("../../assets/home/center_bg.png")} alt="" />
             <p className="word_content">
-              Cerberus is an open source dogecoin EVM infrastructure, designed for the multi-chain
-              web3 dogeverse
+              Cerberus is an open source dogecoin Web69&EVM infrastructure, designed for the
+              multi-chain dogeverse
             </p>
             <div className="bottom_centent">
               <button className="start_box">Get Started</button>
-              <div className="more_box">Learn more</div>
+              {isSmallScreen || isVerySmallScreen ? null : (
+                <div className="more_box">Learn more</div>
+              )}
             </div>
           </div>
         </div>
       </div>
       <div className="block2">
         <div className="container_box">
-          <img src={require("../../assets/home/block_bg.png")} alt="" />
-          <p>
-            Save your lonely doge; let it join the fight for global adoption Bridging and leading
-            dogecoin to the multi-chain dogeverse Paving the path for the next-generation dogecoin
-            Web69 infrastructure 1D=1D
-          </p>
-          <button className="white_box">WHITEPAPER</button>
+          <img
+            src={
+              isSmallScreen || isVerySmallScreen
+                ? require("../../assets/mobile/home/manifestoo.png")
+                : require("../../assets/home/block_bg.png")
+            }
+            alt=""
+          />
+          {isSmallScreen || isVerySmallScreen ? (
+            <div>
+              <p className="first">
+                Save your lonely doge; let it join the fight for global adoption
+              </p>
+              <p className="second">Bridging and leading dogecoin to the multi-chain dogeverse</p>
+              <p className="third">
+                Paving the path for the next-generation dogecoin Web69 infrastructure
+              </p>
+              <p className="forth">1D=1D</p>
+            </div>
+          ) : (
+            <div className="posti_box">
+              <p className="first_box">
+                Save your lonely doge; let it join the fight for global adoption
+              </p>
+              <p className="second_box">
+                Bridging and leading dogecoin to the multi-chain dogeverse
+              </p>
+              <p className="third_box">
+                Paving the path for the next-generation dogecoin Web69 infrastructure
+              </p>
+              <p className="forth_box">1D=1D</p>
+                {isSmallScreen || isVerySmallScreen ? null : (
+                  <button className="white_box">WHITEPAPER</button>
+                )}
+                <p className="ball1"/>
+                <p className="ball2"/>
+                <p className="ball3"/>
+                <p className="ball4"/>
+                <p className="ball5"/>
+            </div>
+          )}
         </div>
       </div>
       <div className="block3">
@@ -131,8 +196,8 @@ export function Home() {
             <div className="right">
               <p className="title">Berus</p>
               <p className="content">
-                Berus is the best friend of Doge. He destroys the fiat order and helps Doge become
-                the currency of the next century.
+                BERUS is the best friend of doge. Sir Berus helps Doge destroy the fiat order and
+                become the people's currency.
               </p>
             </div>
           </div>
@@ -183,14 +248,23 @@ export function Home() {
         <p className="title">Partners</p>
         <div className="container_box">
           <ul>
-            {partnerList &&
-              partnerList.map((item, index) => {
-                return (
-                  <li key={index}>
-                    <img src={item.imgurl} alt="" />
-                  </li>
-                );
-              })}
+            {isSmallScreen || isVerySmallScreen
+              ? partnerPhoneList &&
+                partnerPhoneList.map((item, index) => {
+                  return (
+                    <li key={index}>
+                      <img src={item.imgurl} alt="" />
+                    </li>
+                  );
+                })
+              : partnerList &&
+                partnerList.map((item, index) => {
+                  return (
+                    <li key={index}>
+                      <img src={item.imgurl} alt="" />
+                    </li>
+                  );
+                })}
           </ul>
         </div>
         <div className="bottom_bg" />
