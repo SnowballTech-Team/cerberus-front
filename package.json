@@ -77,5 +77,12 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "prettier": {
+    "tabWidth": 2,
+    "useTabs": false,
+    "trailingComma": "none",
+    "printWidth": 100,
+    "semi": false
+  }
 }
