@@ -328,7 +328,18 @@
   }
   .block5 {
     width: 100%;
-    min-height: 100vh;
+    // min-height: 100vh;
+    margin-bottom: 130px;
+    position: relative;
+    .bottom_bg {
+      width: 795px;
+      height: 795px;
+      background: url("../../../assets/home/bg-gradient-img.png") no-repeat center;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
     .title {
       font-size: 64.4035px;
       text-align: center;
