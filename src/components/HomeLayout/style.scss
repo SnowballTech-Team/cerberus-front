@@ -1,0 +1,291 @@
+.home {
+    background: #040407;
+}
+.fixed-header {
+    background-color: rgba(255, 255, 255, .05) !important;
+    backdrop-filter: blur(6px);
+    z-index: 999999;
+    .modile-enter-app-box {
+        border-top: 1px solid #edeef1;
+        padding: 1rem 0;
+    }
+    a>.moblie-menu-text {
+        color: #FFFFFF;
+        padding: 0.75rem 0;
+    }
+    a>.MuiTypography-h6 {
+        color: #FFFFFF;
+        transition: color .2s ease-in-out;
+        margin-left: 3rem;
+        &:hover {
+            color: #ccd2d4;
+        }
+    }
+    .header-btn {
+        background-color: #ffc768;
+        border-radius: 27px;
+        color: #000;
+        font-weight: bold;
+        transition: color .2s ease-in-out,background-color .2s ease-in-out;
+        &:hover {
+            background-color: #eeb657;
+        }
+    }
+    .menu-icon {
+        font-size: 2rem;
+    }
+    .menu-icon-close {
+        width: 2em;
+    }
+}
+.header-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    box-sizing: border-box;
+}
+#menu-appbar {
+    a>.MuiTypography-body1 {
+        color: #000;
+        &:hover {
+            color: #000;
+        }
+    }
+
+}
+
+.bottom {
+    background-size: 160% auto;
+    background-position: top;
+    .bottom-title {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 4rem;
+        text-align: center;
+        letter-spacing: -0.04em;
+        background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        padding-top: 3rem;
+    }
+    .header-left {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+    }
+    a>.MuiTypography-h6 {
+        color: #FFFFFF;
+        transition: color .2s ease-in-out;
+        margin-left: 3rem;
+        &:hover {
+            color: #ccd2d4;
+        }
+    }
+    .social-link {
+        .social-row-icon {
+            margin-right: 3rem;
+            .MuiTypography-root {
+                color: #FCFCFC;
+                transition: .2s ease-in-out;
+                &:hover {
+                    color: #F4D092;
+                }
+                .MuiSvgIcon-root {
+                    font-size: 2rem !important;
+                }
+            }
+            &:last-child {
+                margin-right: 0 !important;
+            }
+        }
+        .social-row {
+            padding: 0;
+            justify-content: flex-start;
+        }
+        
+    }
+}
+.isMobile {
+    .bottom {
+        .header-left {
+            display: block;
+            margin-bottom: 1.5rem;
+        }
+        a>.MuiTypography-h6 {
+            margin-left: 0;
+            margin-bottom: 1rem;
+        }
+        .bottom-title {
+            font-size: 2rem;
+            font-family: 'PingFang SC';
+            line-height: 2.1rem;
+        }
+        .social-link {
+            .social-row {
+                padding: 0;
+                justify-content: flex-start;
+            }
+
+            .MuiTypography-root {
+                color: #FCFCFC;
+                transition: .2s ease-in-out;
+                &:hover {
+                    color: #F4D092;
+                }
+            }
+        }
+    }
+    .headroom {
+        will-change: transform;
+        transition: transform 200ms linear;
+    }
+    .headroom--pinned {
+        transform: translateY(0%);
+    }
+    .headroom--unpinned {
+        transform: translateY(-100%);
+    }
+}
+.is-hide {
+	transform: translateY(-100%);
+}
+[aria-describedby="locales-popper"] {
+    z-index: 10000000000000000;
+    box-sizing: border-box;
+    width: 40px !important;
+    padding: 3px !important;
+    min-width: 40px !important;
+    background: #3E0F79A6 !important;
+    border-radius: 13px !important;
+    &.MuiButton-containedSecondary:hover {
+      background: #290053 !important;
+    }
+    .MuiButton-label {
+      overflow: hidden;
+      width: 32px;
+      height: 32px;
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 50%;
+      &>.MuiSvgIcon-root {
+        width: 43px;
+        height: 43px;
+      }
+    }
+    &[title="ja"] {
+        span.MuiButton-label svg {
+            background-size: 48px 32px;
+            background-position: center center;
+        }
+    }
+    &[title="th"] {
+        span.MuiButton-label svg {
+            background-size: 48px 32px;
+            background-position: center center;
+        }
+    }
+    // flag to word
+   
+
+    &[title=en] {
+        &>.MuiButton-label {
+            position: relative;
+            &:after {
+                content: "EN";
+                display: inline;
+                position: absolute;
+                left: 0;
+                right: 0;
+                color: #FCFCFC;
+                font-family: Square;
+                font-weight: 500;
+            }
+            &>svg {
+                display: none;
+            }
+        }
+    }
+
+    &[title=ko] {
+        &>.MuiButton-label {
+            position: relative;
+            &:after {
+                content: "KR";
+                display: inline;
+                position: absolute;
+                left: 0;
+                right: 0;
+                color: #FCFCFC;
+                font-family: Square;
+                font-weight: 500;
+            }
+            &>svg {
+                display: none;
+            }
+        }
+    }
+}
+#locales-popper {
+    z-index: 100000000000000000;
+    span.MuiButton-label {
+        padding-top: 2px;
+    }
+    button.MuiButtonBase-root:nth-child(3) {
+        .MuiButton-label {
+            svg {
+                background-size: 20px 15px;
+                background-position: center center;
+            }
+        }
+    }
+    button.MuiButtonBase-root:nth-child(4) {
+        .MuiButton-label {
+            svg {
+                background-size: 20px 15px;
+                background-position: center center;
+            }
+        }
+    }
+    button.MuiButtonBase-root {
+        &>span.MuiButton-label {
+            position: relative;
+            height: 20px;
+            &:before {
+                content: "EN";
+                display: block;
+                height: 20px;
+                line-height: 20px;
+                top: 0;
+                right: 0;
+                position: absolute;
+                left: 0;
+                right: 0;
+                color: #FFFFFF;
+                font-family: Square;
+                font-weight: 500;
+            }
+            &>svg {
+                display: none;
+            }
+        }
+        &:hover {
+            &>span.MuiButton-label {
+                &:before {
+                    color: #3D3D3D;
+                }
+            }
+        }
+        &:nth-child(2) {
+            &>span.MuiButton-label {
+                &:before {
+                    content: "KR";
+                }
+            }
+        }
+    }
+    &>.MuiPaper-root {
+        background: rgba(225,225,225,0.15);
+    }
+}

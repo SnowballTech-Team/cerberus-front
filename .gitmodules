@@ -1,0 +1,4 @@
+[submodule "src/locales/translations"]
+	path = src/locales/translations
+	branch = main
+	ignore = all

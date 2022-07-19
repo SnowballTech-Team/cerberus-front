@@ -1,13 +1,12 @@
-import * as React from "react";
 import "./web.scss";
 export function Footer() {
-  // const leftList = [
-  //   { name: "Home", url: "" },
-  //   { name: "CDoge", url: "" },
-  //   { name: "CNFT", url: "" },
-  //   { name: "CSwap", url: "" },
-  //   { name: "Cerbs", url: "" },
-  // ];
+  const leftList = [
+    { name: "Home", url: "" },
+    { name: "CDoge", url: "" },
+    { name: "CNFT", url: "" },
+    { name: "CSwap", url: "" },
+    { name: "Cerbs", url: "" },
+  ];
   const rightList = [
     { id: 1, imgUrl: require("../../../assets/home/tw2.svg") },
     { id: 1, imgUrl: require("../../../assets/home/tg2.svg") },
@@ -18,7 +17,7 @@ export function Footer() {
     <div className="footer_box">
       <div className="container">
         <div className="left">
-          {/* <ul>
+          <ul>
             {leftList &&
               leftList.map((item, index) => {
                 return (
@@ -27,7 +26,7 @@ export function Footer() {
                   </li>
                 );
               })}
-          </ul> */}
+          </ul>
           {/* <p>
             <span className="contact_title">Contact us:</span> xxx@cerberus.org
           </p> */}

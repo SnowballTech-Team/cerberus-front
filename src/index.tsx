@@ -1,24 +1,4 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { createGlobalStyle } from "styled-components";
+import ReactDOM from "react-dom";
 
-import App from "./App";
-import { globalStyle } from "./styles";
-const GlobalStyle = createGlobalStyle`
-  ${globalStyle}
-`;
-
-declare global {
-  // tslint:disable-next-line
-  interface Window {
-    blockies: any;
-  }
-}
-
-ReactDOM.render(
-  <>
-    <GlobalStyle />
-    <App />
-  </>,
-  document.getElementById("root"),
-);
+import Root from "./Root";
+ReactDOM.render(<Root />, document.getElementById("root"));
