@@ -2,7 +2,7 @@
   width: 100%;
   .block1 {
     video {
-      top: 0;
+      top: -1px;
     }
     .center_box {
       width: 100%;
@@ -32,6 +32,7 @@
       padding: 0 26px;
       height: auto;
       align-items: flex-start;
+      position: relative;
       img {
         width: 100%;
         height: auto;
@@ -43,10 +44,23 @@
           left: 0;
         }
       }
+      .white_paper_mobile {
+        width: 152px;
+        height: 152px;
+        background: url("../../../assets/mobile/home/ball_bg.png") no-repeat center;
+        background-size: cover;
+        position: absolute;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 28px;
+        bottom: -90px;
+      }
     }
   }
   .block3 {
-    margin-top: 105px;
+    margin-top: 145px;
     .container {
       width: 100%;
       padding: 0 26px;
@@ -268,6 +282,9 @@
           }
         }
       }
+    }
+    .bottom_bg {
+      top: 200px;
     }
   }
 }

@@ -1,41 +1,41 @@
-import * as React from "react";
+import * as React from "react"
 // import { Header } from "../../components/HomeLayout/header/header";
 // import { Footer } from "../../components/HomeLayout/footer/index";
-import "./style/web.scss";
-import "./style/mobile.scss";
-import { useMediaQuery } from "@material-ui/core";
+import "./style/web.scss"
+import "./style/mobile.scss"
+import { useMediaQuery } from "@material-ui/core"
 export function Home() {
-  const isSmallScreen = useMediaQuery("(max-width: 650px)");
-  const isVerySmallScreen = useMediaQuery("(max-width: 379px)");
-  console.log(isSmallScreen, isVerySmallScreen, "isVerySmallScreen");
+  const isSmallScreen = useMediaQuery("(max-width: 650px)")
+  const isVerySmallScreen = useMediaQuery("(max-width: 379px)")
+  console.log(isSmallScreen, isVerySmallScreen, "isVerySmallScreen")
   const list = [
     {
       title: "CDoge",
       content:
-        "CDoge (CDoge bridge) is the core extension of dogecoin to the Web69 dogeverse. It brings dogecoin greater liquidity to DEX, DeFi, NFT, GameFi, and infinite cross-chain DApps.",
+        "CDoge (CDoge bridge) is the core extension of dogecoin to the Web69 dogeverse. It brings dogecoin greater liquidity to DEX, DeFi, NFT, GameFi, and infinite cross-chain DApps."
     },
     {
       title: "CNFT",
       content:
-        "CNFT is a marketplace created on Cerberus to allow users to mint and exchange NFTs with CDOGE as a payment option.",
+        "CNFT is a marketplace created on Cerberus to allow users to mint and exchange NFTs with CDOGE as a payment option."
     },
     {
       title: "CSwap",
       content:
-        "CSwap is a DEX (Decentralized Exchange) that allows shibes to start pairing their CDOGE with other tokens.",
+        "CSwap is a DEX (Decentralized Exchange) that allows shibes to start pairing their CDOGE with other tokens."
     },
     {
       title: "Cerbs",
       content:
-        "Cerbs is a decentralized application platform, supporting Doge DApps built by Cerberus, communities, and partners.",
-    },
-  ];
+        "Cerbs is a decentralized application platform, supporting Doge DApps built by Cerberus, communities, and partners."
+    }
+  ]
   const joinList = [
     { name: "Twitter", imgurl: require("../../assets/home/tw.png") },
     { name: "Telegram", imgurl: require("../../assets/home/tg.png") },
     { name: "Github", imgurl: require("../../assets/home/git.png") },
-    { name: "Discord", imgurl: require("../../assets/home/med.png") },
-  ];
+    { name: "Discord", imgurl: require("../../assets/home/med.png") }
+  ]
   const roadmapList = [
     {
       name: "Milestone 1:",
@@ -43,8 +43,8 @@ export function Home() {
         "Cerberus universe launch",
         "CDoge deployment and open source",
         "CBridge launch for Doge<>CDoge",
-        "Cerberus Proof of Asset",
-      ],
+        "Cerberus Proof of Asset"
+      ]
     },
     {
       name: "Milestone 2:",
@@ -54,8 +54,8 @@ export function Home() {
         "CDoge>>Berus vpool launch on ETH",
         "CSwap launch",
         "Berus lockdrop system for CSwap LPs",
-        "Berus burn mechanism for CBridge/CSwap fee",
-      ],
+        "Berus burn mechanism for CBridge/CSwap fee"
+      ]
     },
     {
       name: "Milestone 3:",
@@ -66,8 +66,8 @@ export function Home() {
         "Cerberus doge EVM chain node",
         "Cerberus doge EVM chain DApp",
         "Cerberus global investments and partners",
-        "Cerberus hackathon",
-      ],
+        "Cerberus hackathon"
+      ]
     },
     {
       name: "Milestone 4:",
@@ -75,26 +75,27 @@ export function Home() {
         "Cerberus doge multi-chain Web3 protocol",
         "Cerberus multi-chain CSwap",
         "Cerberus multi-chain DApp",
-        "Invest in Elon Musk projects in 100 years",
-      ],
-    },
-  ];
+        "Invest in Elon Musk projects in 100 years"
+      ]
+    }
+  ]
   const partnerList = [
     { id: 1, imgurl: require("../../assets/home/doge.png") },
     { id: 1, imgurl: require("../../assets/home/Etherum.png") },
     { id: 1, imgurl: require("../../assets/home/images.png") },
     { id: 1, imgurl: require("../../assets/home/lbank-logo-freelogovectors.png") },
     { id: 1, imgurl: require("../../assets/home/bitcoin.png") },
-    { id: 1, imgurl: require("../../assets/home/Binance-Logo.png") },
-  ];
+    { id: 1, imgurl: require("../../assets/home/Binance-Logo.png") }
+  ]
   const partnerPhoneList = [
     { id: 1, imgurl: require("../../assets/mobile/home/doge.png") },
     { id: 1, imgurl: require("../../assets/mobile/home/Etherum.png") },
     { id: 1, imgurl: require("../../assets/mobile/home/sharkteam.png") },
     { id: 1, imgurl: require("../../assets/mobile/home/lbank-logo-freelogovectors.png") },
     { id: 1, imgurl: require("../../assets/mobile/home/bitcoin.png") },
-    { id: 1, imgurl: require("../../assets/mobile/home/Binance-Logo.png") },
-  ];
+    { id: 1, imgurl: require("../../assets/mobile/home/Binance-Logo.png") }
+  ]
+  const toWhitePaper = () => window.open("https://whitepaper.cerbs.org/")
   return (
     <div className={isSmallScreen || isVerySmallScreen ? "home_box mobile_home_box" : "home_box"}>
       <div className="block1">
@@ -147,6 +148,9 @@ export function Home() {
                 Paving the path for the next-generation dogecoin Web69 infrastructure
               </p>
               <p className="forth">1D=1D</p>
+              <div className="white_paper_mobile" onClick={toWhitePaper}>
+                WHITEPAPER
+              </div>
             </div>
           ) : (
             <div className="posti_box">
@@ -160,14 +164,16 @@ export function Home() {
                 Paving the path for the next-generation dogecoin Web69 infrastructure
               </p>
               <p className="forth_box">1D=1D</p>
-                {isSmallScreen || isVerySmallScreen ? null : (
-                  <button className="white_box">WHITEPAPER</button>
-                )}
-                <p className="ball1"/>
-                <p className="ball2"/>
-                <p className="ball3"/>
-                <p className="ball4"/>
-                <p className="ball5"/>
+              {isSmallScreen || isVerySmallScreen ? null : (
+                <button className="white_box" onClick={toWhitePaper}>
+                  WHITEPAPER
+                </button>
+              )}
+              <p className="ball1" />
+              <p className="ball2" />
+              <p className="ball3" />
+              <p className="ball4" />
+              <p className="ball5" />
             </div>
           )}
         </div>
@@ -188,7 +194,7 @@ export function Home() {
                       <p className="arrow" />
                     </div>
                   </li>
-                );
+                )
               })}
           </ul>
           <div className="berus_box">
@@ -211,7 +217,7 @@ export function Home() {
                       <img src={item.imgurl} alt="" />
                       <p>{item.name}</p>
                     </li>
-                  );
+                  )
                 })}
             </ul>
           </div>
@@ -234,11 +240,11 @@ export function Home() {
                             <p className="content" key={inx + "_content"}>
                               {ite}
                             </p>
-                          );
+                          )
                         })}
                       </div>
                     </li>
-                  );
+                  )
                 })}
             </ul>
           </div>
@@ -255,7 +261,7 @@ export function Home() {
                     <li key={index}>
                       <img src={item.imgurl} alt="" />
                     </li>
-                  );
+                  )
                 })
               : partnerList &&
                 partnerList.map((item, index) => {
@@ -263,7 +269,7 @@ export function Home() {
                     <li key={index}>
                       <img src={item.imgurl} alt="" />
                     </li>
-                  );
+                  )
                 })}
           </ul>
         </div>
@@ -271,5 +277,5 @@ export function Home() {
       </div>
       {/* <Footer /> */}
     </div>
-  );
+  )
 }

@@ -1,15 +1,110 @@
 .mobile_header_box {
+  width: 100%;
+  height: 4rem;
+  .container_box {
     width: 100%;
-    height: 4rem;
-    .container_box {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        .left {
-            img {
-                width: 3.5rem;
-                height: 3.5rem;
-            }
-        }
+    display: flex;
+    justify-content: center;
+    .left {
+      img {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
     }
+  }
+  .mobile_header_container {
+    padding-left: 29px;
+    padding-right: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    .left {
+      img {
+        width: 30px;
+        height: 27px;
+      }
+    }
+    .center_box {
+      img {
+        width: 42px;
+        height: 36px;
+      }
+    }
+    .right_box {
+      .Wallet_box {
+        outline: none;
+        background: none;
+        border: none;
+        background: url("../../../assets/mobile/header/wallet_bg.png") no-repeat center;
+        background-size: cover;
+        border-radius: 50px;
+        width: 103px;
+        height: 32px;
+        font-size: 17px;
+        color: #fff;
+      }
+    }
+    .shadow_box {
+      width: 100%;
+      height: 0;
+      //   background-color: rgba(54, 56, 64, 0.5);
+      position: absolute;
+      left: 0;
+      top: 4rem;
+      transition: height linear 0.3s;
+    }
+    .open_shadow_box {
+      height: 100vh;
+    }
+    .left_menu {
+      position: absolute;
+      left: -237px;
+      top: 0rem;
+      width: 237px;
+      background-color: rgba(54, 56, 64, 0.6);
+      backdrop-filter: blur(33px);
+      height: 100vh;
+      z-index: 9;
+      transition: left linear 0.3s;
+      z-index: 9;
+      ul {
+        padding: 31px 20px;
+        li {
+          margin-bottom: 36px;
+          a {
+            font-size: 24px;
+            color: #fff;
+            font-weight: 700;
+          }
+          &:last-child {
+            a {
+              background: linear-gradient(225deg, #18c8ff 14.89%, #933ffe 85.85%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text;
+              text-fill-color: transparent;
+            }
+          }
+        }
+      }
+      .link_nav {
+        width: 100%;
+        padding: 28px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 100px;
+        li {
+          img {
+            width: 29px;
+            height: 24px;
+          }
+        }
+      }
+    }
+    .open_left_menu {
+      left: 0;
+    }
+  }
 }

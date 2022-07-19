@@ -1,7 +1,7 @@
 .header_box {
   width: 100%;
   background-image: url("../../../assets/header/header_bg.png");
-  background-repeat:no-repeat ;
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: linear-gradient(
@@ -23,7 +23,7 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    
+
     .left {
       display: flex;
       align-items: center;
@@ -47,7 +47,7 @@
               background: url("../../../assets/header/chose_bg.png") no-repeat center;
               background-size: cover;
               left: 50%;
-              bottom: 0px;
+              bottom: -5px;
               transform: translateX(-50%);
             }
           }
@@ -58,6 +58,9 @@
             font-size: 18px;
             color: #fff;
             cursor: pointer;
+          }
+          a {
+            color: #fff;
           }
         }
       }
@@ -77,7 +80,7 @@
           width: 50%;
           height: 100%;
           border-radius: 22px 0 0 22px;
-          background: linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%);
+          background: linear-gradient(225deg, #18c8ff 14.89%, #933ffe 85.85%);
           color: #fff;
         }
         .Wallet_box {
