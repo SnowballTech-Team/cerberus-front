@@ -6,13 +6,13 @@ import { useMediaQuery, Link } from "@material-ui/core"
 export function Header() {
   const isSmallScreen = useMediaQuery("(max-width: 650px)")
   const isVerySmallScreen = useMediaQuery("(max-width: 379px)")
-  const topList = [
-    { name: "Home", url: "/" },
-    { name: "CDoge", url: "/cdog" },
-    { name: "CNFT", url: "/cnft" },
-    { name: "CSwap", url: "/cswap" },
-    { name: "Cerbs", url: "/cerbs" }
-  ]
+  // const topList = [
+  //   { name: "Home", url: "/" },
+  //   { name: "CDoge", url: "/cdog" },
+  //   { name: "CNFT", url: "/cnft" },
+  //   { name: "CSwap", url: "/cswap" },
+  //   { name: "Cerbs", url: "/cerbs" }
+  // ]
   const mobileTopList = [
     { name: "Home", url: "/" },
     { name: "CDoge", url: "/cdog" },
@@ -28,26 +28,26 @@ export function Header() {
     { id: 1, imgUrl: require("../../../assets/home/med2.svg") }
   ]
   const [menuStatus, setMenuStatus] = useState(false)
-  const openMenu = () => setMenuStatus(!menuStatus)
+  // const openMenu = () => setMenuStatus(!menuStatus)
   return (
     <div
       className={isSmallScreen || isVerySmallScreen ? "header_box mobile_header_box" : "header_box"}
     >
       {isSmallScreen || isVerySmallScreen ? (
         <div className="mobile_header_container">
-          <div className="left">
+          {/* <div className="left">
             <img
               src={require("../../../assets/mobile/header/menu_box.png")}
               alt=""
               onClick={openMenu}
             />
-          </div>
+          </div> */}
           <div className="center_box">
             <img src={require("../../../assets/header/logo.svg")} alt="" />
           </div>
-          <div className="right_box">
+          {/* <div className="right_box">
             <button className="Wallet_box">Wallet</button>
-          </div>
+          </div> */}
           <div
             className={menuStatus ? "shadow_box open_shadow_box" : "shadow_box"}
             onClick={() => setMenuStatus(false)}
@@ -83,7 +83,7 @@ export function Header() {
           <div className="left">
             <img src={require("../../../assets/header/logo.svg")} alt="" />
           </div>
-          <div className="right">
+          {/* <div className="right">
             <ul>
               {topList &&
                 topList.map((item, index) => {
@@ -100,7 +100,7 @@ export function Header() {
               <button className="Referral_box">Referral</button>
               <button className="Wallet_box">Wallet</button>
             </div>
-          </div>
+          </div> */}
         </div>
       )}
     </div>

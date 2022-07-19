@@ -1,95 +1,95 @@
 self.__precacheManifest = [
   {
-    "revision": "d157aa715e3f662478b8",
-    "url": "/static/css/main.68dce3e4.chunk.css"
+    "revision": "91b7f7fbb1ce37cd2a8d",
+    "url": "/static/css/main.b78e0873.chunk.css"
   },
   {
-    "revision": "d157aa715e3f662478b8",
-    "url": "/static/js/main.d157aa71.chunk.js"
+    "revision": "91b7f7fbb1ce37cd2a8d",
+    "url": "/static/js/main.91b7f7fb.chunk.js"
   },
   {
-    "revision": "8b99dde3d158e1dc9bb6",
-    "url": "/static/js/1.8b99dde3.chunk.js"
+    "revision": "caf69242fa33bd01b7e9",
+    "url": "/static/js/1.caf69242.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
     "url": "/static/js/runtime~main.229c360f.js"
   },
   {
+    "revision": "991dfacc06b157a7e4970574cfbf03a3",
+    "url": "/static/media/logo.991dfacc.svg"
+  },
+  {
     "revision": "808c39a5d7c6cc33d2557d789a669da8",
     "url": "/static/media/header_bg.808c39a5.png"
   },
   {
-    "revision": "999fc4ed51401c7a3089b1cd7961c819",
-    "url": "/static/media/logo.999fc4ed.svg"
+    "revision": "701dfcba945266fcb9202ef3b0a3a6cf",
+    "url": "/static/media/tw2.701dfcba.svg"
   },
   {
-    "revision": "84ca773867a7f1c8b9fc20770a2cb20c",
-    "url": "/static/media/bg-gradient-img.84ca7738.png"
+    "revision": "733f26ebc5c38715b337115a030b0a6d",
+    "url": "/static/media/tg2.733f26eb.svg"
   },
   {
-    "revision": "f5280b214a7d343fc4e311cbc26a6b73",
-    "url": "/static/media/tw2.f5280b21.svg"
+    "revision": "d2d2891be4045635e137b6bdd9b3e910",
+    "url": "/static/media/git2.d2d2891b.svg"
   },
   {
-    "revision": "0ea49d57abe3e5bca8818cde3d11c74d",
-    "url": "/static/media/tg2.0ea49d57.svg"
-  },
-  {
-    "revision": "e201cd691ab92f5508feb2e0515a77a4",
-    "url": "/static/media/git2.e201cd69.svg"
-  },
-  {
-    "revision": "114e7f00d38e861db234d709784f8705",
-    "url": "/static/media/med2.114e7f00.svg"
-  },
-  {
-    "revision": "f1d95d7d7bbef18a962215285cff3ff3",
-    "url": "/static/media/ball2.f1d95d7d.png"
+    "revision": "ec998ac0b802dc24ee57aea6de86189a",
+    "url": "/static/media/med2.ec998ac0.svg"
   },
   {
     "revision": "7fb4c6f339f36a7e80ae35aa4c63b986",
     "url": "/static/media/ball1.7fb4c6f3.png"
   },
   {
+    "revision": "f1d95d7d7bbef18a962215285cff3ff3",
+    "url": "/static/media/ball2.f1d95d7d.png"
+  },
+  {
     "revision": "8034cf8af69d9d1f25f10d92f35705be",
     "url": "/static/media/ball4.8034cf8a.png"
-  },
-  {
-    "revision": "cce49cbf167954f001521c01dbd2bc68",
-    "url": "/static/media/cdoge.cce49cbf.png"
-  },
-  {
-    "revision": "4e722d4c7a499c09a1e03a01bd8d2a8f",
-    "url": "/static/media/list_bg.4e722d4c.png"
   },
   {
     "revision": "0cb0d154486f81ccde8f3ccc8f6fb0c5",
     "url": "/static/media/ball3.0cb0d154.png"
   },
   {
-    "revision": "eb5417e7c3bc362c2c6384aabe67cc9d",
-    "url": "/static/media/cnft.eb5417e7.png"
-  },
-  {
-    "revision": "cfd30649543de786c55806d104686e70",
-    "url": "/static/media/cswap.cfd30649.png"
-  },
-  {
     "revision": "1981d510a1c6c853a409819c31bce1d8",
     "url": "/static/media/ctaik.1981d510.png"
-  },
-  {
-    "revision": "f32cff512f33a8acb966dd2411287d39",
-    "url": "/static/media/beruscoin.f32cff51.png"
   },
   {
     "revision": "34e8a19deb76a0db0ea1e4575066c2d0",
     "url": "/static/media/ball5.34e8a19d.png"
   },
   {
+    "revision": "eb5417e7c3bc362c2c6384aabe67cc9d",
+    "url": "/static/media/cnft.eb5417e7.png"
+  },
+  {
+    "revision": "cce49cbf167954f001521c01dbd2bc68",
+    "url": "/static/media/cdoge.cce49cbf.png"
+  },
+  {
     "revision": "ffbf8c752534a1b57132ab8ef307083c",
     "url": "/static/media/romap.ffbf8c75.png"
+  },
+  {
+    "revision": "f32cff512f33a8acb966dd2411287d39",
+    "url": "/static/media/beruscoin.f32cff51.png"
+  },
+  {
+    "revision": "4e722d4c7a499c09a1e03a01bd8d2a8f",
+    "url": "/static/media/list_bg.4e722d4c.png"
+  },
+  {
+    "revision": "cfd30649543de786c55806d104686e70",
+    "url": "/static/media/cswap.cfd30649.png"
+  },
+  {
+    "revision": "84ca773867a7f1c8b9fc20770a2cb20c",
+    "url": "/static/media/bg-gradient-img.84ca7738.png"
   },
   {
     "revision": "4dc1e0edd17dd9d0bec07e3a155ea18a",
@@ -100,28 +100,32 @@ self.__precacheManifest = [
     "url": "/static/media/big_bg.77f41711.png"
   },
   {
-    "revision": "829e5ee756210d4f394e85cdeb9ce567",
-    "url": "/static/media/cbridge.829e5ee7.png"
-  },
-  {
-    "revision": "32823960b6b136cc69f45ae96fea853f",
-    "url": "/static/media/cbridge_dog.32823960.png"
-  },
-  {
     "revision": "208f10b7aaec006d7adc4866f39da097",
     "url": "/static/media/first_bg.208f10b7.png"
   },
   {
-    "revision": "71b292baa92725fdd18fca30a75596dc",
-    "url": "/static/media/cwap.71b292ba.png"
+    "revision": "829e5ee756210d4f394e85cdeb9ce567",
+    "url": "/static/media/cbridge.829e5ee7.png"
   },
   {
     "revision": "200b4cf1fec4f2e7c595855c4549471c",
     "url": "/static/media/second_bg.200b4cf1.png"
   },
   {
+    "revision": "32823960b6b136cc69f45ae96fea853f",
+    "url": "/static/media/cbridge_dog.32823960.png"
+  },
+  {
+    "revision": "71b292baa92725fdd18fca30a75596dc",
+    "url": "/static/media/cwap.71b292ba.png"
+  },
+  {
     "revision": "c8ce70fcbd3a4310c7478ad00dcb96b2",
     "url": "/static/media/cerbs.c8ce70fc.png"
+  },
+  {
+    "revision": "addc16b584273d223dd5fb6e493b7452",
+    "url": "/static/media/beruscoin.addc16b5.png"
   },
   {
     "revision": "23d238c8ed3b399dde7d61f20fe729a8",
@@ -130,10 +134,6 @@ self.__precacheManifest = [
   {
     "revision": "a03f8aaf55b2e77345d902a27c75dbe8",
     "url": "/static/media/third_bg.a03f8aaf.png"
-  },
-  {
-    "revision": "addc16b584273d223dd5fb6e493b7452",
-    "url": "/static/media/beruscoin.addc16b5.png"
   },
   {
     "revision": "9641025c6d9b821e41c651f1723d3c16",
@@ -184,7 +184,7 @@ self.__precacheManifest = [
     "url": "/static/media/block_bg.257a10da.png"
   },
   {
-    "revision": "6541eddf120f4a7b831aa275f27f34b3",
+    "revision": "f40886b09a2230dd9d4e38a2c39ac0f9",
     "url": "/index.html"
   }
 ];

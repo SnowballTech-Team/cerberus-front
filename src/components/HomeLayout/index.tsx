@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Header } from "./header/header";
-import { Footer } from "./footer";
+// import { Footer } from "./footer";
 import { Home } from "../../pages/Home";
 import { CNFT } from "../../pages/CNFT";
 import { CSwap } from "../../pages/CSwap";
@@ -24,7 +24,7 @@ export function HomeLayout() {
         <Route path="/cnft" component={CNFT} />
         <Route path="/cdog" component={CDog} />
       </Router>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
