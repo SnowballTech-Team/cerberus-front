@@ -1,20 +1,40 @@
-import * as React from "react";
-import { Header } from "./header/header";
-// import { Footer } from "./footer";
-import { Home } from "../../pages/Home";
-import { CNFT } from "../../pages/CNFT";
-import { CSwap } from "../../pages/CSwap";
-import { CDog } from "../../pages/CDoge";
-import "./style/web.scss";
+import * as React from "react"
+import { Header } from "./header/header"
+import { Footer } from "./footer"
+import { Home } from "../../pages/Home"
+import { CNFT } from "../../pages/CNFT"
+import { CSwap } from "../../pages/CSwap"
+import { CDog } from "../../pages/CDoge"
+import { useState } from "react"
+import { Menu } from "./menu"
+import "./style/web.scss"
 import "./style/mobile.scss"
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import { useMediaQuery } from "@material-ui/core";
+import { BrowserRouter as Router, Route } from "react-router-dom"
+import { useMediaQuery } from "@material-ui/core"
 export function HomeLayout() {
-  const isSmallScreen = useMediaQuery("(max-width: 650px)");
-    const isVerySmallScreen = useMediaQuery("(max-width: 379px)");
+  const isSmallScreen = useMediaQuery("(max-width: 650px)")
+  const isVerySmallScreen = useMediaQuery("(max-width: 379px)")
+  const [menuStatus, setMenuStatus] = useState(false)
+  const openMenu = () => {
+    setMenuStatus(!menuStatus)
+  }
+  const closeMenu = () => {
+    setMenuStatus(false)
+  }
   return (
-    <div className={isSmallScreen || isVerySmallScreen ? "homelayout_box mobile_homelayout_box":"homelayout_box"}>
-      <Header />
+    <div
+      className={
+        isSmallScreen || isVerySmallScreen
+          ? "homelayout_box mobile_homelayout_box"
+          : "homelayout_box"
+      }
+    >
+      <Header openMenu={openMenu} />
+      <div className={menuStatus ? "shadow_box open_shadow_box" : "shadow_box"} onClick={closeMenu}>
+        <div className={menuStatus ? "left_menu open_left_menu" : "left_menu"}>
+          <Menu />
+        </div>
+      </div>
       <Router>
         <Route exact path="/">
           <Home />
@@ -24,7 +44,7 @@ export function HomeLayout() {
         <Route path="/cnft" component={CNFT} />
         <Route path="/cdog" component={CDog} />
       </Router>
-      {/* <Footer /> */}
+      <Footer />
     </div>
-  );
+  )
 }
