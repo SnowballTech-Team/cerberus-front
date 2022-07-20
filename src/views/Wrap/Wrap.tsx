@@ -10,7 +10,7 @@ import { useHistory } from "react-router-dom";
 import { usePathForNetwork } from "src/hooks/usePathForNetwork";
 
 const Wrap: FC = () => {
-  const { provider, address, connect, networkId } = useWeb3Context();
+  const { networkId } = useWeb3Context();
   const history = useHistory();
   usePathForNetwork({ pathName: "wrap", networkID: networkId, history });
 

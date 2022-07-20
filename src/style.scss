@@ -1,4 +1,6 @@
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
   width: 100%;
   margin: 0;
@@ -8,7 +10,7 @@ html, body, #root {
 body {
   font-style: normal;
   font-stretch: normal;
-  overflow-y:auto;
+  overflow-y: auto;
   text-rendering: optimizeLegibility;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-font-smoothing: antialiased;
@@ -16,7 +18,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-overflow-scrolling: touch;
   -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;  
+  -webkit-text-size-adjust: 100%;
   background: #000;
   color: #ffffff;
   font-size: 16px;
@@ -28,7 +30,7 @@ button {
   background-image: none;
   outline: 0;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 [tabindex] {
@@ -37,7 +39,14 @@ button {
   height: 100%;
 }
 
-a, p, h1, h2, h3, h4, h5, h6 {
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-decoration: none;
   margin: 0;
   padding: 0;
@@ -46,7 +55,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
 
 a {
   background-color: transparent;
-  -webkit-text-decoration-skip: objects;  
+  -webkit-text-decoration-skip: objects;
   text-decoration: none;
   color: inherit;
   outline: none;
@@ -58,7 +67,8 @@ strong {
   font-weight: bolder;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -67,7 +77,6 @@ ul, li {
 * {
   box-sizing: border-box !important;
 }
-
 
 input {
   -webkit-appearance: none;

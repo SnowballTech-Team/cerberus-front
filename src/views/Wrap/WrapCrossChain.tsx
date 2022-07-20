@@ -19,7 +19,7 @@ import { changeMigrationApproval, migrateCrossChainWSOHM } from "../../slices/Mi
 
 function WrapCrossChain() {
   const dispatch = useDispatch();
-  const { provider, address, networkId, networkName, connect } = useWeb3Context();
+  const { provider, address, networkId, networkName } = useWeb3Context();
   const [quantity, setQuantity] = useState("");
   const assetFrom = "wsOHM";
   const assetTo = "gOHM";
@@ -58,7 +58,7 @@ function WrapCrossChain() {
     setQuantity(wsOhmBalance.toString());
   };
 
-  const handleSwitchChain = (id: any) => {
+  const handleSwitchChain = (id: number) => {
     return () => {
       switchNetwork({ provider: provider, networkId: id });
     };
@@ -67,8 +67,6 @@ function WrapCrossChain() {
   const hasCorrectAllowance = useCallback(() => {
     return wsOhmAllowance > wsOhmBalance;
   }, [wsOhmBalance, wsOhmAllowance]);
-
-  const isDataLoading = useAppSelector(state => state.account.loading);
 
   const migrateToGohm = () =>
     dispatch(

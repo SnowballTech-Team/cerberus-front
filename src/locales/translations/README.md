@@ -1,6 +1,7 @@
 # Olympus translations
 
 ## Translators
+
 ### How to become a translator
 
 Join us on the Olympus DAO discord server and introduce yourself in the #app-translations channel
@@ -10,9 +11,10 @@ Someone will set you up.
 ### How to translate
 
 #### Create a pull request
+
 - You can open the .po file of the language of your choice directly in github
 - Look at the text in each `msgid` line and translate it in the `msgstr`line just below
-You can check the live site to have some context about the texts to be translated. If in doubt, do not hesitate to leave a message on the #app-translations channel
+  You can check the live site to have some context about the texts to be translated. If in doubt, do not hesitate to leave a message on the #app-translations channel
 - Select Create a new branch for this commit and start a pull request.
 - Click Commit changes
 - Wait for the PR to be deployed
@@ -21,6 +23,7 @@ You can check the live site to have some context about the texts to be translate
 #### Update your pull request
 
 You can correct your PR directly through the github interface
+
 - When reviewing your PR, create on the Files changed tab
 - Click the three dots on the right-hand side of the window next to the name of the file
 - Make your changes
@@ -40,7 +43,7 @@ cd olympus-frontend
 yarn lingui:branch:translators
 
 # Install the application dependencies
-yarn install 
+yarn install
 
 # At this point your filesystem contains the latest olympus-frontend develop branch with the latest olympus-translations develop branch as a submodule in src/locales/translations
 # Extract the new translations

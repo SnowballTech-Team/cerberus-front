@@ -33,7 +33,7 @@ const trackGiveEvent = (uaData: IUAData, eventAction?: string) => {
 // Redeems a user's redeemable balance from the Give contract
 export const redeemBalance = createAsyncThunk(
   "redeem/redeemBalance",
-  async ({ provider, address, networkID, eventSource }: IRedeemAsyncThunk, { dispatch }) => {
+  async ({ provider, address, networkID }: IRedeemAsyncThunk, { dispatch }) => {
     if (!provider) {
       dispatch(error(t`Please connect your wallet!`));
       return;
@@ -86,7 +86,7 @@ export const redeemBalance = createAsyncThunk(
 // Redeem a user's redeemable balance from the MockGive contract on Rinkeby
 export const redeemMockBalance = createAsyncThunk(
   "redeem/redeemMockBalance",
-  async ({ provider, address, networkID, eventSource }: IRedeemAsyncThunk, { dispatch }) => {
+  async ({ provider, address, networkID }: IRedeemAsyncThunk, { dispatch }) => {
     if (!provider) {
       dispatch(error(t`Please connect your wallet!`));
       return;
