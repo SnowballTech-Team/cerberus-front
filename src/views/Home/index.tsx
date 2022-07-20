@@ -1,454 +1,282 @@
-import "./styles.scss";
-import { Trans, t } from "@lingui/macro";
-// import MetaBitcon from "../../assets/images/meta-bitcoin.png";
-// import MetaBitconMobile from "../../assets/images/meta-bitcoin-mobile.png";
+import * as React from "react";
+// import { Header } from "../../components/HomeLayout/header/header";
+// import { Footer } from "../../components/HomeLayout/footer/index";
+import "./style/web.scss";
+import "./style/mobile.scss";
+import { useMediaQuery } from "@material-ui/core";
 
-// import HugeDiamond from "../../assets/images/huge-diamond.png";
-// import CardMBTC from "../../assets/images/card-mbtc.png";
-// import CardMFUEL from "../../assets/images/card-mfuel.png";
-// import CardMINER from "../../assets/images/card-miner.png";
-// import CardPOOL from "../../assets/images/card-pool.png";
+import center_bg from "../../assets/home/center_bg.png";
 
-// import HugeDiamondGif from "../../assets/images/b_coins.gif";
+import manifestoo from "../../assets/mobile/home/manifestoo.png";
+import block_bg from "../../assets/home/block_bg.png";
 
-import BtcZ from "../../assets/images/coinn.png";
-import Fuel from "../../assets/images/fuel.png";
-import NftMiner from "../../assets/images/miner1.png";
-import NftPool from "../../assets/images/Daco.png";
-import ExplorBg from "../../assets/images/Rectangle.png";
+import joinList1 from "../../assets/home/tw.png";
+import joinList2 from "../../assets/home/tg.png";
+import joinList3 from "../../assets/home/git.png";
+import joinList4 from "../../assets/home/med.png";
 
-import PartnerBitcoin from "../../assets/images/bitmain-logo.png";
-import PartnerBitmain from "../../assets/images/new-binance-chain-logo.png";
-import PartnerUniswap from "../../assets/images/pancakeswaplogo-freelogovectors.png";
-import PartnerCoinGecko from "../../assets/images/bitcoin-logo-png.png";
-import PartnerLbank from "../../assets/images/lbank-logo-freelogovectors.png";
-import PartnerBinance from "../../assets/images/Binance-Logo.png";
-import PartnerCoinMarketCap from "../../assets/images/CMC-02.png";
-import PartnerAlawad from "../../assets/images/coingecko-logo-white.png";
-import Partner1inch from "../../assets/images/linch_logo.png";
-import PartnerCertik from "../../assets/images/certik.png";
-import PartnerShark from "../../assets/images/sharkteam.png";
+import partnerList1 from "../../assets/home/doge.png";
+import partnerList2 from "../../assets/home/Etherum.png";
+import partnerList3 from "../../assets/home/images.png";
+import partnerList4 from "../../assets/home/lbank-logo-freelogovectors.png";
+import partnerList5 from "../../assets/home/bitcoin.png";
+import partnerList6 from "../../assets/home/Binance-Logo.png";
 
-// import Social from "../../components/Sidebar/Social";
-
-import { Container, useMediaQuery, Link, Typography, Button, Grid, Box } from "@material-ui/core";
-
-const transforRoad = (arr: any) => {
-  const tempArr = [...arr];
-  const tempItem = tempArr[3];
-  tempArr[3] = tempArr[5];
-  tempArr[5] = tempItem;
-  return tempArr;
-};
+import partnerPhoneList1 from "../../assets/mobile/home/doge.png";
+import partnerPhoneList2 from "../../assets/mobile/home/Etherum.png";
+import partnerPhoneList3 from "../../assets/mobile/home/sharkteam.png";
+import partnerPhoneList4 from "../../assets/mobile/home/lbank-logo-freelogovectors.png";
+import partnerPhoneList5 from "../../assets/mobile/home/bitcoin.png";
+import partnerPhoneList6 from "../../assets/mobile/home/Binance-Logo.png";
 
 export function Home() {
   const isSmallScreen = useMediaQuery("(max-width: 650px)");
   const isVerySmallScreen = useMediaQuery("(max-width: 379px)");
-
-  const paperHandler = () => {
-    window.open(window.location.origin + "/whitepaper.pdf");
-  };
-
-  const partners = [
-    "",
-    PartnerBitcoin,
-    PartnerBitmain,
-    // PartnerPancake,
-    PartnerUniswap,
-    PartnerCoinGecko,
-    PartnerLbank,
-    PartnerBinance,
-    PartnerCoinMarketCap,
-    PartnerAlawad,
-    Partner1inch,
-    PartnerCertik,
-    PartnerShark,
-  ];
-
-  const roadMap = [
+  console.log(isSmallScreen, isVerySmallScreen, "isVerySmallScreen");
+  const list = [
     {
-      name: t`Q2 2022`,
-      list: [
-        {
-          item: t`Launch of Meta Bitcoin`,
-          done: true,
-        },
-        {
-          item: t`BTCZ Foundation`,
-          done: true,
-        },
-        {
-          item: t`BTCZ roadshow debut`,
-          done: true,
-        },
-      ],
-      grid: 4,
+      title: "CDoge",
+      content:
+        "CDoge (CDoge bridge) is the core extension of dogecoin to the Web69 dogeverse. It brings dogecoin greater liquidity to DEX, DeFi, NFT, GameFi, and infinite cross-chain DApps.",
     },
     {
-      name: t`Q3 2022`,
-      list: [
-        {
-          item: t`BTCZ miner M-1 series release`,
-          done: true,
-        },
-        {
-          item: t`Web3 DApp & NFT market launch`,
-          done: true,
-        },
-        {
-          item: t`BTCZ genesis block; first BTCZ mined`,
-          done: true,
-        },
-        {
-          item: t`Listing on DEX`,
-          done: true,
-        },
-        {
-          item: t`External audits`,
-          done: true,
-        },
-      ],
-      grid: 4,
+      title: "CNFT",
+      content:
+        "CNFT is a marketplace created on Cerberus to allow users to mint and exchange NFTs with CDOGE as a payment option.",
     },
     {
-      name: t`Q4 2022`,
-      list: [
-        {
-          item: t`Metabitcointalk.com the world's first Web3 forum for BTCZ`,
-          done: false,
-        },
-        {
-          item: t`BTCZ pool P-1 series release`,
-          done: false,
-        },
-        {
-          item: t`Mining UX improvement`,
-          done: false,
-        },
-        {
-          item: t`Airdrops platform & app`,
-          done: false,
-        },
-        {
-          item: t`Listing on major exchanges`,
-          done: false,
-        },
-      ],
-      grid: 4,
+      title: "CSwap",
+      content:
+        "CSwap is a DEX (Decentralized Exchange) that allows shibes to start pairing their CDOGE with other tokens.",
     },
     {
-      name: t`Q1 2023`,
-      list: [
-        {
-          item: t`Development of payment use cases`,
-          done: false,
-        },
-        {
-          item: t`Intense marketing & community push`,
-          done: false,
-        },
-        {
-          item: t`BTCZ DeFi launch`,
-          done: false,
-        },
-      ],
-      grid: 4,
-    },
-    {
-      name: t`Q2 2023`,
-      list: [
-        {
-          item: t`Staking & Mining related products`,
-          done: false,
-        },
-        {
-          item: t`Development of FPGA miner`,
-          done: false,
-        },
-        {
-          item: t`Development of ASIC miner`,
-          done: false,
-        },
-      ],
-      grid: 4,
-    },
-    {
-      name: t`Q3 2023`,
-      list: [
-        {
-          item: t`wMBTC token launch`,
-          done: false,
-        },
-        {
-          item: t`BTCZ cross chain bridge `,
-          done: false,
-        },
-        {
-          item: t`Integration with DeFi applications`,
-          done: false,
-        },
-      ],
-      grid: 4,
-    },
-    {
-      name: t`Q4 2023`,
-      list: [
-        {
-          item: t`BTCZ mining in 3D metaverse`,
-          done: false,
-        },
-        {
-          item: t`BTCZ metaverse ecosystem launch`,
-          done: false,
-        },
-        {
-          item: t`Support BTCZ DeFi/GameFi/SocialFi applications`,
-          done: false,
-        },
-      ],
-      grid: 6,
-    },
-    {
-      name: t`H1 2024`,
-      list: [
-        {
-          item: t`1T market cap`,
-          done: false,
-        },
-        {
-          item: t`BTCZ investment fund and trust`,
-          done: false,
-        },
-        {
-          item: t`Expand BTCZ metaverse to art, finance, entertainment, and tech`,
-          done: false,
-        },
-      ],
-      grid: 6,
+      title: "Cerbs",
+      content:
+        "Cerbs is a decentralized application platform, supporting Doge DApps built by Cerberus, communities, and partners.",
     },
   ];
-
-  const transforedRoadMap = transforRoad(roadMap);
-
+  const joinList = [
+    { name: "Twitter", imgurl: joinList1 },
+    { name: "Telegram", imgurl: joinList2 },
+    { name: "Github", imgurl: joinList3 },
+    { name: "Discord", imgurl: joinList4 },
+  ];
+  const roadmapList = [
+    {
+      name: "Milestone 1:",
+      list: [
+        "Cerberus universe launch",
+        "CDoge deployment and open source",
+        "CBridge launch for Doge<>CDoge",
+        "Cerberus Proof of Asset",
+      ],
+    },
+    {
+      name: "Milestone 2:",
+      list: [
+        "Berus deployment and open source",
+        "CDoge>>Berus vpool launch on BSC",
+        "CDoge>>Berus vpool launch on ETH",
+        "CSwap launch",
+        "Berus lockdrop system for CSwap LPs",
+        "Berus burn mechanism for CBridge/CSwap fee",
+      ],
+    },
+    {
+      name: "Milestone 3:",
+      list: [
+        "Cerberus doge EVM chain launch",
+        "Cerberus doge EVM chain testnet",
+        "Cerberus doge EVM chain mainnet",
+        "Cerberus doge EVM chain node",
+        "Cerberus doge EVM chain DApp",
+        "Cerberus global investments and partners",
+        "Cerberus hackathon",
+      ],
+    },
+    {
+      name: "Milestone 4:",
+      list: [
+        "Cerberus doge multi-chain Web3 protocol",
+        "Cerberus multi-chain CSwap",
+        "Cerberus multi-chain DApp",
+        "Invest in Elon Musk projects in 100 years",
+      ],
+    },
+  ];
+  const partnerList = [
+    { id: 1, imgurl: partnerList1 },
+    { id: 1, imgurl: partnerList2 },
+    { id: 1, imgurl: partnerList3 },
+    { id: 1, imgurl: partnerList4 },
+    { id: 1, imgurl: partnerList5 },
+    { id: 1, imgurl: partnerList6 },
+  ];
+  const partnerPhoneList = [
+    { id: 1, imgurl: partnerPhoneList1 },
+    { id: 1, imgurl: partnerPhoneList2 },
+    { id: 1, imgurl: partnerPhoneList3 },
+    { id: 1, imgurl: partnerPhoneList4 },
+    { id: 1, imgurl: partnerPhoneList5 },
+    { id: 1, imgurl: partnerPhoneList6 },
+  ];
+  const toWhitePaper = () => window.open("https://whitepaper.cerbs.org/");
   return (
-    <div className={isSmallScreen ? "isMobile" : ""}>
+    <div className={isSmallScreen || isVerySmallScreen ? "home_box mobile_home_box" : "home_box"}>
       <div className="block1">
-        <div className="video_box">
-          <video
-            src={window.location.origin + (isSmallScreen ? "/phone_animation.mp4" : "/Homepage_animation.mp4")}
-            muted
-            autoPlay
-            loop
-            playsInline={true}
-            controls={false}
-            className="coin-vedio"
-          ></video>
-        </div>
-        <Box className="social-link top_socia_link" display="flex" justifyContent="flex-start" flexDirection="column">
-          <div className="txt_container">
-            <Typography className="mbtc-txt">
-              <Trans>Bitcoin zero is an innovative payment network and a new kind of money.</Trans>
-            </Typography>
+        <video
+          src={isSmallScreen || isVerySmallScreen ? "/mobile.mp4" : "/block1.mp4"}
+          muted
+          autoPlay
+          loop
+          playsInline={true}
+          controls={false}
+          className="coin-vedio"
+        />
+        <div className="center_box">
+          <div className="content_box">
+            <img src={center_bg} alt="" />
+            <p className="word_content">
+              Cerberus is an open source dogecoin Web69&EVM infrastructure, designed for the multi-chain dogeverse
+            </p>
+            <div className="bottom_centent">
+              <button className="start_box">Get Started</button>
+              {isSmallScreen || isVerySmallScreen ? null : <div className="more_box">Learn more</div>}
+            </div>
           </div>
-          {/* <Social /> */}
-        </Box>
+        </div>
       </div>
       <div className="block2">
-        {/* <Container
-          style={{
-            paddingLeft: isSmallScreen || isVerySmallScreen ? "1rem" : "3rem",
-            paddingRight: isSmallScreen || isVerySmallScreen ? "1rem" : "3rem",
-            paddingTop: isSmallScreen || isVerySmallScreen ? "2rem" : "6rem",
-            display: isSmallScreen ? "block" : "flex",
-            justifyContent: "flex-end",
-            alignItems: "center",
-          }}
-        > */}
-        <div className="block-left">
-          {/* <img src={HugeDiamondGif} alt="" className="diamond-img" /> */}
-          <video
-            src={window.location.origin + "/logo_animation.mp4"}
-            muted
-            autoPlay
-            loop
-            playsInline={true}
-            controls={false}
-            className="logo-vedio"
-          ></video>
+        <div className="container_box">
+          <img src={isSmallScreen || isVerySmallScreen ? manifestoo : block_bg} alt="" />
+          {isSmallScreen || isVerySmallScreen ? (
+            <div>
+              <p className="first">Save your lonely doge; let it join the fight for global adoption</p>
+              <p className="second">Bridging and leading dogecoin to the multi-chain dogeverse</p>
+              <p className="third">Paving the path for the next-generation dogecoin Web69 infrastructure</p>
+              <p className="forth">1D=1D</p>
+              <div className="white_paper_mobile" onClick={toWhitePaper}>
+                WHITEPAPER
+              </div>
+            </div>
+          ) : (
+            <div className="posti_box">
+              <p className="first_box">Save your lonely doge; let it join the fight for global adoption</p>
+              <p className="second_box">Bridging and leading dogecoin to the multi-chain dogeverse</p>
+              <p className="third_box">Paving the path for the next-generation dogecoin Web69 infrastructure</p>
+              <p className="forth_box">1D=1D</p>
+              {isSmallScreen || isVerySmallScreen ? null : (
+                <button className="white_box" onClick={toWhitePaper}>
+                  WHITEPAPER
+                </button>
+              )}
+              <p className="ball1" />
+              <p className="ball2" />
+              <p className="ball3" />
+              <p className="ball4" />
+              <p className="ball5" />
+            </div>
+          )}
         </div>
-        <div className="block-right">
-          <Typography variant="body1" align="left" className="wimb-text">
-            {t`What is`} <br />
-            {t`Bitcoin Zero?`}
-          </Typography>
-          <ul className="bitcoin-list">
-            <li>
-              <p>
-                Bitcoin Zero uses peer-to-NFT technology to operate with no central authority or banks; managing
-                transactions and the issuing of bitcoins zero is carried out collectively by the network. Bitcoin zero
-                is open-source; its design is public, nobody owns or controls Bitcoin zero and everyone can take part.
-                Through many of its unique properties, Bitcoin zero allows exciting uses that could not be covered by
-                any previous payment system.
-              </p>
-            </li>
-          </ul>
-          <Box sx={{ display: { xs: "block", md: "flex" } }} className="opt-block">
-            <Button className="download-btn" onClick={paperHandler}>
-              <Typography>{t`Meta White Paper`}</Typography>
-            </Button>
-            {/* <div className="opt-list">
-                <Link href="https://www.certik.com/projects/meta-bitcoin" target="_blank" className="opt-audit">
-                  <img src={PartnerCertik} />
-                </Link>
-                <Link
-                  href="https://www.sharkteam.org/report/audit/20220331002C_en.pdf"
-                  target="_blank"
-                  className="opt-audit"
-                >
-                  <img src={PartnerShark} />
-                </Link>
-              </div> */}
-          </Box>
-        </div>
-        {/* </Container> */}
-        <div className="bottom_bg"></div>
       </div>
       <div className="block3">
-        <Container
-          style={{
-            paddingLeft: isSmallScreen || isVerySmallScreen ? "0rem" : "3rem",
-            paddingRight: isSmallScreen || isVerySmallScreen ? "0rem" : "3rem",
-            paddingTop: isSmallScreen || isVerySmallScreen ? "0rem" : "4rem",
-          }}
-        >
-          <Grid container spacing={isSmallScreen ? 3 : 8}>
-            <Grid item xs={12} sm={12} md={6}>
-              <Link
-                className="block-card block-card-first-line"
-                href="#/economy#mbtc"
-                underline="none"
-                style={{
-                  background: `url(${ExplorBg}) no-repeat`,
-                  backgroundSize: "cover",
-                }}
-              >
-                <img src={BtcZ} alt="" className="btcz-img" />
-                <Typography className="card-title">{t`BTCZ`}</Typography>
-              </Link>
-            </Grid>
-            <Grid item xs={12} sm={12} md={6}>
-              <Link
-                className="block-card block-card-first-line"
-                href="#/economy#mfuel"
-                underline="none"
-                style={{
-                  background: `url(${ExplorBg}) no-repeat`,
-                  backgroundSize: "cover",
-                }}
-              >
-                <img src={Fuel} alt="" className="Fuel-img" />
-                <Typography className="card-title">{t`ZFUEL`}</Typography>
-              </Link>
-            </Grid>
-            <Grid item xs={12} sm={12} md={6}>
-              <Link
-                className="block-card"
-                href="#/economy#miner"
-                underline="none"
-                style={{
-                  background: `url(${ExplorBg}) no-repeat`,
-                  backgroundSize: "cover",
-                }}
-              >
-                <img src={NftMiner} alt="" className="NftMiner-img" />
-                <Typography className="card-title">{t`NFT MINER`}</Typography>
-              </Link>
-            </Grid>
-            <Grid item xs={12} sm={12} md={6}>
-              <Link
-                className="block-card"
-                href="#/economy#pool"
-                underline="none"
-                style={{
-                  background: `url(${ExplorBg}) no-repeat`,
-                  backgroundSize: "cover",
-                }}
-              >
-                <img src={NftPool} alt="" className="NftMiner-img" />
-                <Typography className="card-title">{t`NFT POOL`}</Typography>
-              </Link>
-            </Grid>
-            <div className="explore_box">
-              <Typography variant="h4" align="center" className="block-title explore">
-                {t`Explore for more.`}
-              </Typography>
-            </div>
-            <div className="bottom_bg"></div>
-          </Grid>
-        </Container>
-      </div>
-      <div className="block3 other_box">
-        <Container
-          style={{
-            paddingLeft: isSmallScreen || isVerySmallScreen ? "1rem" : "3rem",
-            paddingRight: isSmallScreen || isVerySmallScreen ? "1rem" : "3rem",
-            paddingTop: isSmallScreen || isVerySmallScreen ? "0rem" : "4rem",
-          }}
-        >
-          <Typography variant="h4" align="center" className="block-title new_block_title">
-            {t`Innovation in Payment Systems`}
-          </Typography>
-          <div className="content_tainer">
-            <p className="system_content">
-              BTCZ isn't just about sending money. It has many features and opens many possibilities that the community
-              is still exploring. Here are some of the technologies currently being researched, and in some cases, being
-              turned into real products and services. The most interesting uses of Bitcoin zero are probably still to be
-              discovered.
-            </p>
-          </div>
-          <ul className="system_nav">
-            <li>
-              <div className="top">
-                <div className="left">Control against fraud</div>
-                <div className="right"></div>
-              </div>
-              <p className="bottom_content">
-                An unprecedented level of security is possible with Bitcoin zero. The network provides users with
-                protection against most prevalent types of fraud like chargebacks or unwanted charges, and bitcoins are
-                impossible to counterfeit. Users can backup or encrypt their wallets. Hardware wallets make it very
-                difficult to steal or lose money. Bitcoin is designed to allow its users to have complete control over
-                their money.
-              </p>
-            </li>
-            <li>
-              <div className="top">
-                <div className="left">Global accessibility</div>
-                <div className="right right2"></div>
-              </div>
-              <p className="bottom_content">
-                With Bitcoin zero, all payments in the world can be fully interoperable. Bitcoin allows any bank,
-                business or individual to securely send and receive payments anywhere at any time, with or without a
-                bank account. Bitcoin is available in a large number of countries that still remain out of reach for
-                most payment systems due to their own limitations. Bitcoin increases global access to commerce and it
-                can help international trades to flourish.
-              </p>
-            </li>
-            <li>
-              <div className="top">
-                <div className="left">Cost efficiency</div>
-                <div className="right right3"></div>
-              </div>
-              <p className="bottom_content">
-                With the use of cryptography, secure payments are possible without slow and costly middlemen. A Bitcoin
-                transaction can be much cheaper than its alternatives and be completed in a short time. This means
-                Bitcoin holds some potential to become a common way to transfer any currency in the future. BTCZ could
-                also play a role in reducing poverty in many countries by cutting high transaction fees on workers'
-                salary.
-              </p>
-            </li>
+        <div className="container">
+          <ul className="first_nav">
+            {list &&
+              list.map((item, index) => {
+                return (
+                  <li key={index}>
+                    <div className="top">
+                      <p className="title">{item.title}</p>
+                      <p className="content">{item.content}</p>
+                    </div>
+                    <div className="bottom">
+                      <p>Get Started</p>
+                      <p className="arrow" />
+                    </div>
+                  </li>
+                );
+              })}
           </ul>
-        </Container>
+          <div className="berus_box">
+            <div className="left" />
+            <div className="right">
+              <p className="title">Berus</p>
+              <p className="content">
+                BERUS is the best friend of doge. Sir Berus helps Doge destroy the fiat order and become the people's
+                currency.
+              </p>
+            </div>
+          </div>
+          <div className="join_box">
+            <p className="title">JOIN US</p>
+            <ul>
+              {joinList &&
+                joinList.map((item, index) => {
+                  return (
+                    <li key={index}>
+                      <img src={item.imgurl} alt="" />
+                      <p>{item.name}</p>
+                    </li>
+                  );
+                })}
+            </ul>
+          </div>
+        </div>
+        <div className="bg_box" />
       </div>
+      <div className="block4">
+        <p className="title">Roadmap</p>
+        <div className="content_box">
+          <div className="container_box">
+            <ul>
+              {roadmapList &&
+                roadmapList.map((item, index) => {
+                  return (
+                    <li key={index}>
+                      <p className="title_name">{item.name}</p>
+                      <div className="content_contain">
+                        {item.list.map((ite, inx) => {
+                          return (
+                            <p className="content" key={inx + "_content"}>
+                              {ite}
+                            </p>
+                          );
+                        })}
+                      </div>
+                    </li>
+                  );
+                })}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="block5">
+        <p className="title">Partners</p>
+        <div className="container_box">
+          <ul>
+            {isSmallScreen || isVerySmallScreen
+              ? partnerPhoneList &&
+                partnerPhoneList.map((item, index) => {
+                  return (
+                    <li key={index}>
+                      <img src={item.imgurl} alt="" />
+                    </li>
+                  );
+                })
+              : partnerList &&
+                partnerList.map((item, index) => {
+                  return (
+                    <li key={index}>
+                      <img src={item.imgurl} alt="" />
+                    </li>
+                  );
+                })}
+          </ul>
+        </div>
+        <div className="bottom_bg" />
+      </div>
+      {/* <Footer /> */}
     </div>
   );
 }

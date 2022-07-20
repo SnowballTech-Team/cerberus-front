@@ -1,0 +1,23 @@
+.mobile_footer_box {
+  height: 500px;
+  .container {
+    width: 100%;
+    .left {
+      ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 28px;
+        li {
+          margin-bottom: 36px;
+        }
+        a {
+          font-size: 24px;
+          color: #fff;
+        }
+      }
+      p {
+        padding-left: 28px;
+      }
+    }
+  }
+}

@@ -25,10 +25,6 @@ import { trackGAEvent } from "./helpers/analytics";
 import { getAllInverseBonds } from "./slices/InverseBondSlice";
 import { Home } from "./views/Home";
 import HomeLayout from "./components/HomeLayout";
-import { Economy } from "./views/Home/economy";
-import { Foundation } from "./views/Home/foundation";
-import { Community } from "./views/Home/community";
-import { ZFuel } from "./views/Home/zfuel";
 
 const DEBUG = false;
 
@@ -221,22 +217,16 @@ function App() {
   });
 
   return (
-    <Switch>
-      <Route>
-        <HomeLayout>
-          <Switch>
-            <Route exact path="/">
-              <Redirect to="/home" />
-            </Route>
-            <Route exact path="/home" component={Home}></Route>
-            <Route exact path="/economy" component={Economy}></Route>
-            <Route exact path="/foundation" component={Foundation}></Route>
-            <Route exact path="/community" component={Community}></Route>
-            <Route exact path="/zfuel" component={ZFuel}></Route>
-          </Switch>
-        </HomeLayout>
-      </Route>
-    </Switch>
+    <Route>
+      <HomeLayout>
+        <Switch>
+          <Route exact path="/">
+            <Redirect to="/home" />
+          </Route>
+          <Route exact path="/home" component={Home}></Route>
+        </Switch>
+      </HomeLayout>
+    </Route>
   );
 }
 
