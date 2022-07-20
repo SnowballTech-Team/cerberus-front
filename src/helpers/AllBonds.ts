@@ -14,6 +14,7 @@ import { abi as ReserveOhmEthContract } from "src/abi/reserves/OhmEth.json";
 import { abi as ReserveOhmFraxContract } from "src/abi/reserves/OhmFrax.json";
 import { abi as ReserveOhmLusdContract } from "src/abi/reserves/OhmLusd.json";
 import { addresses, NetworkId } from "src/constants";
+import { getTokenPrice } from "src/helpers";
 import { getBondCalculator } from "src/helpers/BondCalculator";
 import { BondType, CustomBond, LPBond, StableBond } from "src/lib/Bond";
 
@@ -303,8 +304,12 @@ export const cvx = new CustomBond({
       // reserveAddress: "0x6761Cb314E39082e08e1e697eEa23B6D1A77A34b", // guessed
     },
   },
-  customTreasuryBalanceFunc: async function (this: CustomBond) {
-    return 0;
+  customTreasuryBalanceFunc: async function (this: CustomBond, NetworkId, provider) {
+    const cvxPrice: number = await getTokenPrice("convex-finance");
+    const token = this.getContractForReserve(NetworkId, provider);
+    let cvxAmount: BigNumberish = await token.balanceOf(addresses[NetworkId].TREASURY_ADDRESS);
+    cvxAmount = Number(cvxAmount.toString()) / Math.pow(10, 18);
+    return cvxAmount * cvxPrice;
   },
 });
 
@@ -356,8 +361,12 @@ export const cvx_expired = new CustomBond({
       // reserveAddress: "0x6761Cb314E39082e08e1e697eEa23B6D1A77A34b", // guessed
     },
   },
-  customTreasuryBalanceFunc: async function (this: CustomBond) {
-    return 0;
+  customTreasuryBalanceFunc: async function (this: CustomBond, NetworkId, provider) {
+    const cvxPrice: number = await getTokenPrice("convex-finance");
+    const token = this.getContractForReserve(NetworkId, provider);
+    let cvxAmount: BigNumberish = await token.balanceOf(addresses[NetworkId].TREASURY_ADDRESS);
+    cvxAmount = Number(cvxAmount.toString()) / Math.pow(10, 18);
+    return cvxAmount * cvxPrice;
   },
 });
 

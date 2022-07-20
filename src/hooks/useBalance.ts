@@ -5,7 +5,13 @@ import {
   FUSE_POOL_6_ADDRESSES,
   FUSE_POOL_18_ADDRESSES,
   FUSE_POOL_36_ADDRESSES,
+  GOHM_ADDRESSES,
   GOHM_TOKEMAK_ADDRESSES,
+  OHM_ADDRESSES,
+  SOHM_ADDRESSES,
+  V1_OHM_ADDRESSES,
+  V1_SOHM_ADDRESSES,
+  WSOHM_ADDRESSES,
 } from "src/constants/addresses";
 import { DecimalBigNumber } from "src/helpers/DecimalBigNumber/DecimalBigNumber";
 import { queryAssertion } from "src/helpers/react-query/queryAssertion";
@@ -78,4 +84,10 @@ export const useFuseBalance = () => {
   return { [NetworkId.MAINNET]: query } as Record<NetworkId.MAINNET, typeof query>;
 };
 
+export const useOhmBalance = () => useBalance(OHM_ADDRESSES);
+export const useSohmBalance = () => useBalance(SOHM_ADDRESSES);
+export const useGohmBalance = () => useBalance(GOHM_ADDRESSES);
+export const useWsohmBalance = () => useBalance(WSOHM_ADDRESSES);
+export const useV1OhmBalance = () => useBalance(V1_OHM_ADDRESSES);
+export const useV1SohmBalance = () => useBalance(V1_SOHM_ADDRESSES);
 export const useGohmTokemakBalance = () => useBalance(GOHM_TOKEMAK_ADDRESSES);

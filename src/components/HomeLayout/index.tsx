@@ -3,12 +3,26 @@ import "./style.scss";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { t } from "@lingui/macro";
-import Logo from "../../assets/images/logo-4.png";
+import Logo from "../../assets/images/Vector.png";
 import LogoCoin from "../../assets/images/logo-3.png";
+import companyLogo from "../../assets/images/Frame.png";
 import MenuClose from "../../assets/icons/nav-close.svg";
-import Social from "../../components/Sidebar/Social";
+// import Social from "../../components/Sidebar/Social";
+import logoUrl from "../../assets/images/bottom_logo.png";
 
-import { AppBar, Container, useMediaQuery, Link, Typography, Toolbar, Box, Collapse, Button } from "@material-ui/core";
+import {
+  AppBar,
+  Container,
+  useMediaQuery,
+  Link,
+  Typography,
+  Toolbar,
+  Box,
+  // Menu,
+  // MenuItem,
+  Collapse,
+  // Button,
+} from "@material-ui/core";
 import React, { useState } from "react";
 import { Menu as MenuIcon } from "@material-ui/icons";
 import Headroom from "headroom.js";
@@ -21,9 +35,10 @@ export default function HomeLayout({ children }: { children: React.ReactNode }) 
   const isVerySmallScreen = useMediaQuery("(max-width: 379px)");
   const location = useLocation();
   const isFoundation = location.pathname === "/foundation";
+  const [zoomed, setZoomed] = useState(false);
 
   const [anchorElNav, setAnchorElNav] = useState(false);
-
+  console.log(location, "location");
   useEffect(() => {
     const header: HTMLElement = document.querySelector(".fixed-header") as HTMLElement;
     const headroom = new Headroom(header);
@@ -39,17 +54,17 @@ export default function HomeLayout({ children }: { children: React.ReactNode }) 
   };
 
   const links = [
+    // {
+    //   name: t`BTCZ`,
+    //   href: "#/home",
+    // },
     {
-      name: t`MBTC`,
-      href: "#/home",
+      name: t`Community`,
+      href: "#/community",
     },
     {
-      name: t`Economy`,
-      href: "#/economy",
-    },
-    {
-      name: t`Foundation`,
-      href: "#/foundation",
+      name: t`ZFuel`,
+      href: "#/zfuel",
     },
   ];
 
@@ -64,23 +79,36 @@ export default function HomeLayout({ children }: { children: React.ReactNode }) 
         >
           <Toolbar disableGutters>
             <Typography variant="h6" noWrap style={{ lineHeight: 1 }}>
-              <img src={""} alt="MBTC" className="header-logo" />
+              <img src={isFoundation ? LogoCoin : Logo} alt="BTCZ" className="header-logo" />
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+              <Link href="#/home" underline="none" onClick={handleCloseNavMenu}>
+                <img src={companyLogo} className="header-company_logo" />
+              </Link>
               {links.map(link => (
                 <Link href={link.href} underline="none" key={link.name} onClick={handleCloseNavMenu}>
                   <Typography variant="h6">{link.name}</Typography>
                 </Link>
               ))}
             </Box>
-            <Box sx={{ flexGrow: 1, justifyContent: "flex-end", display: { xs: "flex", md: "none" } }}>
+            <Box sx={{ flexGrow: 1, justifyContent: "space-between", display: { xs: "flex", md: "none" } }}>
               {anchorElNav ? (
                 <Box onClick={handleCloseNavMenu}>
-                  <img src={MenuClose} alt="MBTC" className="menu-icon-close" />
+                  <img src={MenuClose} alt="BTCZ" className="menu-icon-close" />
                 </Box>
               ) : (
                 <MenuIcon aria-haspopup="true" onClick={handleOpenNavMenu} className="menu-icon"></MenuIcon>
               )}
+              {/* <Link
+                href="https://app.btc-z.org/#/dashboard"
+                underline="none"
+                target="_blank"
+                style={{ marginLeft: "1rem" }}
+              >
+                <Button variant="contained" className="header-btn">
+                  {t`Enter App`}
+                </Button>
+              </Link> */}
             </Box>
             <Box sx={{ flexGrow: 1, justifyContent: "flex-end", display: { xs: "none", md: "flex" } }}>
               <LocaleSwitcher
@@ -89,8 +117,8 @@ export default function HomeLayout({ children }: { children: React.ReactNode }) 
                 onLocaleChange={selectLocale}
                 label={i18n.locale}
               />
-              <Link
-                href="https://app.meta-btc.org/#/dashboard"
+              {/* <Link
+                href="https://app.btc-z.org/#/dashboard"
                 underline="none"
                 target="_blank"
                 style={{ marginLeft: "1rem" }}
@@ -98,7 +126,7 @@ export default function HomeLayout({ children }: { children: React.ReactNode }) 
                 <Button variant="contained" className="header-btn">
                   {t`Enter App`}
                 </Button>
-              </Link>
+              </Link> */}
             </Box>
           </Toolbar>
           <Box sx={{ display: { xs: "block", md: "none" } }}>
@@ -112,50 +140,55 @@ export default function HomeLayout({ children }: { children: React.ReactNode }) 
                   </Box>
                 ))}
               </Box>
-              <Box className="modile-enter-app-box">
+              {/* <Box className="modile-enter-app-box">
                 <Link href="https://app.meta-btc.org/#/dashboard" underline="none" target="_blank">
                   <Button variant="contained" className="header-btn">
                     {t`Enter App`}
                   </Button>
                 </Link>
-              </Box>
+              </Box> */}
             </Collapse>
           </Box>
         </Container>
       </AppBar>
       {children}
       <div className="bottom">
-        <Typography variant="h4" align="center" className="bottom-title">
+        {/* <Typography variant="h4" align="center" className="bottom-title">
           {t`Get more out of`}
           <br />
           {t`MetaBitcoin`}
-        </Typography>
+        </Typography> */}
+        <div className="bg_box"></div>
+        <img src={logoUrl} alt="" className="logo_img" />
         <Container
           style={{
-            paddingLeft: isSmallScreen || isVerySmallScreen ? "1rem" : "3rem",
-            paddingRight: isSmallScreen || isVerySmallScreen ? "1rem" : "3rem",
-            paddingTop: isSmallScreen || isVerySmallScreen ? "2rem" : "4rem",
-            paddingBottom: isSmallScreen || isVerySmallScreen ? "2rem" : "4rem",
+            // paddingLeft: isSmallScreen || isVerySmallScreen ? "1rem" : "3rem",
+            // paddingRight: isSmallScreen || isVerySmallScreen ? "1rem" : "3rem",
+            paddingTop: isSmallScreen || isVerySmallScreen ? "2rem" : "1rem",
+            paddingBottom: isSmallScreen || isVerySmallScreen ? "2rem" : "0rem",
             display: isSmallScreen ? "block" : "flex",
             justifyContent: "space-between",
             alignItems: "center",
+            borderTop: isSmallScreen || isVerySmallScreen ? "none" : "1px solid #fff",
           }}
         >
           <div className="header-left">
-            <img src={isFoundation ? LogoCoin : Logo} alt="MBTC" className="header-logo" />
+            {/* <img src={isFoundation ? LogoCoin : Logo} alt="BTCZ" className="header-logo" /> */}
+            {/* {!isSmallScreen ? <img src={isFoundation ? LogoCoin : Logo} alt="BTCZ" className="header-logo" /> : null} */}
             <Link href="#/home" underline="none">
-              <Typography variant="h6">{t`MBTC`}</Typography>
+              {/* <Typography variant="h6">{t`BTCZ`}</Typography> */}
+              <img src={companyLogo} className="header-company_logo" />
             </Link>
-            <Link href="#/economy" underline="none">
-              <Typography variant="h6">{t`Economy`}</Typography>
+            <Link href="#/community" underline="none">
+              <Typography variant="h6">{t`Community`}</Typography>
             </Link>
-            <Link href="#/foundation" underline="none">
-              <Typography variant="h6">{t`Foundation`}</Typography>
+            <Link href="#/zfuel" underline="none">
+              <Typography variant="h6">{t`ZFuel`}</Typography>
             </Link>
           </div>
-          <Box className="social-link" display="flex" justifyContent="flex-start" flexDirection="column">
+          {/* <Box className="social-link" display="flex" justifyContent="flex-start" flexDirection="column">
             <Social />
-          </Box>
+          </Box> */}
         </Container>
       </div>
     </div>

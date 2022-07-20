@@ -27,7 +27,7 @@ const useGoogleAnalytics = () => {
       ReactGA.set({ anonymizeIp: true });
       ReactGA.pageview(path);
     }
-  }, [address, location]);
+  }, [location]);
 };
 
 export { useGoogleAnalytics };

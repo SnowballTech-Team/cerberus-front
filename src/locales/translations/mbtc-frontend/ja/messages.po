@@ -22,7 +22,7 @@ msgid "1T market cap"
 msgstr "1"
 
 #: src/views/Home/foundation.tsx:126
-msgid "2. One MBTC/NFT one vote to decide the development and releasing of NFTs."
+msgid "2. One BTCZ/NFT one vote to decide the development and releasing of NFTs."
 msgstr "1"
 
 #: src/views/Home/foundation.tsx:128
@@ -198,7 +198,6 @@ msgstr "1"
 msgid "Dashboard"
 msgstr "1"
 
-#: src/views/Market/Market copy.tsx:62
 #: src/views/Market/Market.tsx:70
 msgid "Date"
 msgstr "1"
@@ -260,7 +259,7 @@ msgid "Enter an amount"
 msgstr "1"
 
 #: src/views/Home/index.tsx:215
-msgid "Expand MBTC metaverse to art, finance, entertainment, and tech"
+msgid "Expand BTCZ metaverse to art, finance, entertainment, and tech"
 msgstr "1"
 
 #: src/views/Home/index.tsx:350
@@ -405,7 +404,7 @@ msgstr "1"
 
 #: src/views/Mine/Mine.tsx:147
 #: src/views/Mine/Temp.tsx:742
-msgid "Harvest MBTC"
+msgid "Harvest BTCZ"
 msgstr "1"
 
 #: src/views/Mine/StakedList.tsx:606
@@ -425,7 +424,7 @@ msgid "Holders, represents the total number of Ohmies (sOHM holders)"
 msgstr "1"
 
 #: src/views/Home/index.tsx:286
-msgid "In 2022, Meta Satoshi Nakamoto launched MBTC, a decentralized digital currency in the metaverse."
+msgid "In 2022, Meta Satoshi Nakamoto launched BTCZ, a decentralized digital currency in the metaverse."
 msgstr "1"
 
 #: src/views/Home/index.tsx:179
@@ -465,78 +464,78 @@ msgstr "1"
 #: src/views/Home/economy.tsx:127
 #: src/views/Home/index.tsx:333
 #: src/views/TreasuryDashboard/TreasuryDashboard.tsx:75
-msgid "MBTC"
+msgid "BTCZ"
 msgstr "1"
 
 #: src/views/Home/index.tsx:143
-msgid "MBTC DeFi launch"
+msgid "BTCZ DeFi launch"
 msgstr "1"
 
 #: src/views/Home/index.tsx:69
-msgid "MBTC Foundation"
+msgid "BTCZ Foundation"
 msgstr "1"
 
 #: src/views/Home/index.tsx:263
-msgid "MBTC Genesis Block Launch: May 3, 2022"
+msgid "BTCZ Genesis Block Launch: May 3, 2022"
 msgstr "1"
 
 #: src/views/Mine/StakedList.tsx:622
-msgid "MBTC Mined"
+msgid "BTCZ Mined"
 msgstr "1"
 
 #: src/views/TreasuryDashboard/components/Metric/Metric.tsx:40
-msgid "MBTC Price"
+msgid "BTCZ Price"
 msgstr "1"
 
 #: src/views/TreasuryDashboard/components/Metric/Metric.tsx:206
-msgid "MBTC Reward"
+msgid "BTCZ Reward"
 msgstr "1"
 
 #: src/views/Home/index.tsx:175
-msgid "MBTC cross chain bridge"
+msgid "BTCZ cross chain bridge"
 msgstr "1"
 
 #: src/views/Home/index.tsx:91
-msgid "MBTC genesis block; first MBTC mined"
+msgid "BTCZ genesis block; first BTCZ mined"
 msgstr "1"
 
 #: src/views/Home/index.tsx:211
-msgid "MBTC investment fund and trust"
+msgid "BTCZ investment fund and trust"
 msgstr "1"
 
 #: src/views/Home/index.tsx:193
-msgid "MBTC metaverse ecosystem launch"
+msgid "BTCZ metaverse ecosystem launch"
 msgstr "1"
 
 #: src/views/Mine/Mine.tsx:156
 #: src/views/Mine/Temp.tsx:751
-msgid "MBTC mined"
+msgid "BTCZ mined"
 msgstr "1"
 
 #: src/views/Home/index.tsx:83
-msgid "MBTC miner M-1 series release"
+msgid "BTCZ miner M-1 series release"
 msgstr "1"
 
 #: src/views/Home/index.tsx:189
-msgid "MBTC mining in 3D metaverse"
+msgid "BTCZ mining in 3D metaverse"
 msgstr "1"
 
 #: src/views/Home/index.tsx:288
 #~ msgid ""
-#~ "MBTC mining requires hash power from NFT miners using next-gen proof-of-NFT validation with zero energy\n"
+#~ "BTCZ mining requires hash power from NFT miners using next-gen proof-of-NFT validation with zero energy\n"
 #~ "consumption."
 #~ msgstr "1"
 
 #: src/views/Home/index.tsx:288
-msgid "MBTC mining requires hash power from NFT miners using next-gen proof-of-NFT validation with zero energy consumption."
+msgid "BTCZ mining requires hash power from NFT miners using next-gen proof-of-NFT validation with zero energy consumption."
 msgstr ""
 
 #: src/views/Home/index.tsx:113
-msgid "MBTC pool P-1 series release"
+msgid "BTCZ pool P-1 series release"
 msgstr "1"
 
 #: src/views/Home/index.tsx:73
-msgid "MBTC roadshow debut"
+msgid "BTCZ roadshow debut"
 msgstr "1"
 
 #: src/views/Market/Market.tsx:253
@@ -561,7 +560,7 @@ msgstr "1"
 
 #: src/views/Mine/Mine.tsx:162
 #: src/views/Mine/Temp.tsx:757
-msgid "MFuel cost"
+msgid "ZFUEL cost"
 msgstr "1"
 
 #: src/views/TreasuryDashboard/treasuryData.ts:192
@@ -623,7 +622,7 @@ msgid "MetaBitcoin"
 msgstr "1"
 
 #: src/views/Home/index.tsx:109
-msgid "Metabitcointalk.com the world's first Web3 forum for MBTC"
+msgid "Metabitcointalk.com the world's first Web3 forum for BTCZ"
 msgstr "1"
 
 #: src/components/Sidebar/NavContent.tsx:36
@@ -633,11 +632,11 @@ msgid "Mine"
 msgstr "1"
 
 #: src/views/TreasuryDashboard/components/Metric/Metric.tsx:154
-msgid "Mined MBTC"
+msgid "Mined BTCZ"
 msgstr "1"
 
 #: src/views/TreasuryDashboard/components/Metric/Metric.tsx:169
-msgid "Mined MBTC Net Worth"
+msgid "Mined BTCZ Net Worth"
 msgstr "1"
 
 #: src/views/Mint/Mint.tsx:105
@@ -691,11 +690,11 @@ msgstr "1"
 
 #: src/views/Home/economy.tsx:106
 #: src/views/Home/economy.tsx:153
-msgid "NFT Miner mines MBTC by providing hash power"
+msgid "NFT Miner mines BTCZ by providing hash power"
 msgstr "1"
 
 #: src/views/Market/Market.tsx:254
-msgid "NFT Miner mines MBTC by providing hash power using proof-of-NFT"
+msgid "NFT Miner mines BTCZ by providing hash power using proof-of-NFT"
 msgstr "1"
 
 #: src/views/Home/economy.tsx:116
@@ -817,7 +816,6 @@ msgstr "1"
 msgid "Pool"
 msgstr "1"
 
-#: src/views/Market/Market copy.tsx:57
 #: src/views/Market/Market.tsx:65
 #: src/views/MarketDetail/MarketDetail.tsx:446
 #: src/views/Wrap/WrapCrossChain.tsx:165
@@ -983,7 +981,7 @@ msgid "Successfully approved"
 msgstr "1"
 
 #: src/views/Home/index.tsx:197
-msgid "Support MBTC DeFi/GameFi/SocialFi applications"
+msgid "Support BTCZ DeFi/GameFi/SocialFi applications"
 msgstr "1"
 
 #: src/views/MyNft/Detail.tsx:494
@@ -1007,7 +1005,7 @@ msgid "TVL Total Value Locked"
 msgstr "1"
 
 #: src/views/Home/foundation.tsx:122
-msgid "The MBTC Foundation is a TDAO established to provide:"
+msgid "The BTCZ Foundation is a TDAO established to provide:"
 msgstr "1"
 
 #: src/views/Home/index.tsx:254
@@ -1029,12 +1027,12 @@ msgstr "1"
 
 #: src/views/Home/index.tsx:292
 #~ msgid ""
-#~ "The maximum supply of MBTC is 21,000,000. Mining rewards are 50MBTC per 10mins initially and will be\n"
+#~ "The maximum supply of BTCZ is 21,000,000. Mining rewards are 50BTCZ per 10mins initially and will be\n"
 #~ "halved every four years."
 #~ msgstr "1"
 
 #: src/views/Home/index.tsx:291
-msgid "The maximum supply of MBTC is 21,000,000. Mining rewards are 50MBTC per 10mins initially and will be halved every four years."
+msgid "The maximum supply of BTCZ is 21,000,000. Mining rewards are 50BTCZ per 10mins initially and will be halved every four years."
 msgstr ""
 
 #: src/views/Home/foundation.tsx:83
@@ -1054,7 +1052,6 @@ msgstr "1"
 msgid "Token doesn't exist on current network. Please switch networks."
 msgstr "1"
 
-#: src/views/Market/Market copy.tsx:52
 #: src/views/Market/Market.tsx:60
 #: src/views/Mine/StakedList.tsx:114
 #: src/views/Mine/UnStakedList.tsx:112

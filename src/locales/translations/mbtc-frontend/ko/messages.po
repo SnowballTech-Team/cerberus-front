@@ -22,8 +22,8 @@ msgid "1T market cap"
 msgstr "1조 시가총액"
 
 #: src/views/Home/foundation.tsx:126
-msgid "2. One MBTC/NFT one vote to decide the development and releasing of NFTs."
-msgstr "2. 하나의 MBTC/NFT 하나의 투표가 NFT 개발 및 출시를 결정합니다."
+msgid "2. One BTCZ/NFT one vote to decide the development and releasing of NFTs."
+msgstr "2. 하나의 BTCZ/NFT 하나의 투표가 NFT 개발 및 출시를 결정합니다."
 
 #: src/views/Home/foundation.tsx:128
 msgid "3. Creating a full and comprehensive roadmap which will guide the future of Meta Bitcoin."
@@ -198,7 +198,6 @@ msgstr "두바이 풀"
 msgid "Dashboard"
 msgstr "대시보드"
 
-#: src/views/Market/Market copy.tsx:62
 #: src/views/Market/Market.tsx:70
 msgid "Date"
 msgstr "일자"
@@ -260,8 +259,8 @@ msgid "Enter an amount"
 msgstr "금액 입력"
 
 #: src/views/Home/index.tsx:215
-msgid "Expand MBTC metaverse to art, finance, entertainment, and tech"
-msgstr "MBTC 메타버스를 예술, 금융, 엔터테인먼트 및 기술로 확장"
+msgid "Expand BTCZ metaverse to art, finance, entertainment, and tech"
+msgstr "BTCZ 메타버스를 예술, 금융, 엔터테인먼트 및 기술로 확장"
 
 #: src/views/Home/index.tsx:350
 msgid "Explore for more."
@@ -405,8 +404,8 @@ msgstr "수확"
 
 #: src/views/Mine/Mine.tsx:147
 #: src/views/Mine/Temp.tsx:742
-msgid "Harvest MBTC"
-msgstr "MBTC 수확"
+msgid "Harvest BTCZ"
+msgstr "BTCZ 수확"
 
 #: src/views/Mine/StakedList.tsx:606
 #: src/views/Mine/Temp.tsx:1035
@@ -425,7 +424,7 @@ msgid "Holders, represents the total number of Ohmies (sOHM holders)"
 msgstr "홀더, Ohmies(sOHM 홀더)의 총 수를 나타냅니다."
 
 #: src/views/Home/index.tsx:286
-msgid "In 2022, Meta Satoshi Nakamoto launched MBTC, a decentralized digital currency in the metaverse."
+msgid "In 2022, Meta Satoshi Nakamoto launched BTCZ, a decentralized digital currency in the metaverse."
 msgstr "2022년 나카모토 메타사토시는 메타버스의 분산형 디지털 화폐인 MBTC를 출시하였습니다."
 
 #: src/views/Home/index.tsx:179
@@ -465,73 +464,73 @@ msgstr "추가 로드중..."
 #: src/views/Home/economy.tsx:127
 #: src/views/Home/index.tsx:333
 #: src/views/TreasuryDashboard/TreasuryDashboard.tsx:75
-msgid "MBTC"
-msgstr "MBTC"
+msgid "BTCZ"
+msgstr "BTCZ"
 
 #: src/views/Home/index.tsx:143
-msgid "MBTC DeFi launch"
-msgstr "MBTC DeFi 출시"
+msgid "BTCZ DeFi launch"
+msgstr "BTCZ DeFi 출시"
 
 #: src/views/Home/index.tsx:69
-msgid "MBTC Foundation"
-msgstr "MBTC 재단"
+msgid "BTCZ Foundation"
+msgstr "BTCZ 재단"
 
 #: src/views/Home/index.tsx:263
-msgid "MBTC Genesis Block Launch: May 3, 2022"
-msgstr "MBTC 제네시스 블록 출시 : 2022년 5월 3일"
+msgid "BTCZ Genesis Block Launch: May 3, 2022"
+msgstr "BTCZ 제네시스 블록 출시 : 2022년 5월 3일"
 
 #: src/views/Mine/StakedList.tsx:622
-msgid "MBTC Mined"
-msgstr "마이닝 MBTC"
+msgid "BTCZ Mined"
+msgstr "마이닝 BTCZ"
 
 #: src/views/TreasuryDashboard/components/Metric/Metric.tsx:40
-msgid "MBTC Price"
-msgstr "MBTC 가격"
+msgid "BTCZ Price"
+msgstr "BTCZ 가격"
 
 #: src/views/TreasuryDashboard/components/Metric/Metric.tsx:206
-msgid "MBTC Reward"
-msgstr "MBTC 보상"
+msgid "BTCZ Reward"
+msgstr "BTCZ 보상"
 
 #: src/views/Home/index.tsx:175
-msgid "MBTC cross chain bridge"
-msgstr "MBTC 크로스 체인 브릿지"
+msgid "BTCZ cross chain bridge"
+msgstr "BTCZ 크로스 체인 브릿지"
 
 #: src/views/Home/index.tsx:91
-msgid "MBTC genesis block; first MBTC mined"
-msgstr "MBTC 제네시스 블록, 첫 번째 마이닝 된 MBTC"
+msgid "BTCZ genesis block; first BTCZ mined"
+msgstr "BTCZ 제네시스 블록, 첫 번째 마이닝 된 BTCZ"
 
 #: src/views/Home/index.tsx:211
-msgid "MBTC investment fund and trust"
-msgstr "MBTC 투자 펀드 및 신탁"
+msgid "BTCZ investment fund and trust"
+msgstr "BTCZ 투자 펀드 및 신탁"
 
 #: src/views/Home/index.tsx:193
-msgid "MBTC metaverse ecosystem launch"
-msgstr "MBTC 메타버스 생태계 출시"
+msgid "BTCZ metaverse ecosystem launch"
+msgstr "BTCZ 메타버스 생태계 출시"
 
 #: src/views/Mine/Mine.tsx:156
 #: src/views/Mine/Temp.tsx:751
-msgid "MBTC mined"
-msgstr "마이닝 된 MBTC"
+msgid "BTCZ mined"
+msgstr "마이닝 된 BTCZ"
 
 #: src/views/Home/index.tsx:83
-msgid "MBTC miner M-1 series release"
-msgstr "MBTC 마이너 M-1 시리즈 출시"
+msgid "BTCZ miner M-1 series release"
+msgstr "BTCZ 마이너 M-1 시리즈 출시"
 
 #: src/views/Home/index.tsx:189
-msgid "MBTC mining in 3D metaverse"
-msgstr "3D 메타버스 내의 MBTC 마이닝"
+msgid "BTCZ mining in 3D metaverse"
+msgstr "3D 메타버스 내의 BTCZ 마이닝"
 
 #: src/views/Home/index.tsx:288
-msgid "MBTC mining requires hash power from NFT miners using next-gen proof-of-NFT validation with zero energy consumption."
-msgstr "MBTC 마이닝은 에너지가 0인 차세대 NFT 증명 검증을 사용하는 NFT 마이너의 해시 파워를 필요로 한다 소모"
+msgid "BTCZ mining requires hash power from NFT miners using next-gen proof-of-NFT validation with zero energy consumption."
+msgstr "BTCZ 마이닝은 에너지가 0인 차세대 NFT 증명 검증을 사용하는 NFT 마이너의 해시 파워를 필요로 한다 소모"
 
 #: src/views/Home/index.tsx:113
-msgid "MBTC pool P-1 series release"
-msgstr "MBTC 풀 P-1 시리즈 출시"
+msgid "BTCZ pool P-1 series release"
+msgstr "BTCZ 풀 P-1 시리즈 출시"
 
 #: src/views/Home/index.tsx:73
-msgid "MBTC roadshow debut"
-msgstr "MBTC 로드쇼 데뷔"
+msgid "BTCZ roadshow debut"
+msgstr "BTCZ 로드쇼 데뷔"
 
 #: src/views/Market/Market.tsx:253
 msgid "META BITCOIN NFT"
@@ -555,7 +554,7 @@ msgstr "MFUEL 비용"
 
 #: src/views/Mine/Mine.tsx:162
 #: src/views/Mine/Temp.tsx:757
-msgid "MFuel cost"
+msgid "ZFUEL cost"
 msgstr "MFUEL 비용"
 
 #: src/views/TreasuryDashboard/treasuryData.ts:192
@@ -617,7 +616,7 @@ msgid "MetaBitcoin"
 msgstr "메타 비트코인"
 
 #: src/views/Home/index.tsx:109
-msgid "Metabitcointalk.com the world's first Web3 forum for MBTC"
+msgid "Metabitcointalk.com the world's first Web3 forum for BTCZ"
 msgstr "Metabitcointalk.com : MBTC를 위한 세계 최초의 웹3 포럼"
 
 #: src/components/Sidebar/NavContent.tsx:36
@@ -627,11 +626,11 @@ msgid "Mine"
 msgstr "마이닝"
 
 #: src/views/TreasuryDashboard/components/Metric/Metric.tsx:154
-msgid "Mined MBTC"
-msgstr "마이닝 된 MBTC"
+msgid "Mined BTCZ"
+msgstr "마이닝 된 BTCZ"
 
 #: src/views/TreasuryDashboard/components/Metric/Metric.tsx:169
-msgid "Mined MBTC Net Worth"
+msgid "Mined BTCZ Net Worth"
 msgstr "마이닝 된 MBTC의 순자산"
 
 #: src/views/Mint/Mint.tsx:105
@@ -685,11 +684,11 @@ msgstr "NFT 마이너"
 
 #: src/views/Home/economy.tsx:106
 #: src/views/Home/economy.tsx:153
-msgid "NFT Miner mines MBTC by providing hash power"
+msgid "NFT Miner mines BTCZ by providing hash power"
 msgstr "NFT 마이너는 해시 파워를 제공하여 MBTC를 마이닝 합니다."
 
 #: src/views/Market/Market.tsx:254
-msgid "NFT Miner mines MBTC by providing hash power using proof-of-NFT"
+msgid "NFT Miner mines BTCZ by providing hash power using proof-of-NFT"
 msgstr "NFT 마이너는 NFT 증명을 사용하고 해시파워를 제공하여 MBTC를 마이닝 합니다."
 
 #: src/views/Home/economy.tsx:116
@@ -811,7 +810,6 @@ msgstr "테스트넷으로 전환해주세요!"
 msgid "Pool"
 msgstr "풀"
 
-#: src/views/Market/Market copy.tsx:57
 #: src/views/Market/Market.tsx:65
 #: src/views/MarketDetail/MarketDetail.tsx:446
 #: src/views/Wrap/WrapCrossChain.tsx:165
@@ -977,8 +975,8 @@ msgid "Successfully approved"
 msgstr "성공적으로 승인됨"
 
 #: src/views/Home/index.tsx:197
-msgid "Support MBTC DeFi/GameFi/SocialFi applications"
-msgstr "MBTC DeFi/GameFi/SocialFi 앱 지원"
+msgid "Support BTCZ DeFi/GameFi/SocialFi applications"
+msgstr "BTCZ DeFi/GameFi/SocialFi 앱 지원"
 
 #: src/views/MyNft/Detail.tsx:494
 msgid "Sure to Sell"
@@ -1001,8 +999,8 @@ msgid "TVL Total Value Locked"
 msgstr "총 예치 금액(TVL) "
 
 #: src/views/Home/foundation.tsx:122
-msgid "The MBTC Foundation is a TDAO established to provide:"
-msgstr "MBTC 재단은 다음을 제공하기 위해 설립된 TDAO입니다.:"
+msgid "The BTCZ Foundation is a TDAO established to provide:"
+msgstr "BTCZ 재단은 다음을 제공하기 위해 설립된 TDAO입니다.:"
 
 #: src/views/Home/index.tsx:254
 msgid "The Next Generation Crypto Providing a Cross-chain Trust Standard in the Metaverse"
@@ -1022,8 +1020,8 @@ msgid "The market is temporarily closed."
 msgstr "시장은 일시적으로 문을 닫았습니다."
 
 #: src/views/Home/index.tsx:291
-msgid "The maximum supply of MBTC is 21,000,000. Mining rewards are 50MBTC per 10mins initially and will be halved every four years."
-msgstr "MBTC의 최대 공급량은 21,000,000개이고, 마이닝 보상은 초기에 10분당 50MBTC 입니다 그리고 4년마다 반감기가 있습니다."
+msgid "The maximum supply of BTCZ is 21,000,000. Mining rewards are 50BTCZ per 10mins initially and will be halved every four years."
+msgstr "MBTC의 최대 공급량은 21,000,000개이고, 마이닝 보상은 초기에 10분당 50BTCZ 입니다 그리고 4년마다 반감기가 있습니다."
 
 #: src/views/Home/foundation.tsx:83
 msgid "TheCuteDictator"
@@ -1042,7 +1040,6 @@ msgstr "금일"
 msgid "Token doesn't exist on current network. Please switch networks."
 msgstr "현재 네트워크에 토큰이 없습니다. 네트워크를 전환해주세요."
 
-#: src/views/Market/Market copy.tsx:52
 #: src/views/Market/Market.tsx:60
 #: src/views/Mine/StakedList.tsx:114
 #: src/views/Mine/UnStakedList.tsx:112

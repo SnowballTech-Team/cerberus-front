@@ -1,6 +1,7 @@
 .dapp-topbar {
   width: 100%;
   align-items: center;
+  padding-right: 18px;
   a,
   button {
     white-space: nowrap !important;
@@ -15,10 +16,21 @@
       padding: 9.5px !important;
     }
   }
+  .wallet_btn {
+    margin: 2px !important;
+    margin-right: 10px !important;
+    // margin: 0px !important;
+    padding: 0 30.5px;
+  }
 }
+
 .left-back {
-  margin-left: 260px;
+  margin-left: 180px;
+  margin-top: 5px;
   cursor: pointer;
+  & > svg {
+    display: none;
+  }
 }
 .tablet .dapp-topbar {
   justify-content: space-between;
@@ -58,31 +70,12 @@
   }
 }
 @media (min-width: 750px) {
-  .my-ntf {
-    height: 52px;
-    font-size: 24px;
-    font-family: Manrope-ExtraBold, Manrope;
-    font-weight: 800;
-    color: #FFFFFF;
-    line-height: 52px;
-    margin-right: 58px;
-    background: linear-gradient(320.66deg, #7301B8 14.75%, #9511FD 84.81%);
-    &:hover {
-      background: linear-gradient(320.66deg, #8801da 14.75%, #a433fd 84.81%);
-    }
-    border-radius: 24px !important;
-    padding: 6px 16px !important;
-    .my-nft-num {
-      display: inline-block;
-      min-width: 30px;
-    }
-  }
   #ohm-menu-button {
     // width: 87px;
     // height: 24px;
-    background: #D39B33;
+    background: #d39b33;
     opacity: 1;
-    color:#fff;
+    color: #fff;
     border-radius: 24px;
   }
 }
@@ -92,10 +85,10 @@
     font-size: 0.875rem !important;
     font-family: Manrope-ExtraBold, Manrope;
     font-weight: 800;
-    color: #FFFFFF;
+    color: #ffffff;
     line-height: 52px;
     margin-right: 20px;
-    background: linear-gradient(320.66deg, #7301B8 14.75%, #9511FD 84.81%);
+    background: linear-gradient(320.66deg, #7301b8 14.75%, #9511fd 84.81%);
     &:hover {
       background: linear-gradient(320.66deg, #8801da 14.75%, #a433fd 84.81%);
     }
@@ -112,10 +105,14 @@
   #ohm-menu-button {
     // width: 87px;
     // height: 24px;
-    background: #D39B33;
+    background: #d39b33;
     opacity: 1;
-    color:#fff;
-    border-radius:24px;
+    color: #fff;
+    border-radius: 24px;
+  }
+  .change_padding {
+    padding: 0 8px !important;
+    font-size: 14px !important;
   }
 }
 [title="Change locale"] {
@@ -123,7 +120,7 @@
   width: 40px !important;
   padding: 3px !important;
   min-width: 40px !important;
-  background: #3E0F79A6 !important;
+  background: #3e0f79a6 !important;
   border-radius: 13px !important;
   &.MuiButton-containedSecondary:hover {
     background: #290053 !important;

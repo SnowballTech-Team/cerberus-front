@@ -7,7 +7,7 @@
     justify-content: center;
   }
   .small-icon {
-    margin-left: .5rem;
+    margin-left: 0.5rem;
     cursor: pointer;
   }
 }
@@ -69,8 +69,123 @@
     }
   }
 }
+.wallet_box {
+  // padding: 2px;
+  // padding-right: 10px;
+  background: #25edbc;
+  border-radius: 50px;
+  height: 44px;
+  margin-top: 6px;
+  position: relative;
+  .wallet_btn {
+    z-index: 10;
+  }
+}
+.cancle_bg {
+  background: none;
+  transition: background linear 0.5s;
+}
+.wallet_container {
+  width: 215px;
+  height: 0;
+  background: url("../../../assets/images/wallet_bg.png") no-repeat center;
+  background-size: cover;
+  position: absolute;
+  top: 19px;
+  left: 0px;
+  z-index: 9;
+  transition: height linear 0.3s;
 
+  .init_container {
+    height: 100%;
+    display: none;
+    background: linear-gradient(106.33deg, #003c2d 0.52%, #000000 99.71%);
+    backdrop-filter: blur(73.9453px);
+    border-radius: 7.39453px;
+    padding-bottom: 20px;
+    overflow-y: scroll;
+    .init_box {
+      padding: 0;
+      .toobar_container {
+        padding: 0 10px;
+        height: auto;
+        .address-list {
+          margin-top: 0;
+          .address-list-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: auto;
+            line-height: normal;
+            margin-bottom: 10px;
+            .first_item {
+              display: flex;
+              align-items: center;
+            }
+            .name,
+            .count-only {
+              font-weight: 700;
+              font-size: 12px;
+              height: auto;
+              line-height: normal;
+            }
+            .count-only {
+              position: static;
+            }
+            .icon {
+              width: 27px;
+              height: 27px;
+            }
+          }
+        }
+      }
+      .wallet-link {
+        margin: 0;
+        // padding: 0 10px;
+        width: 100%;
+        padding: 0;
+        justify-content: space-between;
+        border-bottom: 1px solid #25edbc;
+        a {
+          font-weight: normal;
+          font-size: 12px;
+          min-height: auto !important;
+        }
+      }
+    }
+  }
+  .disconnectd_btn:hover {
+    background: #25edbc;
+  }
+}
+.open_wallet {
+  height: 335px;
+  padding: 10px;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  .init_box {
+    background: none;
+    box-shadow: none;
+    backdrop-filter: initial;
+  }
+  .MuiBox-root {
+    display: block;
+  }
+}
 @media (max-width: 750px) {
+  .wallet_box {
+    .wallet_btn {
+    }
+  }
+  .wallet_container {
+    top: 19px;
+    left: 0;
+    .init_box {
+      .toolBar-title {
+        padding-left: 10px;
+      }
+    }
+  }
   .address-list {
     .address-list-item {
       .icon {

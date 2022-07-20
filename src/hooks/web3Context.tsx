@@ -56,7 +56,7 @@ export const useWeb3Context = () => {
   const { onChainProvider } = web3Context;
   return useMemo<onChainProvider>(() => {
     return { ...onChainProvider };
-  }, [onChainProvider]);
+  }, [web3Context]);
 };
 
 export const useAddress = () => {
@@ -74,6 +74,10 @@ const initModal = new Web3Modal({
         rpc: {
           1: NETWORKS[1].uri(),
           4: NETWORKS[4].uri(),
+          42161: NETWORKS[42161].uri(),
+          421611: NETWORKS[421611].uri(),
+          43113: NETWORKS[43113].uri(),
+          43114: NETWORKS[43114].uri(),
           56: NETWORKS[56].uri(),
           97: NETWORKS[97].uri(),
         },
@@ -122,7 +126,7 @@ export const Web3ContextProvider: React.FC<{ children: ReactElement }> = ({ chil
   const [providerUri, setProviderUri] = useState("");
   const [providerInitialized, setProviderInitialized] = useState(false);
 
-  const [web3Modal] = useState<Web3Modal>(initModal);
+  const [web3Modal, setWeb3Modal] = useState<Web3Modal>(initModal);
 
   function hasCachedProvider(): boolean {
     return checkCachedProvider(web3Modal);
@@ -136,7 +140,7 @@ export const Web3ContextProvider: React.FC<{ children: ReactElement }> = ({ chil
       if (!rawProvider.on) {
         return;
       }
-      rawProvider.on("accountsChanged", async () => {
+      rawProvider.on("accountsChanged", async (accounts: string[]) => {
         setTimeout(() => window.location.reload(), 1);
       });
 

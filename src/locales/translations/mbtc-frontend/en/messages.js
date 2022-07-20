@@ -3,8 +3,8 @@
     "1. Support for the Meta Bitcoin through ecosystem development and community advocacy.":
       "1. Support for the Meta Bitcoin through ecosystem development and community advocacy.",
     "1T market cap": "1T market cap",
-    "2. One MBTC/NFT one vote to decide the development and releasing of NFTs.":
-      "2. One MBTC/NFT one vote to decide the development and releasing of NFTs.",
+    "2. One BTCZ/NFT one vote to decide the development and releasing of NFTs.":
+      "2. One BTCZ/NFT one vote to decide the development and releasing of NFTs.",
     "3. Creating a full and comprehensive roadmap which will guide the future of Meta Bitcoin.":
       "3. Creating a full and comprehensive roadmap which will guide the future of Meta Bitcoin.",
     "ABOUT THE FOUNDATION": "ABOUT THE FOUNDATION",
@@ -61,8 +61,8 @@
     "Editing sOHM donation amount": "Editing sOHM donation amount",
     "Enter App": "Enter App",
     "Enter an amount": "Enter an amount",
-    "Expand MBTC metaverse to art, finance, entertainment, and tech":
-      "Expand MBTC metaverse to art, finance, entertainment, and tech",
+    "Expand BTCZ metaverse to art, finance, entertainment, and tech":
+      "Expand BTCZ metaverse to art, finance, entertainment, and tech",
     "Explore for more.": "Explore for more.",
     "External audits": "External audits",
     "Fail to batch stake": "Fail to batch stake",
@@ -94,13 +94,13 @@
     "Growth Partner": "Growth Partner",
     "H1 2024": "H1 2024",
     Harvest: "Harvest",
-    "Harvest MBTC": "Harvest MBTC",
+    "Harvest BTCZ": "Harvest BTCZ",
     HashRate: "HashRate",
     "Hashrate:": "Hashrate:",
     "Holders, represents the total number of Ohmies (sOHM holders)":
       "Holders, represents the total number of Ohmies (sOHM holders)",
-    "In 2022, Meta Satoshi Nakamoto launched MBTC, a decentralized digital currency in the metaverse.":
-      "In 2022, Meta Satoshi Nakamoto launched MBTC, a decentralized digital currency in the metaverse.",
+    "In 2022, Meta Satoshi Nakamoto launched BTCZ, a decentralized digital currency in the metaverse.":
+      "In 2022, Meta Satoshi Nakamoto launched BTCZ, a decentralized digital currency in the metaverse.",
     "Integration with DeFi applications": "Integration with DeFi applications",
     "Intense marketing & community push": "Intense marketing & community push",
     "Invalid tokenId": "Invalid tokenId",
@@ -108,31 +108,31 @@
     "Listing on DEX": "Listing on DEX",
     "Listing on major exchanges": "Listing on major exchanges",
     "Loading More ...": "Loading More ...",
-    MBTC: "MBTC",
-    "MBTC DeFi launch": "MBTC DeFi launch",
-    "MBTC Foundation": "MBTC Foundation",
-    "MBTC Genesis Block Launch: May 3, 2022": "MBTC Genesis Block Launch: May 3, 2022",
-    "MBTC Mined": "MBTC Mined",
-    "MBTC Price": "MBTC Price",
-    "MBTC Reward": "MBTC Reward",
-    "MBTC cross chain bridge": "MBTC cross chain bridge",
-    "MBTC genesis block; first MBTC mined": "MBTC genesis block; first MBTC mined",
-    "MBTC investment fund and trust": "MBTC investment fund and trust",
-    "MBTC metaverse ecosystem launch": "MBTC metaverse ecosystem launch",
-    "MBTC mined": "MBTC mined",
-    "MBTC miner M-1 series release": "MBTC miner M-1 series release",
-    "MBTC mining in 3D metaverse": "MBTC mining in 3D metaverse",
-    "MBTC mining requires hash power from NFT miners using next-gen proof-of-NFT validation with zero energy\nconsumption.":
-      "MBTC mining requires hash power from NFT miners using next-gen proof-of-NFT validation with zero energy\nconsumption.",
-    "MBTC mining requires hash power from NFT miners using next-gen proof-of-NFT validation with zero energy consumption.":
-      "MBTC mining requires hash power from NFT miners using next-gen proof-of-NFT validation with zero energy consumption.",
-    "MBTC pool P-1 series release": "MBTC pool P-1 series release",
-    "MBTC roadshow debut": "MBTC roadshow debut",
+    BTCZ: "BTCZ",
+    "BTCZ DeFi launch": "BTCZ DeFi launch",
+    "BTCZ Foundation": "BTCZ Foundation",
+    "BTCZ Genesis Block Launch: May 3, 2022": "BTCZ Genesis Block Launch: May 3, 2022",
+    "BTCZ Mined": "BTCZ Mined",
+    "BTCZ Price": "BTCZ Price",
+    "BTCZ Reward": "BTCZ Reward",
+    "BTCZ cross chain bridge": "BTCZ cross chain bridge",
+    "BTCZ genesis block; first BTCZ mined": "BTCZ genesis block; first BTCZ mined",
+    "BTCZ investment fund and trust": "BTCZ investment fund and trust",
+    "BTCZ metaverse ecosystem launch": "BTCZ metaverse ecosystem launch",
+    "BTCZ mined": "BTCZ mined",
+    "BTCZ miner M-1 series release": "BTCZ miner M-1 series release",
+    "BTCZ mining in 3D metaverse": "BTCZ mining in 3D metaverse",
+    "BTCZ mining requires hash power from NFT miners using next-gen proof-of-NFT validation with zero energy\nconsumption.":
+      "BTCZ mining requires hash power from NFT miners using next-gen proof-of-NFT validation with zero energy\nconsumption.",
+    "BTCZ mining requires hash power from NFT miners using next-gen proof-of-NFT validation with zero energy consumption.":
+      "BTCZ mining requires hash power from NFT miners using next-gen proof-of-NFT validation with zero energy consumption.",
+    "BTCZ pool P-1 series release": "BTCZ pool P-1 series release",
+    "BTCZ roadshow debut": "BTCZ roadshow debut",
     "META BITCOIN NFT": "META BITCOIN NFT",
     MFUEL: "MFUEL",
     MFuel: "MFuel",
     "MFuel Cost": "MFuel Cost",
-    "MFuel cost": "MFuel cost",
+    "ZFUEL cost": "ZFUEL cost",
     "Market SLP": "Market SLP",
     "Marketing and business analyst": "Marketing and business analyst",
     Max: "Max",
@@ -148,11 +148,11 @@
     "Meta-Intel Pentium 4": "Meta-Intel Pentium 4",
     "Meta-Intel Pentium 4 #": "Meta-Intel Pentium 4 #",
     MetaBitcoin: "MetaBitcoin",
-    "Metabitcointalk.com the world's first Web3 forum for MBTC":
-      "Metabitcointalk.com the world's first Web3 forum for MBTC",
+    "Metabitcointalk.com the world's first Web3 forum for BTCZ":
+      "Metabitcointalk.com the world's first Web3 forum for BTCZ",
     Mine: "Mine",
-    "Mined MBTC": "Mined MBTC",
-    "Mined MBTC Net Worth": "Mined MBTC Net Worth",
+    "Mined BTCZ": "Mined BTCZ",
+    "Mined BTCZ Net Worth": "Mined BTCZ Net Worth",
     MinerToken: "MinerToken",
     "Miners in wallet": "Miners in wallet",
     "Mining UX improvement": "Mining UX improvement",
@@ -164,9 +164,9 @@
     "My Wallet": "My Wallet",
     "NFT Market": "NFT Market",
     "NFT Miner": "NFT Miner",
-    "NFT Miner mines MBTC by providing hash power": "NFT Miner mines MBTC by providing hash power",
-    "NFT Miner mines MBTC by providing hash power using proof-of-NFT":
-      "NFT Miner mines MBTC by providing hash power using proof-of-NFT",
+    "NFT Miner mines BTCZ by providing hash power": "NFT Miner mines BTCZ by providing hash power",
+    "NFT Miner mines BTCZ by providing hash power using proof-of-NFT":
+      "NFT Miner mines BTCZ by providing hash power using proof-of-NFT",
     "NFT Pool": "NFT Pool",
     "NFT Pool empowers miners by receiving and burning MFuels":
       "NFT Pool empowers miners by receiving and burning MFuels",
@@ -236,21 +236,21 @@
     "Success to unstake": "Success to unstake",
     "Success to withdraw all": "Success to withdraw all",
     "Successfully approved": "Successfully approved",
-    "Support MBTC DeFi/GameFi/SocialFi applications": "Support MBTC DeFi/GameFi/SocialFi applications",
+    "Support BTCZ DeFi/GameFi/SocialFi applications": "Support BTCZ DeFi/GameFi/SocialFi applications",
     "Sure to Sell": "Sure to Sell",
     "Sure to transfer": "Sure to transfer",
     "TOKEN ID": "TOKEN ID",
     "TVL Total Value Locked": "TVL Total Value Locked",
-    "The MBTC Foundation is a TDAO established to provide:": "The MBTC Foundation is a TDAO established to provide:",
+    "The BTCZ Foundation is a TDAO established to provide:": "The BTCZ Foundation is a TDAO established to provide:",
     "The Next Generation Crypto Providing a Cross-chain Trust Standard in the Metaverse":
       "The Next Generation Crypto Providing a Cross-chain Trust Standard in the Metaverse",
     "The annual percentage yield (APY)": "The annual percentage yield (APY)",
     "The director": "The director",
     "The market is temporarily closed.": "The market is temporarily closed.",
-    "The maximum supply of MBTC is 21,000,000. Mining rewards are 50MBTC per 10mins initially and will be\nhalved every four years.":
-      "The maximum supply of MBTC is 21,000,000. Mining rewards are 50MBTC per 10mins initially and will be\nhalved every four years.",
-    "The maximum supply of MBTC is 21,000,000. Mining rewards are 50MBTC per 10mins initially and will be halved every four years.":
-      "The maximum supply of MBTC is 21,000,000. Mining rewards are 50MBTC per 10mins initially and will be halved every four years.",
+    "The maximum supply of BTCZ is 21,000,000. Mining rewards are 50BTCZ per 10mins initially and will be\nhalved every four years.":
+      "The maximum supply of BTCZ is 21,000,000. Mining rewards are 50BTCZ per 10mins initially and will be\nhalved every four years.",
+    "The maximum supply of BTCZ is 21,000,000. Mining rewards are 50BTCZ per 10mins initially and will be halved every four years.":
+      "The maximum supply of BTCZ is 21,000,000. Mining rewards are 50BTCZ per 10mins initially and will be halved every four years.",
     TheCuteDictator: "TheCuteDictator",
     TheLibertyWalk: "TheLibertyWalk",
     Today: "Today",

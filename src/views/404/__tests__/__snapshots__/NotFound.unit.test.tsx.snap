@@ -9,7 +9,7 @@ exports[`<NotFound/> should render component 1`] = `
       class="not-found-header"
     >
       <a
-        href="https://meta-btc.org/#/home"
+        href="https://olympusdao.finance"
         target="_blank"
       >
         <img

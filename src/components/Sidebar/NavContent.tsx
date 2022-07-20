@@ -6,8 +6,8 @@ import { Box, Divider, Link, Paper, SvgIcon } from "@material-ui/core";
 import { NavItem } from "@olympusdao/component-library";
 import React from "react";
 
-import { ReactComponent as MBTCIcon } from "../../assets/icons/mbtc-logo-gold.svg";
-import Social from "./Social";
+import { ReactComponent as MBTCIcon } from "../../assets/icons/Vector.svg";
+// import Social from "./Social";
 
 type NavContentProps = {
   handleDrawerToggle?: () => void;
@@ -19,12 +19,12 @@ const NavContent: React.FC<NavContentProps> = ({ handleDrawerToggle }) => {
       <Box className="dapp-sidebar-inner" display="flex" justifyContent="space-between" flexDirection="column">
         <div className="dapp-menu-top">
           <Box className="branding-header">
-            <Link href={"/#/home"} target="_blank" style={{ marginBottom: "1rem" }}>
+            <Link href={"/#/home"} target="_blank" style={{ marginBottom: "1rem", paddingLeft: "35px" }}>
               <SvgIcon
                 color="primary"
                 component={MBTCIcon}
                 viewBox="0 0 85 61"
-                style={{ minWidth: "63px", minHeight: "46px", width: "63px" }}
+                style={{ minWidth: "77px", minHeight: "66px", width: "77px" }}
               />
             </Link>
             {/* <WalletAddressEns /> */}
@@ -43,9 +43,11 @@ const NavContent: React.FC<NavContentProps> = ({ handleDrawerToggle }) => {
             </div>
           </div>
         </div>
-        <Box className="dapp-menu-social" display="flex" justifyContent="space-between" flexDirection="column">
-          <Social />
-        </Box>
+        {/* <Box className="dapp-menu-social" display="flex" justifyContent="center">
+          <div className="social_box">
+            <Social />
+          </div>
+        </Box> */}
       </Box>
     </Paper>
   );

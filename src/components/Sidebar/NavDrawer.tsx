@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 
 import NavContent from "./NavContent";
 
-const drawerWidth = 280;
+const drawerWidth = 220;
 
 const useStyles = makeStyles(theme => ({
   drawer: {

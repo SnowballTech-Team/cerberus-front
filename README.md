@@ -1,6 +1,17 @@
-# [MBTC Frontend](https://meta-btc.org)
+[![Lighthouse PWA Test](https://github.com/OlympusDAO/olympus-frontend/actions/workflows/lighthouse.yml/badge.svg)](https://github.com/OlympusDAO/olympus-frontend/actions/workflows/lighthouse.yml)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+[![OHM Discord](https://img.shields.io/badge/chat-on%20discord-7289DA.svg)](https://discord.gg/gGZUMVDuhQ)
+![Branches Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/appleseed-iii/d630a3bd1cf13bb3dc3c1925df28efcd/raw/olympus-frontend__coverage__branches__heads_develop.json)
+![Lines Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/appleseed-iii/d630a3bd1cf13bb3dc3c1925df28efcd/raw/olympus-frontend__coverage__lines__heads_develop.json)
+![Statements Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/appleseed-iii/d630a3bd1cf13bb3dc3c1925df28efcd/raw/olympus-frontend__coverage__statements__heads_develop.json)
+![Functions Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/appleseed-iii/d630a3bd1cf13bb3dc3c1925df28efcd/raw/olympus-frontend__coverage__functions__heads_develop.json)
 
-This is the front-end repo for MBTC which is the Next Generation Crypto Providing a Cross-chain Trust Standard in the Metaverse.
+# [Ω Olympus Frontend](https://app.olympusdao.finance/)
+
+This is the front-end repo for Olympus that allows users to be part of the future of _Meta Greece_.
+
+We are moving at web3 speed and we are looking for talented contributors to boost this rocket. Take a look at our [CONTRIBUTING GUIDE](CONTRIBUTING.md) if you are considering joining a world class DAO.
+
 ## 🔧 Setting up Local Development
 
 Required:
@@ -9,6 +20,21 @@ Required:
 - [Yarn](https://classic.yarnpkg.com/en/docs/install/)
 - [Git](https://git-scm.com/downloads)
 
+```bash
+$ git clone https://github.com/OlympusDAO/olympus-frontend.git
+$ cd olympus-frontend
+
+# set up your environment variables
+# read the comments in the .env files for what is required/optional
+$ cp .env.example .env
+
+# fill in your own values in .env, then =>
+$ yarn
+$ yarn start
+
+# Set up Husky (for pre-commit hooks) by running:
+$ yarn prepare
+```
 
 The site is now running at `http://localhost:3000`!
 Open the source code and start editing!
@@ -53,6 +79,16 @@ Unit tests should minimize dependency on remote API calls. Remote API calls slow
 
 We use [`fast-check`](https://github.com/dubzzz/fast-check) for generative testing which provides property-based coverage for ranges of input values.
 [Here is an example](src/helpers/33Together.unit.test.ts) of a unit test case in this repo that uses generative testing.
+
+### Snapshot Testing
+
+We use [Jest Snapshot tests](https://jestjs.io/docs/snapshot-testing) to make sure the UI does not change unexpectedly.
+When you make changes to the UI (intentionally), you likely will have to update the Snapshots. You can do so by running:
+`yarn snapshot`.
+
+[Here is an example](src/views/Stake/__tests__/Stake.unit.test.tsx) snapshot test and [here is the correspoding recorded snapshot](https://github.com/OlympusDAO/olympus-frontend/blob/develop/src/views/Stake/__tests__/__snapshots__/Stake.unit.test.tsx.snap). Keep in mind that for snapshot tests to be meaningful, they have to pre-populate components with variety of data sets (realistic, edge case, invalid).
+
+[Here is a good blog post](https://dev.to/tobiastimm/property-based-testing-with-react-and-fast-check-3dce) about testing React components with generative data sets.
 
 ### React Component Testing
 
@@ -132,6 +168,18 @@ If you are a new contributor, you can fork the repo and start a pre-configured g
 
 Then follow the standard [Github fork & PR workflow](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
 
+### Permissioned Contributors
+
+If you are an established contributor with access rights to create and push to branches in this repo, you can use a simpler flow.
+
+1. Obtain a Personal Access Token from your github UI.
+2. In your gitpod dashboard, set a new variable named `GITHUB_OHM_PERSONAL_ACCESS_TOKEN` to the value of the access token.
+3. Use the button below to start a pre-configured gidpod environment.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/OlympusDAO/olympus-frontend)
+
+4. Follow the simplified [Github Flow](https://docs.github.com/en/get-started/quickstart/github-flow) to create new branches in the repo and submit PRs.
+
 ## Architecture/Layout
 
 The app is written in [React](https://reactjs.org/) using [Redux](https://redux.js.org/) as the state container.
@@ -179,6 +227,33 @@ If you wish to use a theme's color scheme manually, follow these steps:
 
 For the available theme properties, take a look at the themes in `src/themes`.
 
+## Application translation
+
+Olympus uses [linguijs](https://github.com/lingui/js-lingui) to manage translation.
+
+The language files are located in a submodule deployed in `src/locales/translations`. This submodule points to the [olympus translation repository](https://github.com/OlympusDAO/olympus-translations)
+
+In order to mark text for translation you can use:
+
+- The <Trans> component in jsx templates eg. `<Trans>Translate me!</Trans>`
+- The t function in javascript code and jsx templates. `` t`Translate me` ``
+  You can also add comments for the translators. eg.
+
+```JSX
+t({
+ id: "do_bond",
+ comment: "The action of bonding (verb)",
+})
+```
+
+- Where a variable/javascript function is required within a block of translatable text, a different format is used:
+
+```JSX
+{`${t`Your current Staked Balance is `} ${getSOhmBalance().toFixed(2)} sOHM`}
+```
+
+When new texts are created or existing texts are modified in the application please leave a message in the OlympusDao app-translation channel for the translators to translate them.
+
 ### Resolving merge conflicts with translations
 
 ```bash
@@ -219,9 +294,39 @@ An up-to-date list of available components, implementation examples as well as d
 
 [![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@main/badge/badge-storybook.svg)](https://master--61c4d644c064da004aebdd97.chromatic.com/)
 
+Contributions are welcome and encouraged to our Component Library. If you see repeated UI patterns not represented in the library, or would like to enhance functionality (such as adding assets to our Icon or Token components), you're welcome to [submit a PR to the component-library project](https://github.com/OlympusDAO/component-library). Please fully review component documentation in Storybook before submitting a PR.
+
 ## 🚀 Deployment
 
 Auto deployed on [Fleek.co](http://fleek.co/) fronted by [Cloudflare](https://www.cloudflare.com/). Since it is hosted via IPFS there is no running "server" component and we don't have server sided business logic. Users are served an `index.html` and javascript to run our applications.
+
+_**TODO**: TheGraph implementation/how/why we use it._
+
+### Continuous deployment
+
+Commits to the follow branches are automatically deployed to their respective URLs.
+| Branch | URL |
+| --- | --- |
+| master | <https://app.olympusdao.finance> |
+| deploy | <https://staging.olympusdao.finance> |
+
+**Pull Requests**:
+Each PR into master will get its own custom URL that is visible on the PR page. QA & validate changes on that URL before merging into the deploy branch.
+
+### Feature Flags
+
+- Give: by default it is enabled. It can be disabled by setting the `REACT_APP_GIVE_ENABLED` environment variable to "false".
+
+## 👏🏽 Contributing Guidelines
+
+First, take a look at our [CONTRIBUTING GUIDE](CONTRIBUTING.md) .
+
+We keep an updated list of bugs/feature requests in [Github Issues](https://github.com/OlympusDAO/olympusdao/issues).
+
+![GitHub issues](https://img.shields.io/github/issues/olympusdao/olympusdao?style=flat-square)
+
+Filter by ["good first issue"](https://github.com/OlympusDAO/olympusdao/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) to get your feet wet!
+Once you submit a PR, our CI will generate a temporary testing URL where you can validate your changes. Tag any of the gatekeepers on the review to merge them into master.
 
 _**NOTE**_: For big changes associated with feature releases/milestones, they will be merged onto the `develop` branch for more thorough QA before a final merge to `master`
 

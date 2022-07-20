@@ -172,7 +172,10 @@ const getTypeFromAction = (action: string): string => {
 // Submits transactions to deposit, edit or withdraw to Give contract
 export const changeGive = createAsyncThunk(
   "give/changeGive",
-  async ({ action, value, recipient, provider, address, networkID }: IActionValueRecipientAsyncThunk, { dispatch }) => {
+  async (
+    { action, value, recipient, provider, address, networkID, eventSource }: IActionValueRecipientAsyncThunk,
+    { dispatch },
+  ) => {
     if (!provider) {
       dispatch(error(t`Please connect your wallet!`));
       return;
@@ -246,7 +249,10 @@ export const changeGive = createAsyncThunk(
 // Submits transactions to deposit, edit or withdraw to Give contract
 export const changeMockGive = createAsyncThunk(
   "give/changeMockGive",
-  async ({ action, value, recipient, provider, address, networkID }: IActionValueRecipientAsyncThunk, { dispatch }) => {
+  async (
+    { action, value, recipient, provider, address, networkID, eventSource }: IActionValueRecipientAsyncThunk,
+    { dispatch },
+  ) => {
     if (!provider) {
       dispatch(error(t`Please connect your wallet!`));
       return;

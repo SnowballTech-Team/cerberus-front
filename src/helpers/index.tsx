@@ -17,8 +17,7 @@ import { ohm_dai, ohm_daiOld, ohm_weth } from "./AllBonds";
 import { Environment } from "./environment/Environment/Environment";
 import { Providers } from "./providers/Providers/Providers";
 import { BigNumber as BigNumberEther } from "bignumber.js";
-import metaintelp4 from "src/assets/images/metaintelp4.png";
-import metaintelcore2duo from "src/assets/images/metaintelcore2duo.png";
+import NFTIMAGE from "src/assets/images/miner.png";
 
 /**
  * gets marketPrice from Ohm-DAI v2
@@ -55,6 +54,34 @@ export async function getV1MarketPrice() {
   const pairContract = new ethers.Contract(ohm_dai_address || "", PairContractABI, mainnetProvider) as PairContract;
   const reserves = await pairContract.getReserves();
   return Number(reserves[1].toString()) / Number(reserves[0].toString()) / 10 ** 9;
+}
+
+/**
+ * gets price of token from coingecko
+ * @param tokenId STRING taken from https://www.coingecko.com/api/documentations/v3#/coins/get_coins_list
+ * @returns INTEGER usd value
+ */
+export async function getTokenPrice(tokenId = "olympus"): Promise<number> {
+  let tokenPrice = 0;
+  const priceApiURL = "https://api.olympusdao.finance/api/rest/coingecko_name";
+  try {
+    const ohmResp = (await axios.get(`${priceApiURL}/${tokenId}`)) as {
+      data: { coingeckoTicker: { value: number } };
+    };
+    tokenPrice = ohmResp.data.coingeckoTicker.value;
+  } catch (e) {
+    console.warn(`Error accessing OHM API ${priceApiURL} . Falling back to coingecko API`);
+    // fallback to coingecko
+    const cgResp = (await axios.get(
+      `https://api.coingecko.com/api/v3/simple/price?ids=${tokenId}&vs_currencies=usd`,
+    )) as {
+      data: { [id: string]: { usd: number } };
+    };
+    tokenPrice = cgResp.data[tokenId].usd;
+  } finally {
+    // console.info(`Token price from coingecko: ${tokenPrice}`);
+    return tokenPrice;
+  }
 }
 
 /**
@@ -240,10 +267,11 @@ export const formatMBTC = (number: number, precision = 0) => {
   return a.toFixed(precision);
 };
 
-export const getImage = (tokenId = 0) => {
-  return tokenId <= 30171 ? metaintelp4 : metaintelcore2duo;
+export const getImage = () => {
+  return NFTIMAGE;
 };
 
 export const getNftName = (tokenId = 0) => {
-  return tokenId <= 30171 ? "Meta-Intel Pentium 4 " : "Meta-Intel Core2Duo ";
+  // return tokenId <= 30171 ? "Meta-Intel Pentium 4 " : "Meta-Intel Core2Duo ";
+  return "SHA~256 MINER";
 };

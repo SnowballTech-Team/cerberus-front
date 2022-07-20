@@ -3,11 +3,12 @@ import { NFTMiner_ADDRESS } from "src/contract";
 import { useWeb3Context } from "./web3Context";
 import { useHistory } from "react-router-dom";
 import { Encrypt } from "src/helpers/aes";
+import baseUrl from "src/helpers/baseUrl";
 export const useNftBalance = () => {
   const { address, networkId } = useWeb3Context();
   const history = useHistory();
   const KEY = history?.location?.key || "";
-  const requestUrl = `system/open/api/nft/owner/detail`;
+  const requestUrl = `${baseUrl}/system/open/api/nft/owner/detail`;
   const { data } = useQuery(`${KEY}-${address}`, async () => {
     try {
       const response = await fetch(requestUrl, {

@@ -1,4 +1,5 @@
 import { useQuery } from "react-query";
+import apollo from "src/lib/apolloClient";
 import { useWeb3Context } from "./web3Context";
 import { useHistory } from "react-router-dom";
 // import { useAddNetwork } from './useAddNetwork';
@@ -85,6 +86,32 @@ type ProtocolMetricsNumbers = Record<keyof ProtocolMetrics, number>;
 
 export const protocolMetricsQueryKey = () => ["useProtocolMetrics"];
 
+export const useProtocolMetrics = <TSelectData = unknown>(select: (data: ProtocolMetricsNumbers[]) => TSelectData) => {
+  return useQuery<ProtocolMetricsNumbers[], Error, TSelectData>(
+    protocolMetricsQueryKey(),
+    async () => {
+      const response = await apollo<{ protocolMetrics: ProtocolMetrics[] }>(query);
+
+      if (!response) throw new Error("No response from TheGraph");
+
+      // Convert all strings to numbers
+      return response.data.protocolMetrics.map(metric =>
+        Object.entries(metric).reduce(
+          (obj, [key, value]) => Object.assign(obj, { [key]: parseFloat(value) }),
+          {} as ProtocolMetricsNumbers,
+        ),
+      );
+    },
+    { select },
+  );
+};
+
+export const useTotalSupply = () => useProtocolMetrics(metrics => metrics[0].totalSupply);
+export const useTotalValueDeposited = () => useProtocolMetrics(metrics => metrics[0].totalValueLocked);
+export const useTreasuryMarketValue = () => useProtocolMetrics(metrics => metrics[0].treasuryMarketValue);
+export const useTreasuryTotalBacking = () => useProtocolMetrics(metrics => metrics[0].treasuryTotalBacking);
+export const useOhmCirculatingSupply = () => useProtocolMetrics(metrics => metrics[0].ohmCirculatingSupply);
+
 const TotalMiningHashRate = `${baseUrl}/system/open/api/apy`;
 const MyNFTMiners = `${baseUrl}/system/open/api/myNftMiners`; // hasOwner
 const MyNFTPools = `${baseUrl}/system/open/api/myNftPools`; // hasOwner
@@ -119,7 +146,7 @@ export const useMbtcMetrics = (requestUrl: string, hasOwner?: boolean) => {
       return res.json();
     });
 
-    if (!response) throw new Error("No response from MBTC");
+    if (!response) throw new Error("No response from BTCZ");
 
     return response.data || 0;
   });
