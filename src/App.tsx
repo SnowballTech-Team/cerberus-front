@@ -24,6 +24,7 @@ import { NetworkId } from "./constants";
 import { trackGAEvent } from "./helpers/analytics";
 import { getAllInverseBonds } from "./slices/InverseBondSlice";
 import { Home } from "./views/Home";
+import { CDog } from "./views/CDog";
 import HomeLayout from "./components/HomeLayout";
 
 const DEBUG = false;
@@ -224,6 +225,7 @@ function App() {
             <Redirect to="/home" />
           </Route>
           <Route exact path="/home" component={Home}></Route>
+          <Route exact path="/cdog" component={CDog}></Route>
         </Switch>
       </HomeLayout>
     </Route>

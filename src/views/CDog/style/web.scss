@@ -1,0 +1,15 @@
+.dog_box {
+  width: 100%;
+  margin-top: 108px;
+  height: calc(100vh - 174px);
+  position: relative;
+  .bottom_bg {
+    width: 2738px;
+    height: 2738px;
+    background: url("../../../assets/cdog/big_bg.png");
+    background-size: cover;
+    position: absolute;
+    bottom: -68px;
+    right: 0;
+  }
+}
