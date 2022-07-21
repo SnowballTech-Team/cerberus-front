@@ -27,7 +27,7 @@
         z-index: 1;
         // top: -510px;
         img {
-          width: 50%;
+          width: 44%;
           height: auto;
         }
         .word_content {
@@ -72,7 +72,7 @@
     }
   }
   .block2 {
-    min-height: 125vh;
+    min-height: 130vh;
     // margin-top: 150px;
     .container_box {
       width: 1200px;
@@ -106,7 +106,7 @@
       }
 
       .posti_box {
-        height: 600px;
+        height: 650px;
         width: 100%;
         position: relative;
         p {
@@ -126,23 +126,23 @@
           position: absolute;
         }
         .first_box {
-          bottom: 30px;
-          left: -30px;
+          bottom: 0px;
+          left: 20px;
           z-index: 2;
         }
         .second_box {
           top: 0;
-          left: 280px;
+          left: 300px;
           z-index: 2;
         }
         .third_box {
-          left: 650px;
+          left: 580px;
           top: 100px;
           z-index: 2;
         }
         .forth_box {
-          right: -60px;
-          top: -50px;
+          left: 860px;
+          top: 0;
           z-index: 2;
         }
         .add_mation {
@@ -222,8 +222,21 @@
         color: #fff;
         padding: 0 24px;
         position: absolute;
-        right: -40px;
+        left: 860px;
         top: 290px;
+        &::after {
+          content: "";
+          width: 56px;
+          height: 56px;
+          background: url("../../../assets/home/white_ball.png") no-repeat center;
+          background-size: cover;
+          position: absolute;
+          left: 0;
+          top: 20px;
+        }
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }

@@ -14,13 +14,14 @@
         height: 100%;
         img {
           width: 90%;
-          margin-top: 6rem;
+          // margin-top: 6rem;
         }
         .word_content {
           width: 100%;
           padding: 0 1rem;
           font-size: 20px;
           margin-top: 4rem;
+          line-height: 108.6%;
         }
         .bottom_centent {
           margin-top: 5rem;
@@ -54,6 +55,7 @@
         }
       }
       .posti_box {
+        height: 730px;
         p {
           width: 180px;
           height: 180px;
@@ -65,8 +67,9 @@
           z-index: 2;
         }
         .second_box {
-          top: 100px;
-          left: 200px;
+          top: 123px;
+          right: 0px !important;
+          left: auto;
           z-index: 2;
         }
         .third_box {
@@ -75,8 +78,9 @@
           z-index: 2;
         }
         .forth_box {
-          right: 0px;
-          top: 360px;
+          right: 0px !important;
+          left: auto;
+          top: 380px;
           z-index: 2;
         }
         .white_box {
@@ -97,6 +101,26 @@
           position: absolute;
           left: 0px;
           top: 520px;
+          &::after {
+            content: "";
+            background: none;
+          }
+        }
+        .ball1 {
+          left: -55px;
+          bottom: -120px;
+        }
+        .ball2 {
+          left: -60px;
+        }
+        .ball3 {
+          right: -80px !important;
+          left: auto;
+          top: 50px;
+        }
+        .ball5 {
+          top: 460px;
+          right: -110px;
         }
       }
       .white_paper_mobile {
@@ -125,7 +149,7 @@
           width: 100%;
           width: 375px;
           height: 359.88px;
-          padding: 20px 12px;
+          padding: 20px;
           &:nth-child(1) {
             background: url("../../../assets/mobile/home/first_bg.png") no-repeat center;
             background-size: 100% 100%;
@@ -168,7 +192,7 @@
             }
             .content {
               margin-top: 12px;
-              font-size: 14px;
+              font-size: 13px;
             }
           }
           .bottom {
@@ -231,6 +255,9 @@
           margin-top: 33px;
           li {
             justify-content: space-between;
+            p {
+              font-size: 12px;
+            }
           }
           li:nth-child(1) {
             img {
@@ -256,9 +283,8 @@
     }
     .bg_box {
       width: 237%;
-      left: -500px;
-      // right: 0;
-      top: 267px;
+      left: -453px;
+      top: 140px;
     }
   }
   .block4 {
@@ -291,7 +317,7 @@
             }
             .content_contain {
               padding: 20px 10px;
-              // padding-left: 10px;
+              padding-left: 20px;
               .content {
                 font-size: 14px;
               }

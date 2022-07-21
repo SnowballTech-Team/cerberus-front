@@ -66,49 +66,40 @@ export function Home() {
       name: "Milestone 1:",
       list: [
         "Cerberus universe launch",
-        "CDoge deployment and open source",
-        "CBridge launch for Doge<>CDoge",
-        "Cerberus Proof of Asset",
+        "CDoge launch",
+        "CDoge Proof of Asset",
+        "Million Doge Club NFT",
+        "Berus deployment",
       ],
     },
     {
       name: "Milestone 2:",
-      list: [
-        "Berus deployment and open source",
-        "CDoge>>Berus vpool launch on BSC",
-        "CDoge>>Berus vpool launch on ETH",
-        "CSwap launch",
-        "Berus lockdrop system for CSwap LPs",
-        "Berus burn mechanism for CBridge/CSwap fee",
-      ],
+      list: ["CSwap launch", "CNFT partners", "Cerbs ecosystem"],
     },
     {
       name: "Milestone 3:",
       list: [
-        "Cerberus doge EVM chain launch",
         "Cerberus doge EVM chain testnet",
         "Cerberus doge EVM chain mainnet",
         "Cerberus doge EVM chain node",
-        "Cerberus doge EVM chain DApp",
-        "Cerberus global investments and partners",
         "Cerberus hackathon",
       ],
     },
     {
       name: "Milestone 4:",
       list: [
-        "Cerberus doge multi-chain Web3 protocol",
+        "Cerberus doge multi-chain protocol",
         "Cerberus multi-chain CSwap",
         "Cerberus multi-chain DApp",
-        "Invest in Elon Musk projects in 100 years",
+        "Invest in Elon Musk’s mars projects",
       ],
     },
   ];
   const partnerList = [
     { id: 1, imgurl: partnerList1 },
     { id: 1, imgurl: partnerList2 },
-    { id: 1, imgurl: partnerList3 },
     { id: 1, imgurl: partnerList4 },
+    { id: 1, imgurl: partnerList3 },
     { id: 1, imgurl: partnerList5 },
     { id: 1, imgurl: partnerList6 },
   ];
