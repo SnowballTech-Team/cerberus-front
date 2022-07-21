@@ -53,29 +53,50 @@
           position: absolute;
         }
       }
-      .first {
-        margin-top: 47px;
-        &::before {
-          background: url("../../../assets/mobile/home/first.png") no-repeat center;
-          background-size: cover;
+      .posti_box {
+        p {
+          width: 180px;
+          height: 180px;
+          font-size: 14px;
         }
-      }
-      .second {
-        &::before {
-          background: url("../../../assets/mobile/home/second.png") no-repeat center;
-          background-size: cover;
+        .first_box {
+          top: 0px;
+          left: 0;
+          z-index: 2;
         }
-      }
-      .third {
-        &::before {
-          background: url("../../../assets/mobile/home/third.png") no-repeat center;
-          background-size: cover;
+        .second_box {
+          top: 100px;
+          left: 200px;
+          z-index: 2;
         }
-      }
-      .forth {
-        &::before {
-          background: url("../../../assets/mobile/home/forth.png") no-repeat center;
+        .third_box {
+          left: 0px;
+          top: 250px;
+          z-index: 2;
+        }
+        .forth_box {
+          right: 0px;
+          top: 360px;
+          z-index: 2;
+        }
+        .white_box {
+          width: 180px;
+          height: 180px;
+          cursor: pointer;
+          background: url("../../../assets/home/whitepaper_bg.png") no-repeat center;
           background-size: cover;
+          /* Note: backdrop-filter has minimal browser support */
+          // font-weight: 800;
+          border-radius: 130px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 20px;
+          color: #fff;
+          padding: 0 24px;
+          position: absolute;
+          left: 0px;
+          top: 520px;
         }
       }
       .white_paper_mobile {

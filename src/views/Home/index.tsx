@@ -149,36 +149,22 @@ export function Home() {
       <div className="block2">
         <div className="container_box">
           <img src={isSmallScreen || isVerySmallScreen ? manifestoo : block_bg} alt="" />
-          {isSmallScreen || isVerySmallScreen ? (
-            <div>
-              <p className="first">Save your lonely doge; let it join the fight for global adoption</p>
-              <p className="second">Bridging and leading dogecoin to the multi-chain dogeverse</p>
-              <p className="third">Paving the path for the next-generation dogecoin Web69 infrastructure</p>
-              <p className="forth">1D=1D</p>
-              <div className="white_paper_mobile" onClick={toWhitePaper}>
-                WHITEPAPER
-              </div>
-            </div>
-          ) : (
-            <div className="posti_box">
-              <p className="first_box add_mation">Save your lonely doge; let it join the fight for global adoption</p>
-              <p className="second_box add_mation">Bridging and leading dogecoin to the multi-chain dogeverse</p>
-              <p className="third_box add_mation">
-                Paving the path for the next-generation dogecoin Web69 infrastructure
-              </p>
-              <p className="forth_box add_mation">1D=1D</p>
-              {isSmallScreen || isVerySmallScreen ? null : (
-                <button className="white_box" onClick={toWhitePaper}>
-                  WHITEPAPER
-                </button>
-              )}
-              <p className="ball1" />
-              <p className="ball2" />
-              <p className="ball3" />
-              <p className="ball4" />
-              <p className="ball5" />
-            </div>
-          )}
+          <div className="posti_box">
+            <p className="first_box add_mation">Save your lonely doge; let it join the fight for global adoption</p>
+            <p className="second_box add_mation">Bridging and leading dogecoin to the multi-chain dogeverse</p>
+            <p className="third_box add_mation">
+              Paving the path for the next-generation dogecoin Web69 infrastructure
+            </p>
+            <p className="forth_box add_mation">1D=1D</p>
+            <button className="white_box" onClick={toWhitePaper}>
+              WHITEPAPER
+            </button>
+            <p className="ball1" />
+            <p className="ball2" />
+            <p className="ball3" />
+            <p className="ball4" />
+            <p className="ball5" />
+          </div>
         </div>
       </div>
       <div className="block3">
