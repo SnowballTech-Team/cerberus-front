@@ -1,12 +1,15 @@
 .mobile_home_box {
   width: 100%;
+  font-family: "PingFang SC";
   .block1 {
+    min-height: 100vh;
     video {
-      top: -1px;
+      // top: -1px;
     }
     .center_box {
       width: 100%;
       height: 100%;
+      top: 0;
       .content_box {
         height: 100%;
         img {
@@ -40,8 +43,39 @@
       p {
         width: 100%;
         padding-left: 40px;
+        font-size: 14px;
         &::before {
           left: 0;
+          top: -10px;
+          content: "";
+          width: 47px;
+          height: 22px;
+          position: absolute;
+        }
+      }
+      .first {
+        margin-top: 47px;
+        &::before {
+          background: url("../../../assets/mobile/home/first.png") no-repeat center;
+          background-size: cover;
+        }
+      }
+      .second {
+        &::before {
+          background: url("../../../assets/mobile/home/second.png") no-repeat center;
+          background-size: cover;
+        }
+      }
+      .third {
+        &::before {
+          background: url("../../../assets/mobile/home/third.png") no-repeat center;
+          background-size: cover;
+        }
+      }
+      .forth {
+        &::before {
+          background: url("../../../assets/mobile/home/forth.png") no-repeat center;
+          background-size: cover;
         }
       }
       .white_paper_mobile {
@@ -55,7 +89,7 @@
         justify-content: center;
         align-items: center;
         right: 28px;
-        bottom: -90px;
+        bottom: -125px;
       }
     }
   }
@@ -117,7 +151,7 @@
             }
           }
           .bottom {
-            width: 119px;
+            width: 125px;
             height: 28px;
             background-size: cover;
             font-size: 14px;
@@ -136,11 +170,15 @@
           background: url("../../../assets/mobile/home/beruscoin.png") no-repeat center;
           background-size: cover;
           &::after {
-            left: 97px;
-            top: -89px;
-            border-radius: 60px;
-            width: 151px;
-            height: 330px;
+            content: "";
+            background: url("../../../assets/mobile/home/box_shadowbg.png") no-repeat center;
+            background-size: 100% 100%;
+            left: 2%;
+            top: 0;
+            width: 96%;
+            height: 100%;
+            transform: none;
+            // border-radius: 30px 30px 0 0;
           }
         }
         .right {
@@ -195,6 +233,12 @@
         }
       }
     }
+    .bg_box {
+      width: 237%;
+      left: -500px;
+      // right: 0;
+      top: 267px;
+    }
   }
   .block4 {
     .title {
@@ -214,12 +258,19 @@
             width: 100%;
             height: 278px;
             padding: 30px 21px;
+            // background: url("../../../assets/mobile/home/roadmap_bg.png") no-repeat center;
+            // background-size: 100% 100%;
+            background: linear-gradient(116.29deg, rgba(98, 98, 98, 0.28) -16.91%, rgba(0, 0, 0, 0.28) 101.76%);
+            backdrop-filter: blur(70.1887px);
+            /* Note: backdrop-filter has minimal browser support */
+            border: 1px solid rgba(98, 98, 98, 0.28);
+            border-radius: 21.0566px;
             .title_name {
               font-size: 28px;
             }
             .content_contain {
-              padding: 20px 30px;
-              padding-left: 10px;
+              padding: 20px 10px;
+              // padding-left: 10px;
               .content {
                 font-size: 14px;
               }

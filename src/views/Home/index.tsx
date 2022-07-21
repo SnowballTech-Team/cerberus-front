@@ -22,12 +22,12 @@ import partnerList4 from "../../assets/home/lbank-logo-freelogovectors.png";
 import partnerList5 from "../../assets/home/bitcoin.png";
 import partnerList6 from "../../assets/home/Binance-Logo.png";
 
-import partnerPhoneList1 from "../../assets/mobile/home/doge.png";
-import partnerPhoneList2 from "../../assets/mobile/home/Etherum.png";
-import partnerPhoneList3 from "../../assets/mobile/home/sharkteam.png";
-import partnerPhoneList4 from "../../assets/mobile/home/lbank-logo-freelogovectors.png";
-import partnerPhoneList5 from "../../assets/mobile/home/bitcoin.png";
-import partnerPhoneList6 from "../../assets/mobile/home/Binance-Logo.png";
+// import partnerPhoneList1 from "../../assets/mobile/home/doge.png";
+// import partnerPhoneList2 from "../../assets/mobile/home/Etherum.png";
+// import partnerPhoneList3 from "../../assets/mobile/home/sharkteam.png";
+// import partnerPhoneList4 from "../../assets/mobile/home/lbank-logo-freelogovectors.png";
+// import partnerPhoneList5 from "../../assets/mobile/home/bitcoin.png";
+// import partnerPhoneList6 from "../../assets/mobile/home/Binance-Logo.png";
 
 export function Home() {
   const isSmallScreen = useMediaQuery("(max-width: 650px)");
@@ -112,14 +112,14 @@ export function Home() {
     { id: 1, imgurl: partnerList5 },
     { id: 1, imgurl: partnerList6 },
   ];
-  const partnerPhoneList = [
-    { id: 1, imgurl: partnerPhoneList1 },
-    { id: 1, imgurl: partnerPhoneList2 },
-    { id: 1, imgurl: partnerPhoneList3 },
-    { id: 1, imgurl: partnerPhoneList4 },
-    { id: 1, imgurl: partnerPhoneList5 },
-    { id: 1, imgurl: partnerPhoneList6 },
-  ];
+  // const partnerPhoneList = [
+  //   { id: 1, imgurl: partnerPhoneList1 },
+  //   { id: 1, imgurl: partnerPhoneList2 },
+  //   { id: 1, imgurl: partnerPhoneList3 },
+  //   { id: 1, imgurl: partnerPhoneList4 },
+  //   { id: 1, imgurl: partnerPhoneList5 },
+  //   { id: 1, imgurl: partnerPhoneList6 },
+  // ];
   const toWhitePaper = () => window.open("https://whitepaper.cerbs.org/");
   return (
     <div className={isSmallScreen || isVerySmallScreen ? "home_box mobile_home_box" : "home_box"}>
@@ -161,10 +161,12 @@ export function Home() {
             </div>
           ) : (
             <div className="posti_box">
-              <p className="first_box">Save your lonely doge; let it join the fight for global adoption</p>
-              <p className="second_box">Bridging and leading dogecoin to the multi-chain dogeverse</p>
-              <p className="third_box">Paving the path for the next-generation dogecoin Web69 infrastructure</p>
-              <p className="forth_box">1D=1D</p>
+              <p className="first_box add_mation">Save your lonely doge; let it join the fight for global adoption</p>
+              <p className="second_box add_mation">Bridging and leading dogecoin to the multi-chain dogeverse</p>
+              <p className="third_box add_mation">
+                Paving the path for the next-generation dogecoin Web69 infrastructure
+              </p>
+              <p className="forth_box add_mation">1D=1D</p>
               {isSmallScreen || isVerySmallScreen ? null : (
                 <button className="white_box" onClick={toWhitePaper}>
                   WHITEPAPER
@@ -255,23 +257,14 @@ export function Home() {
         <p className="title">Partners</p>
         <div className="container_box">
           <ul>
-            {isSmallScreen || isVerySmallScreen
-              ? partnerPhoneList &&
-                partnerPhoneList.map((item, index) => {
-                  return (
-                    <li key={index}>
-                      <img src={item.imgurl} alt="" />
-                    </li>
-                  );
-                })
-              : partnerList &&
-                partnerList.map((item, index) => {
-                  return (
-                    <li key={index}>
-                      <img src={item.imgurl} alt="" />
-                    </li>
-                  );
-                })}
+            {partnerList &&
+              partnerList.map((item, index) => {
+                return (
+                  <li key={index}>
+                    <img src={item.imgurl} alt="" />
+                  </li>
+                );
+              })}
           </ul>
         </div>
         <div className="bottom_bg" />
