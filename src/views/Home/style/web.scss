@@ -463,12 +463,10 @@
           li {
             width: 530px;
             height: 397px;
-            background-image: url("../../../assets//home/romap.png");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-color: linear-gradient(116.29deg, rgba(98, 98, 98, 0.28) -16.91%, rgba(0, 0, 0, 0.28) 101.76%);
-            backdrop-filter: blur(50px);
-            background-size: 100% 100%;
+            background: linear-gradient(116.29deg, rgba(98, 98, 98, 0.28) -16.91%, rgba(0, 0, 0, 0.28) 101.76%);
+            backdrop-filter: blur(70.1887px);
+            border: 1px solid rgba(98, 98, 98, 0.28);
+            border-radius: 21.0566px;
             margin-bottom: 65px;
             padding: 30px 42px;
             p {
