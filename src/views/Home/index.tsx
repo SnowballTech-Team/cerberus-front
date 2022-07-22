@@ -4,7 +4,7 @@ import * as React from "react";
 import "./style/web.scss";
 import "./style/mobile.scss";
 import { useMediaQuery } from "@material-ui/core";
-
+import { useHistory } from "react-router-dom";
 import center_bg from "../../assets/home/center_bg.png";
 
 import manifestoo from "../../assets/mobile/home/manifestoo.png";
@@ -33,6 +33,7 @@ export function Home() {
   const isSmallScreen = useMediaQuery("(max-width: 650px)");
   const isVerySmallScreen = useMediaQuery("(max-width: 379px)");
   console.log(isSmallScreen, isVerySmallScreen, "isVerySmallScreen");
+  const history = useHistory();
   const list = [
     {
       title: "CDoge",
@@ -98,8 +99,8 @@ export function Home() {
   const partnerList = [
     { id: 1, imgurl: partnerList1 },
     { id: 1, imgurl: partnerList2 },
-    { id: 1, imgurl: partnerList4 },
     { id: 1, imgurl: partnerList3 },
+    { id: 1, imgurl: partnerList4 },
     { id: 1, imgurl: partnerList5 },
     { id: 1, imgurl: partnerList6 },
   ];
@@ -112,6 +113,9 @@ export function Home() {
   //   { id: 1, imgurl: partnerPhoneList6 },
   // ];
   const toWhitePaper = () => window.open("https://whitepaper.cerbs.org/");
+  const toBerus = () => {
+    history.push("/commingsoon");
+  };
   return (
     <div className={isSmallScreen || isVerySmallScreen ? "home_box mobile_home_box" : "home_box"}>
       <div className="block1">
@@ -177,7 +181,7 @@ export function Home() {
                 );
               })}
           </ul>
-          <div className="berus_box">
+          <div className="berus_box" onClick={toBerus}>
             <div className="left" />
             <div className="right">
               <p className="title">Berus</p>

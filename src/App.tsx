@@ -25,6 +25,7 @@ import { trackGAEvent } from "./helpers/analytics";
 import { getAllInverseBonds } from "./slices/InverseBondSlice";
 import { Home } from "./views/Home";
 import { CDog } from "./views/CDog";
+import { CommingSoon } from "./views/CommingSoon";
 import HomeLayout from "./components/HomeLayout";
 
 const DEBUG = false;
@@ -226,6 +227,7 @@ function App() {
           </Route>
           <Route exact path="/home" component={Home}></Route>
           <Route exact path="/cdog" component={CDog}></Route>
+          <Route exact path="/commingsoon" component={CommingSoon}></Route>
         </Switch>
       </HomeLayout>
     </Route>

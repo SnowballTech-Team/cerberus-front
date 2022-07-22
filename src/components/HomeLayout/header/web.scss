@@ -27,6 +27,9 @@
     .left {
       display: flex;
       align-items: center;
+      img {
+        cursor: pointer;
+      }
     }
     .right {
       display: flex;

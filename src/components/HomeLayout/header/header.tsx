@@ -5,21 +5,26 @@ import "./mobile.scss";
 import { useMediaQuery, Link } from "@material-ui/core";
 import menu_box from "../../../assets/mobile/header/menu_box.png";
 import logo from "../../../assets/header/logo.svg";
+import { useHistory } from "react-router-dom";
 export function Header({ openMenu }: { openMenu: () => void }) {
   const isSmallScreen = useMediaQuery("(max-width: 650px)");
   const isVerySmallScreen = useMediaQuery("(max-width: 379px)");
+  const history = useHistory();
   const topList = [
     { name: "Home", url: "/" },
-    { name: "CDoge", url: "/cdog" },
-    { name: "CNFT", url: "/cnft" },
-    { name: "CSwap", url: "/cswap" },
-    { name: "Cerbs", url: "/cerbs" },
+    { name: "CDoge", url: "/commingsoon" },
+    { name: "CNFT", url: "/commingsoon" },
+    { name: "CSwap", url: "/commingsoon" },
+    { name: "Cerbs", url: "/commingsoon" },
   ];
 
   //   const [menuStatus, setMenuStatus] = useState(false)
   //   const openMenu = () => {
   //     setMenuStatus(!menuStatus)
   //   }
+  const toHome = () => {
+    history.push("/home");
+  };
   return (
     <div className={isSmallScreen || isVerySmallScreen ? "header_box mobile_header_box" : "header_box"}>
       {isSmallScreen || isVerySmallScreen ? (
@@ -37,7 +42,7 @@ export function Header({ openMenu }: { openMenu: () => void }) {
       ) : (
         <div className="container_box">
           <div className="left">
-            <img src={logo} alt="" />
+            <img src={logo} alt="" onClick={toHome} />
           </div>
           <div className="right">
             <ul>

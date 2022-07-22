@@ -13,7 +13,7 @@
       width: 1200px;
       margin: 0 auto;
       position: absolute;
-      top: 120px;
+      top: 184px;
       left: 50%;
       transform: translateX(-50%);
       padding-top: 20px;
@@ -209,13 +209,14 @@
         }
       }
       .white_box {
-        width: 245px;
-        height: 245px;
+        width: 302px;
+        height: 189px;
         cursor: pointer;
-        background: linear-gradient(119.14deg, rgba(98, 98, 98, 0.2) 16.15%, rgba(69, 69, 69, 0.2) 83.38%);
-        backdrop-filter: blur(100px);
-        border: 2px solid rgba(225, 225, 225, 0.3);
+        // background: linear-gradient(119.14deg, rgba(98, 98, 98, 0.2) 16.15%, rgba(69, 69, 69, 0.2) 83.38%);
+        // backdrop-filter: blur(100px);
+        // border: 2px solid rgba(225, 225, 225, 0.3);
         border-radius: 130px;
+        background: transparent;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -227,13 +228,14 @@
         top: 290px;
         &::after {
           content: "";
-          width: 56px;
-          height: 56px;
-          background: url("../../../assets/home/white_ball.png") no-repeat center;
+          width: 302px;
+          height: 189px;
+          background: url("../../../assets/home/whitepaper.gif") no-repeat center;
           background-size: cover;
           position: absolute;
           left: 0;
-          top: 20px;
+          bottom: -55px;
+          z-index: -1;
         }
         &:hover {
           font-size: 22px;
@@ -357,6 +359,7 @@
         border-radius: 30px;
         display: flex;
         align-items: center;
+        cursor: pointer;
         .left {
           width: 494px;
           height: 312px;
@@ -371,7 +374,7 @@
             background: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 74.32%);
             transform: rotate(-90deg);
             left: 138px;
-            top: -126px;
+            top: -130px;
           }
         }
         .right {
