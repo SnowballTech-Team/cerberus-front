@@ -6,10 +6,14 @@ import { Menu } from "./menu";
 import "./style/web.scss";
 import "./style/mobile.scss";
 import { useMediaQuery } from "@material-ui/core";
+import { useLocation } from "react-router-dom";
 function HomeLayout(props: any) {
   const isSmallScreen = useMediaQuery("(max-width: 650px)");
   const isVerySmallScreen = useMediaQuery("(max-width: 379px)");
   const [menuStatus, setMenuStatus] = useState(false);
+  const location = useLocation();
+  console.log(location, "location");
+  const isShow = location.pathname != "/commingsoon";
   const openMenu = () => {
     setMenuStatus(!menuStatus);
   };
@@ -25,7 +29,7 @@ function HomeLayout(props: any) {
         </div>
       </div>
       {props.children}
-      <Footer />
+      {isShow ? <Footer /> : null}
     </div>
   );
 }

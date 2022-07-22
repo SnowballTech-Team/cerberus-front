@@ -56,6 +56,7 @@
       }
       .posti_box {
         height: 730px;
+        margin-top: 20px;
         p {
           width: 180px;
           height: 180px;
@@ -84,23 +85,25 @@
           z-index: 2;
         }
         .white_box {
-          width: 180px;
-          height: 180px;
+          width: 193px;
+          height: 120px;
           cursor: pointer;
-          background: url("../../../assets/home/whitepaper_bg.png") no-repeat center;
+          background: url("../../../assets/home/whitepaper.gif") no-repeat center;
           background-size: cover;
           /* Note: backdrop-filter has minimal browser support */
           // font-weight: 800;
-          border-radius: 130px;
+          // border-radius: 130px;
+          
           display: flex;
           justify-content: center;
           align-items: center;
           font-size: 20px;
           color: #fff;
           padding: 0 24px;
+          padding-bottom: 85px;
           position: absolute;
           left: 0px;
-          top: 520px;
+          top: 580px;
           &::after {
             content: "";
             background: none;
