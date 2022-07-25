@@ -8,7 +8,15 @@ export function CommingSoon() {
   return (
     <div className={isSmallScreen || isVerySmallScreen ? "dog_box mobile_dog_box" : "dog_box"}>
       <div className="big_bg">
-        <p>COMING SOON</p>
+        {/* <p className="title_box">
+          <p>COMING SOON</p>
+        </p> */}
+        <span className="sc-cBIieI gYgkvS">
+          <span className="sc-czvZiG bfvNdl">COMING SOON</span>
+          <span className="sc-kqnjJL cXKpZu">
+            <span className="sc-czvZiG bfvNdl">COMING SOON</span>
+          </span>
+        </span>
       </div>
     </div>
   );

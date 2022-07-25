@@ -184,11 +184,19 @@ export function Home() {
           <div className="berus_box" onClick={toBerus}>
             <div className="left" />
             <div className="right">
-              <p className="title">Berus</p>
-              <p className="content">
-                BERUS is the best friend of doge. Sir Berus helps Doge destroy the fiat order and become the people's
-                currency.
-              </p>
+              <div className="top_contan">
+                <p className="title">Berus</p>
+                <p className="content">
+                  BERUS is the best friend of doge. Sir Berus helps Doge destroy the fiat order and become the people's
+                  currency.
+                </p>
+                {isSmallScreen || isVerySmallScreen ? null : (
+                  <div className="bottom_contan">
+                    <p>Get Started</p>
+                    <p className="arrow" />
+                  </div>
+                )}
+              </div>
             </div>
           </div>
           <div className="join_box">
