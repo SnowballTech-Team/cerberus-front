@@ -12,7 +12,7 @@ export function Header({ openMenu }: { openMenu: () => void }) {
   const history = useHistory();
   const topList = [
     { name: "Home", url: "/" },
-    { name: "CDoge", url: "/commingsoon" },
+    { name: "CDoge", url: "/cdog" },
     { name: "CNFT", url: "/commingsoon" },
     { name: "CSwap", url: "/commingsoon" },
     { name: "Cerbs", url: "/commingsoon" },
