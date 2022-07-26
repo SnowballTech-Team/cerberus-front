@@ -76,6 +76,9 @@
             justify-content: space-between;
             align-items: center;
             padding: 0 20px;
+            .fix_width {
+              width: 50px;
+            }
             p {
               font-size: 20px;
             }
@@ -255,4 +258,7 @@
       }
     }
   }
+}
+.MuiInput-underline:hover:not(.Mui-disabled):before {
+  border-bottom: none !important
 }

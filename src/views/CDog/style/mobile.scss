@@ -1,0 +1,105 @@
+.mobile_dog_box {
+  .center_box {
+    width: 373px;
+    height: 460px;
+    background: linear-gradient(116.29deg, rgba(98, 98, 98, 0.28) -16.91%, rgba(0, 0, 0, 0.28) 101.76%);
+    backdrop-filter: blur(69.9812px);
+    border: 2px solid rgba(98, 98, 98, 0.28);
+    border-radius: 20.9944px;
+    padding: 0 35px;
+    padding-top: 18px;
+    top: 100px;
+    .content_box {
+      width: 304px;
+      height: 279px;
+      background: url("../../../assets/mobile/cdog/phone_left.png") no-repeat center;
+      background-size: cover;
+      padding-top: 10px;
+      .top {
+        .title {
+          font-size: 16px;
+        }
+      }
+      .center_content {
+        padding-top: 20px;
+        .top_text {
+          font-size: 13px;
+          color: #fff;
+        }
+        .change_box {
+          margin-top: 46px;
+          .from_box {
+            width: 280px;
+            height: 53px;
+            p {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+      &::after {
+        width: 373px;
+        left: -38px;
+      }
+    }
+   
+    .bottom_btn {
+        margin-top: 84px;
+      button {
+        width: 279.92px;
+        height: 53.19px;
+        background: linear-gradient(225deg, #18c8ff 14.89%, #933ffe 85.85%);
+        border-radius: 20.9944px;
+        font-weight: 800;
+        font-size: 16.7955px;
+      }
+    }
+  }
+  .release_center_box {
+    height: 517px;
+    .content_box {
+        width: 304px;
+        height: 378px;
+        background: url("../../../assets/mobile/cdog/phone_right.png") no-repeat center;
+      background-size: cover;
+      .center_content {
+        .top_cont {
+            padding-top: 12px;
+            box-sizing: border-box;
+            .cdoge_num {
+                 font-size: 43.3967px;
+                 color: #fff;
+            }
+            .dollar_num {
+                font-size: 14px;
+            }
+        }
+        .bottom_cont {
+            .title_box {
+                p {
+                    font-size: 12px;
+                    margin: 0;
+                }
+            }
+            .change_box {
+                margin-top: 13px;
+                .adress_box {
+                    margin-top: 25px;
+                    .input_box .MuiInput-underline .MuiInput-input {
+                        height: 30px;
+                        font-size: 12px;
+                    }
+                }
+            }
+            
+        }
+      }
+      &::after {
+        bottom: -25px;
+      }
+    }
+    .bottom_btn {
+        margin-top: 45px;
+    }
+}
+}

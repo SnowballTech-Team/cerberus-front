@@ -10,7 +10,7 @@ import rightList4 from "../../../assets/home/med2.svg";
 export function Menu() {
   const mobileTopList = [
     { name: "Home", url: "/" },
-    { name: "CDoge", url: "/commingsoon" },
+    { name: "CDoge", url: "/cdog" },
     { name: "CNFT", url: "/commingsoon" },
     { name: "CSwap", url: "/commingsoon" },
     { name: "Cerbs", url: "/commingsoon" },

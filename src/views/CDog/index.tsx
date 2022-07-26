@@ -2,11 +2,11 @@ import { useMediaQuery, Select, MenuItem, Input, FormControl } from "@material-u
 import { useState } from "react";
 import BTCCoin from "../../assets/cdog/btc_bg.png";
 import "./style/web.scss";
+import "./style/mobile.scss";
 export function CDog() {
   const isSmallScreen = useMediaQuery("(max-width: 650px)");
   const isVerySmallScreen = useMediaQuery("(max-width: 379px)");
-  console.log(isSmallScreen, isVerySmallScreen, "isVerySmallScreen");
-  const [titleType, setTitleType] = useState("Release");
+  const [titleType, setTitleType] = useState("Mint");
   const relsaseList = [
     { id: 1, name: "BTC", coin: BTCCoin },
     { id: 2, name: "ETH", coin: BTCCoin },
@@ -25,7 +25,7 @@ export function CDog() {
     setReleaseValue(e.target.value);
   };
   return (
-    <div className="dog_box">
+    <div className={isSmallScreen || isVerySmallScreen ? "dog_box mobile_dog_box" : "dog_box"}>
       <div className="big_bg"></div>
       <div className={titleType == "Mint" ? "center_box" : "center_box release_center_box"}>
         <div className={titleType == "Mint" ? "content_box" : "content_box right_content_box"}>
@@ -42,7 +42,7 @@ export function CDog() {
               <p className="top_text">Select an asset and destination chain, to begin or resume a mint.</p>
               <div className="change_box">
                 <div className="from_box">
-                  <p>Mint</p>
+                  <p className="fix_width">Mint</p>
                   <Select
                     labelId="move-select"
                     value={moveValue}
@@ -65,7 +65,7 @@ export function CDog() {
                   </Select>
                 </div>
                 <div className="from_box top_box">
-                  <p>To</p>
+                  <p className="fix_width">To</p>
                   <Select
                     labelId="move-select"
                     value={moveValue}

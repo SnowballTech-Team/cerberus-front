@@ -13,7 +13,7 @@ function HomeLayout(props: any) {
   const [menuStatus, setMenuStatus] = useState(false);
   const location = useLocation();
   console.log(location, "location");
-  const isShow = location.pathname != "/commingsoon";
+  const isShow = location.pathname == "/home";
   const openMenu = () => {
     setMenuStatus(!menuStatus);
   };
