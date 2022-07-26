@@ -68,12 +68,119 @@
           margin-top: 67px;
           .from_box {
             width: 100%;
+            position: relative;
             height: 76px;
             background: #485470;
             border-radius: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            p {
+              font-size: 20px;
+            }
+            .select_box {
+              flex: 1;
+              // margin-left: 20px;
+              .MuiSelect-select {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .logo_box {
+                  width: 36px;
+                  height: 36px;
+                  border-radius: 18px;
+                  background-color: #f7931a;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  margin-right: 30px;
+                  img {
+                    width: 20px;
+                    height: 26px;
+                  }
+                }
+                p {
+                  margin: none;
+                  color: #fff;
+                }
+                &:focus {
+                  background: none;
+                }
+              }
+              .MuiSelect-icon {
+                color: #fff;
+              }
+            }
+          }
+          .adress_box {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            .title {
+              font-size: 12px;
+              line-height: 16px;
+              color: #19c8ff;
+              margin-bottom: 0;
+            }
+            .input_box {
+              flex: 1;
+              .MuiInput-underline {
+                .MuiInput-input {
+                  height: 50px;
+                  color: #a4a4a4;
+                  font-size: 16px;
+                  &::before {
+                    content: "";
+                  }
+                }
+                &::after {
+                  border-bottom: none;
+                }
+              }
+            }
           }
           .top_box {
             margin-top: 12px;
+          }
+        }
+        .top_cont {
+          p {
+            margin: 0;
+            text-align: center;
+          }
+          .cdoge_num {
+            font-weight: 500;
+            font-size: 61.8462px;
+            line-height: 108.6%;
+            color: #ffffff;
+          }
+          .dollar_num {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 27px;
+            color: #ffffff;
+          }
+        }
+        .bottom_cont {
+          .title_box {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 19px;
+            .left {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 19px;
+              color: #ffffff;
+            }
+          }
+          .change_box {
+            margin-top: 19px;
+            .adress_box {
+              margin-top: 38px;
+            }
           }
         }
       }
@@ -123,6 +230,29 @@
     }
     .bottom_btn {
       margin-top: 70px;
+    }
+  }
+}
+
+.MuiMenu-list {
+  .MuiListItem-root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .logo_box {
+      width: 36px;
+      height: 36px;
+      border-radius: 18px;
+      background: #f7931a;
+      margin-right: 40px;
+      background-color: #f7931a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 20px;
+        height: 26px;
+      }
     }
   }
 }
