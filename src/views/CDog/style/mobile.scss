@@ -29,6 +29,7 @@
         .change_box {
           margin-top: 46px;
           .from_box {
+            border-radius: 12px;
             width: 280px;
             height: 53px;
             p {
@@ -42,9 +43,9 @@
         left: -38px;
       }
     }
-   
+
     .bottom_btn {
-        margin-top: 84px;
+      margin-top: 84px;
       button {
         width: 279.92px;
         height: 53.19px;
@@ -58,40 +59,39 @@
   .release_center_box {
     height: 517px;
     .content_box {
-        width: 304px;
-        height: 378px;
-        background: url("../../../assets/mobile/cdog/phone_right.png") no-repeat center;
+      width: 304px;
+      height: 378px;
+      background: url("../../../assets/mobile/cdog/phone_right.png") no-repeat center;
       background-size: cover;
       .center_content {
         .top_cont {
-            padding-top: 12px;
-            box-sizing: border-box;
-            .cdoge_num {
-                 font-size: 43.3967px;
-                 color: #fff;
-            }
-            .dollar_num {
-                font-size: 14px;
-            }
+          padding-top: 12px;
+          box-sizing: border-box;
+          .cdoge_num {
+            font-size: 43.3967px;
+            color: #fff;
+          }
+          .dollar_num {
+            font-size: 14px;
+          }
         }
         .bottom_cont {
-            .title_box {
-                p {
-                    font-size: 12px;
-                    margin: 0;
-                }
+          .title_box {
+            p {
+              font-size: 12px;
+              margin: 0;
             }
-            .change_box {
-                margin-top: 13px;
-                .adress_box {
-                    margin-top: 25px;
-                    .input_box .MuiInput-underline .MuiInput-input {
-                        height: 30px;
-                        font-size: 12px;
-                    }
-                }
+          }
+          .change_box {
+            margin-top: 13px;
+            .adress_box {
+              margin-top: 25px;
+              .input_box .MuiInput-underline .MuiInput-input {
+                height: 30px;
+                font-size: 12px;
+              }
             }
-            
+          }
         }
       }
       &::after {
@@ -99,7 +99,7 @@
       }
     }
     .bottom_btn {
-        margin-top: 45px;
+      margin-top: 45px;
     }
-}
+  }
 }
