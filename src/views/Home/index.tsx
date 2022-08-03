@@ -242,7 +242,7 @@ export function Home() {
           </div>
         </div>
       </div>
-      <div className="block5">
+      {/* <div className="block5">
         <p className="title">Partners</p>
         <div className="container_box">
           <ul>
@@ -257,7 +257,7 @@ export function Home() {
           </ul>
         </div>
         <div className="bottom_bg" />
-      </div>
+      </div> */}
       {/* <Footer /> */}
     </div>
   );
