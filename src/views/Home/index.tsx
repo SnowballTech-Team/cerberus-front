@@ -38,22 +38,22 @@ export function Home() {
     {
       title: "CDoge",
       content:
-        "CDoge (CDoge bridge) is the core extension of dogecoin to the Web69 dogeverse. It brings dogecoin greater liquidity to DEX, DeFi, NFT, GameFi, and infinite cross-chain DApps.",
+        "CDoge  is the core extension of dogecoin to the Web69 dogeverse. It brings dogecoin greater liquidity to DEX, DeFi, NFT, GameFi, and infinite DApps.",
     },
     {
       title: "CNFT",
       content:
-        "CNFT is a marketplace created on Cerberus to allow users to mint and exchange NFTs with CDOGE as a payment option.",
+        "CNFT is a marketplace created on Cerberus to allow users to mint and exchange NFTs with cDOGE as a payment option. ",
     },
     {
       title: "CSwap",
       content:
-        "CSwap is a DEX (Decentralized Exchange) that allows shibes to start pairing their CDOGE with other tokens.",
+        "CSwap is a DEX (Decentralized Exchange) that allows shibes to start pairing their cDOGE with other tokens.",
     },
     {
       title: "Cerbs",
       content:
-        "Cerbs is a decentralized application platform, supporting Doge DApps built by Cerberus, communities, and partners.",
+        "Cerbs is a decentralized application platform, supporting Doge DApps built by communities, and partners. When dogecoin hits $6.9, Cerbs Mainnet/Testnet will be launched to create a home for every doge believer.",
     },
   ];
   const joinList = [
@@ -67,32 +67,41 @@ export function Home() {
       name: "Milestone 1:",
       list: [
         "Cerberus universe launch",
-        "CDoge launch",
-        "CDoge Proof of Asset",
-        "Million Doge Club NFT",
-        "Berus deployment",
+        "CDoge deployment and open source",
+        "CBridge launch for Doge<>CDoge",
+        "Cerberus Proof of Asset",
       ],
     },
     {
       name: "Milestone 2:",
-      list: ["CSwap launch", "CNFT partners", "Cerbs ecosystem"],
+      list: [
+        "Berus deployment and open source",
+        "CDoge>>Berus vpool launch on BSC",
+        "CDoge>>Berus vpool launch on ETH",
+        "CSwap launch",
+        "Berus lockdrop system for CSwap LPs",
+        "Berus burn mechanism for CBridge/CSwap fee",
+      ],
     },
     {
       name: "Milestone 3:",
       list: [
+        "Cerberus doge EVM chain launch",
         "Cerberus doge EVM chain testnet",
         "Cerberus doge EVM chain mainnet",
         "Cerberus doge EVM chain node",
+        "Cerberus doge EVM chain DApp",
+        "Cerberus global investments and partners",
         "Cerberus hackathon",
       ],
     },
     {
       name: "Milestone 4:",
       list: [
-        "Cerberus doge multi-chain protocol",
+        "Cerberus doge multi-chain Web3 protocol",
         "Cerberus multi-chain CSwap",
         "Cerberus multi-chain DApp",
-        "Invest in Elon Musk’s mars projects",
+        "Invest in Elon Musk projects in 100 years",
       ],
     },
   ];
@@ -136,7 +145,7 @@ export function Home() {
             </p>
             <div className="bottom_centent">
               <button className="start_box">Get Started</button>
-              {isSmallScreen || isVerySmallScreen ? null : <div className="more_box">Learn more</div>}
+              {/* {isSmallScreen || isVerySmallScreen ? null : <div className="more_box">Learn more</div>} */}
             </div>
           </div>
         </div>
@@ -175,7 +184,7 @@ export function Home() {
                     </div>
                     <div className="bottom">
                       <p>Get Started</p>
-                      <p className="arrow" />
+                      {/* <p className="arrow" /> */}
                     </div>
                   </li>
                 );
@@ -190,12 +199,9 @@ export function Home() {
                   BERUS is the best friend of doge. Sir Berus helps Doge destroy the fiat order and become the people's
                   currency.
                 </p>
-                {isSmallScreen || isVerySmallScreen ? null : (
-                  <div className="bottom_contan">
-                    <p>Get Started</p>
-                    <p className="arrow" />
-                  </div>
-                )}
+                <div className="bottom_contan">
+                  <p>Get Started</p>
+                </div>
               </div>
             </div>
           </div>
@@ -259,6 +265,7 @@ export function Home() {
         <div className="bottom_bg" />
       </div> */}
       {/* <Footer /> */}
+      <div className="bottom_bg" />
     </div>
   );
 }

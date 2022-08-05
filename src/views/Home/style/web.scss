@@ -1,4 +1,5 @@
 .home_box {
+  position: relative;
   .block1 {
     width: 100%;
     min-height: 115vh;
@@ -34,10 +35,12 @@
           font-size: 36px;
           width: 1000px;
           text-align: center;
+          line-height: 36px;
         }
         .bottom_centent {
           display: flex;
           align-items: center;
+          margin-top: 25px;
           .start_box {
             width: 148.27px;
             height: 45.39px;
@@ -291,6 +294,7 @@
           .top {
             .title {
               font-size: 64.4px;
+              font-weight: 800;
             }
             .content {
               font-size: 20px;
@@ -299,20 +303,25 @@
           }
           .bottom {
             cursor: pointer;
-            width: 198px;
-            height: 47px;
-            background: url("../../../assets/home/bottom_btn.png") no-repeat center;
+            width: 148.27px;
+            height: 45.39px;
+            background: url("../../../assets/images/btn_bg.png") no-repeat center;
+            backdrop-filter: blur(63.8298px);
             background-size: cover;
+            border-radius: 50px;
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 100px;
             .arrow {
               width: 20px;
               height: 12px;
               background: url("../../../assets/home/Arrow.png") no-repeat center;
               background-size: cover;
               margin-left: 9px;
+            }
+            &:hover {
+              background: linear-gradient(225deg, #18c8ff 14.89%, #933ffe 85.85%);
+              border-radius: 50px;
             }
           }
           &::after {
@@ -355,7 +364,7 @@
         background: #000000;
         border: 1px solid #727272;
         backdrop-filter: blur(100px);
-        height: 349px;
+        height: 315px;
         border-radius: 30px;
         display: flex;
         align-items: flex-start;
@@ -401,21 +410,19 @@
           .bottom_contan {
             margin-top: 40px;
             cursor: pointer;
-            width: 198px;
-            height: 47px;
-            background: #000000;
-            backdrop-filter: blur(100px);
-            border: 2px solid rgba(225, 225, 225, 0.3);
+            width: 148.27px;
+            height: 45.39px;
+            background: url("../../../assets/images/btn_bg.png") no-repeat center;
+            backdrop-filter: blur(63.8298px);
+            background-size: cover;
+            border-radius: 50px;
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 100px;
-            .arrow {
-              width: 20px;
-              height: 12px;
-              background: url("../../../assets/home/Arrow.png") no-repeat center;
-              background-size: cover;
-              margin-left: 9px;
+            &:hover {
+              background: linear-gradient(225deg, #18c8ff 14.89%, #933ffe 85.85%);
+              border-radius: 50px;
             }
           }
         }
@@ -470,6 +477,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     .title {
       font-size: 64.4035px;
       text-align: center;
@@ -517,12 +525,6 @@
         }
       }
     }
-  }
-  .block5 {
-    width: 100%;
-    // min-height: 100vh;
-    margin-bottom: 130px;
-    position: relative;
     .bottom_bg {
       width: 795px;
       height: 795px;
@@ -533,6 +535,13 @@
       left: 0;
       z-index: -1;
     }
+  }
+  .block5 {
+    width: 100%;
+    // min-height: 100vh;
+    margin-bottom: 130px;
+    position: relative;
+
     .title {
       font-size: 64.4035px;
       text-align: center;
@@ -558,5 +567,15 @@
         }
       }
     }
+  }
+  .bottom_bg {
+    width: 795px;
+    height: 795px;
+    background: url("../../../assets/home/bg-gradient-img.png") no-repeat center;
+    background-size: cover;
+    position: absolute;
+    bottom: -440px;
+    left: 0;
+    z-index: -1;
   }
 }
