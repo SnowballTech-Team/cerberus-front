@@ -141,7 +141,7 @@ export function Home() {
           <div className="content_box">
             <img src={center_bg} alt="" />
             <p className="word_content">
-              Cerberus is an open source dogecoin Web69&EVM infrastructure, designed for the multi-chain dogeverse
+              Cerberus is an open source dogecoin EVM infrastructure, designed for the multi-chain web3 dogeverse
             </p>
             <div className="bottom_centent">
               <button className="start_box">Get Started</button>
