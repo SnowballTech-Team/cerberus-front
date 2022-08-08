@@ -12,9 +12,9 @@ export function Menu() {
     { name: "Home", url: "/" },
     { name: "CDoge", url: "/cdog" },
     { name: "CNFT", url: "/commingsoon" },
-    { name: "CSwap", url: "/commingsoon" },
-    { name: "Cerbs", url: "/commingsoon" },
-    { name: "Referral", url: "/commingsoon" },
+    // { name: "CSwap", url: "/commingsoon" },
+    // { name: "Cerbs", url: "/commingsoon" },
+    // { name: "Referral", url: "/commingsoon" },
   ];
   const rightList = [
     { id: 1, imgUrl: rightList1 },

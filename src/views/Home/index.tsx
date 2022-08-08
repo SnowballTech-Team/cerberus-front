@@ -38,7 +38,7 @@ export function Home() {
     {
       title: "CDoge",
       content:
-        "CDoge  is the core extension of dogecoin to the Web69 dogeverse. It brings dogecoin greater liquidity to DEX, DeFi, NFT, GameFi, and infinite DApps.",
+        "CDoge  portal is the core extension of dogecoin to the Web69 dogeverse. It brings dogecoin greater liquidity to DEX, DeFi, NFT, GameFi, and infinite DApps.",
     },
     {
       title: "CNFT",
@@ -47,13 +47,12 @@ export function Home() {
     },
     {
       title: "CSwap",
-      content:
-        "CSwap is a DEX (Decentralized Exchange) that allows shibes to start pairing their cDOGE with other tokens.",
+      content: "CSwap is a DEX that allows shibes to start pairing their cDOGE with other tokens. ",
     },
     {
       title: "Cerbs",
       content:
-        "Cerbs is a decentralized application platform, supporting Doge DApps built by communities, and partners. When dogecoin hits $6.9, Cerbs Mainnet/Testnet will be launched to create a home for every doge believer.",
+        "Cerbs is a decentralized application platform, supporting Doge DApps built by communities, and partners.",
     },
   ];
   const joinList = [
@@ -67,20 +66,23 @@ export function Home() {
       name: "Milestone 1:",
       list: [
         "Cerberus universe launch",
-        "CDoge deployment and open source",
-        "CBridge launch for Doge<>CDoge",
+        "CebrsCore deployment and open source",
+        "CDoge Portal launch for DOGE<>cDOGE",
         "Cerberus Proof of Asset",
+        "Million Doge Club NFT",
+        "Berus token and mining launch",
       ],
     },
     {
       name: "Milestone 2:",
       list: [
-        "Berus deployment and open source",
-        "CDoge>>Berus vpool launch on BSC",
-        "CDoge>>Berus vpool launch on ETH",
+        "CDoge>>Berus vpool launch",
+        "Referral system",
+        "CCNFT partners and collaborations",
+        "Berus burning mechanism",
         "CSwap launch",
-        "Berus lockdrop system for CSwap LPs",
-        "Berus burn mechanism for CBridge/CSwap fee",
+        "CSwap LP incentives",
+        "Cerbs ecosystem development",
       ],
     },
     {
@@ -101,7 +103,7 @@ export function Home() {
         "Cerberus doge multi-chain Web3 protocol",
         "Cerberus multi-chain CSwap",
         "Cerberus multi-chain DApp",
-        "Invest in Elon Musk projects in 100 years",
+        "Invest in Elon Musk's Mars projects and support humanity's new civilizations",
       ],
     },
   ];
@@ -182,10 +184,12 @@ export function Home() {
                       <p className="title">{item.title}</p>
                       <p className="content">{item.content}</p>
                     </div>
-                    <div className="bottom">
-                      <p>Get Started</p>
-                      {/* <p className="arrow" /> */}
-                    </div>
+                    {index == 0 || index == 1 ? (
+                      <div className="bottom">
+                        <p>Get Started</p>
+                        {/* <p className="arrow" /> */}
+                      </div>
+                    ) : null}
                   </li>
                 );
               })}

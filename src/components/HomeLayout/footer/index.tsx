@@ -12,8 +12,8 @@ export function Footer() {
     { name: "Home", url: "/" },
     { name: "CDoge", url: "/commingsoon" },
     { name: "CNFT", url: "/commingsoon" },
-    { name: "CSwap", url: "/commingsoon" },
-    { name: "Cerbs", url: "/commingsoon" },
+    // { name: "CSwap", url: "/commingsoon" },
+    // { name: "Cerbs", url: "/commingsoon" },
   ];
   const rightList = [
     { id: 1, imgUrl: rightList1 },

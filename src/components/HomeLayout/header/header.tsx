@@ -14,8 +14,8 @@ export function Header({ openMenu }: { openMenu: () => void }) {
     { name: "Home", url: "/" },
     { name: "CDoge", url: "/cdog" },
     { name: "CNFT", url: "/commingsoon" },
-    { name: "CSwap", url: "/commingsoon" },
-    { name: "Cerbs", url: "/commingsoon" },
+    // { name: "CSwap", url: "/commingsoon" },
+    // { name: "Cerbs", url: "/commingsoon" },
   ];
 
   //   const [menuStatus, setMenuStatus] = useState(false)
