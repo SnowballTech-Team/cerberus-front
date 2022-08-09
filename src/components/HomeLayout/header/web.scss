@@ -39,8 +39,11 @@
         li {
           margin-right: 62px;
           font-size: 18px;
+          min-width: 78px;
           cursor: pointer;
-          &:first-child {
+          display: flex;
+          justify-content: center;
+          &.actived_link {
             position: relative;
             &::after {
               content: "";
@@ -50,9 +53,10 @@
               background: url("../../../assets/header/chose_bg.png") no-repeat center;
               background-size: cover;
               left: 50%;
-              bottom: -5px;
+              bottom: -10px;
               transform: translateX(-50%);
             }
+
           }
           button {
             background: none;
@@ -64,6 +68,28 @@
           }
           a {
             color: #fff;
+          }
+          .select_box {
+            width: 100%;
+            .MuiInputBase-root  {
+              width: 100%;
+              border: none;
+              color: #fff;
+              font-weight: 500;
+              font-size: 18px;
+              .MuiSelect-icon {
+                color: #fff;
+              }
+              .MuiSelect-iconOutlined {
+                right: -30px;
+              }
+              .MuiSelect-select {
+                padding: 0;
+              }
+              .MuiOutlinedInput-notchedOutline {
+                border: none  !important;
+              }
+            }
           }
         }
       }

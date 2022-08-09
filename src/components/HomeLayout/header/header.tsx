@@ -1,19 +1,22 @@
 import * as React from "react";
-// import { useState } from "react"
+import { useState } from "react";
 import "./web.scss";
 import "./mobile.scss";
-import { useMediaQuery, Link } from "@material-ui/core";
+import { useMediaQuery, Link, Select, MenuItem, FormControl } from "@material-ui/core";
 import menu_box from "../../../assets/mobile/header/menu_box.png";
 import logo from "../../../assets/header/logo.svg";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 export function Header({ openMenu }: { openMenu: () => void }) {
   const isSmallScreen = useMediaQuery("(max-width: 650px)");
   const isVerySmallScreen = useMediaQuery("(max-width: 379px)");
   const history = useHistory();
+  const location = useLocation();
+  const [selectValue, setValue] = useState<string>("/cnft");
+  console.log(location, "123");
   const topList = [
-    { name: "Home", url: "/" },
+    { name: "Home", url: "/home" },
     { name: "CDoge", url: "/cdog" },
-    { name: "CNFT", url: "/commingsoon" },
+    { name: "CNFT", url: "/cnft" },
     // { name: "CSwap", url: "/commingsoon" },
     // { name: "Cerbs", url: "/commingsoon" },
   ];
@@ -24,6 +27,10 @@ export function Header({ openMenu }: { openMenu: () => void }) {
   //   }
   const toHome = () => {
     history.push("/home");
+  };
+  const handleChange = (e: any) => {
+    setValue(e.target.value);
+    console.log(e.target.value);
   };
   return (
     <div className={isSmallScreen || isVerySmallScreen ? "header_box mobile_header_box" : "header_box"}>
@@ -49,10 +56,22 @@ export function Header({ openMenu }: { openMenu: () => void }) {
               {topList &&
                 topList.map((item, index) => {
                   return (
-                    <li key={index}>
-                      <Link href={item.url} underline="none">
-                        {item.name}
-                      </Link>
+                    <li key={index} className={location.pathname === item.url ? "actived_link" : ""}>
+                      {item.url == "/cnft" ? (
+                        <Link href={item.url} underline="none">
+                          <FormControl variant="outlined" color="primary" size="small" className="select_box">
+                            <Select value={selectValue} onChange={handleChange} displayEmpty>
+                              <MenuItem value={"/cnft"}>CNFT</MenuItem>
+                              <MenuItem value={"/nftmarket"}>Nft market</MenuItem>
+                              <MenuItem value={"/milliongogeclub"}>Million Doge Club</MenuItem>
+                            </Select>
+                          </FormControl>
+                        </Link>
+                      ) : (
+                        <Link href={item.url} underline="none">
+                          {item.name}
+                        </Link>
+                      )}
                     </li>
                   );
                 })}
