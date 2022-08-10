@@ -56,7 +56,6 @@
               bottom: -10px;
               transform: translateX(-50%);
             }
-
           }
           button {
             background: none;
@@ -69,26 +68,88 @@
           a {
             color: #fff;
           }
-          .select_box {
+        }
+        .nft_link {
+          display: flex;
+          justify-content: center;
+          .nft_parent {
+            position: relative;
+            height: 42px;
+            padding: 5px 0;
+            box-sizing: border-box;
+            width: 140px;
+            text-align: center;
+            border-radius: 10px;
+            &::after {
+              content: "";
+              display: block;
+              width: 12px;
+              height: 7px;
+              position: absolute;
+              right: 20px;
+              bottom: 18px;
+              background: url("../../../assets/header/trangle.png") no-repeat center;
+              background-size: 100% 100%;
+            }
+            .select {
+              position: absolute;
+              left: 0px;
+              top: 33px;
+              display: flex;
+              flex-direction: column;
+              background: #fff;
+              border-radius: 0 0 10px 10px;
+              width: 140px;
+              height: 0;
+              box-sizing: border-box;
+              flex: 1;
+              transition: height linear 0.3s;
+
+              .nft_son {
+                color: #485470;
+                width: 100%;
+                text-align: center;
+                height: 32px;
+                font-family: "DM Sans";
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 32px;
+                opacity: 0;
+                transition: opacity linear 0.3s;
+              }
+            }
+            .open_select {
+              height: 90px;
+              padding-top: 5px;
+              .nft_son {
+                opacity: 1;
+              }
+            }
+          }
+          .open_nft_parent {
+            // border-radius: 10px 10px 0 0;
+            background: #fff;
             width: 100%;
-            .MuiInputBase-root  {
-              width: 100%;
-              border: none;
-              color: #fff;
-              font-weight: 500;
-              font-size: 18px;
-              .MuiSelect-icon {
-                color: #fff;
-              }
-              .MuiSelect-iconOutlined {
-                right: -30px;
-              }
-              .MuiSelect-select {
-                padding: 0;
-              }
-              .MuiOutlinedInput-notchedOutline {
-                border: none  !important;
-              }
+            &::after {
+              transform: rotateX(180deg);
+            }
+          }
+        }
+        .nft_actived_link {
+          width: 140px;
+          background: #fff;
+          border-radius: 10px;
+          .nft_parent {
+            .nft_parent_word {
+              background: linear-gradient(225deg, #18c8ff 14.89%, #933ffe 85.85%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text;
+              text-fill-color: transparent;
+              display: block;
+              height: 36px;
+              line-height: 34px;
             }
           }
         }

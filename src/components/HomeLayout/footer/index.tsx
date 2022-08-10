@@ -6,7 +6,7 @@ import rightList1 from "../../../assets/home/tw2.svg";
 import rightList2 from "../../../assets/home/tg2.svg";
 import rightList3 from "../../../assets/home/git2.svg";
 import rightList4 from "../../../assets/home/med2.svg";
-
+import { useLocation } from "react-router-dom";
 export function Footer() {
   const leftList = [
     { name: "Home", url: "/" },
@@ -23,8 +23,12 @@ export function Footer() {
   ];
   const isSmallScreen = useMediaQuery("(max-width: 650px)");
   const isVerySmallScreen = useMediaQuery("(max-width: 379px)");
+  const location = useLocation();
   return (
-    <div className={isSmallScreen || isVerySmallScreen ? "footer_box mobile_footer_box" : "footer_box"}>
+    <div
+      className={isSmallScreen || isVerySmallScreen ? "footer_box mobile_footer_box" : "footer_box"}
+      style={{ minHeight: location.pathname == "/home" ? "440px" : "auto" }}
+    >
       <div className="container">
         <div className="left">
           <ul>

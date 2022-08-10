@@ -29,7 +29,8 @@ function HomeLayout(props: any) {
         </div>
       </div>
       {props.children}
-      {isShow ? <Footer /> : null}
+      {/* {isShow ? <Footer /> : null} */}
+      <Footer />
     </div>
   );
 }

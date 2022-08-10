@@ -1,70 +1,213 @@
-.dog_box {
-  width: 100%;
-  margin-top: 108px;
-  height: calc(100vh - 194px);
-  position: relative;
-  .big_bg {
-    position: absolute;
-    top: -108px;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: url("../../../assets/big_bg.png") no-repeat center;
-    background-size: 100% 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: -1;
-    .gYgkvS {
-      display: inline-block;
-      position: relative;
-      .bfvNdl {
-        text-align: center;
-        font-size: 128px;
-        display: inline-block;
-        background: linear-gradient(
-            270deg,
-            rgb(255, 115, 86) 0%,
-            rgb(255, 89, 226) 25.52%,
-            rgb(82, 221, 246) 50%,
-            rgb(234, 223, 78) 76.04%,
-            rgb(255, 115, 86) 100%
-          )
-          0% 0% / 200%;
-        -webkit-background-clip: text;
-        color: transparent;
-        display: inline-block;
-        animation: 4s linear 0s infinite normal none running eEGgoN;
+.cnft_box {
+  .block1 {
+    position: relative;
+    video {
+      width: 100%;
+    }
+    .center_cont {
+      height: 223px;
+      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 168px;
+      .left_cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .top_tile {
+          font-family: "Manrope";
+          font-style: normal;
+          font-weight: 800;
+          font-size: 64.4px;
+          line-height: 88px;
+          color: #ffffff;
+        }
+        .bottom_content {
+          margin-top: 18px;
+          width: 712px;
+          height: 117px;
+          font-family: "Manrope";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 36px;
+          line-height: 108.6%;
+        }
       }
-      .cXKpZu {
-        filter: blur(32px);
-        opacity: 0.5;
-        display: inline;
-        left: 0px;
-        position: absolute;
-        .bfvNdl {
-          text-align: center;
-          font-size: 128px;
-          display: inline-block;
-          background: linear-gradient(
-              270deg,
-              rgb(255, 115, 86) 0%,
-              rgb(255, 89, 226) 25.52%,
-              rgb(82, 221, 246) 50%,
-              rgb(234, 223, 78) 76.04%,
-              rgb(255, 115, 86) 100%
-            )
-            0% 0% / 200%;
-          -webkit-background-clip: text;
-          color: transparent;
-          display: inline-block;
-          animation: 4s linear 0s infinite normal none running eEGgoN;
+      .right_cont {
+        .address_input {
+          width: 264px;
+          height: 48px;
+          border-radius: 30px;
+          background: #485470;
+          padding: 0 20px;
+          font-family: "DM Sans";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 21px;
+          /* identical to box height */
+
+          color: #ffffff;
+          .MuiInputBase-input {
+            &::before {
+              content: "";
+            }
+            &::after {
+              content: "";
+            }
+          }
+        }
+        .MuiInput-underline:after {
+          content: "";
+          border-bottom: none;
         }
       }
     }
-    @keyframes eEGgoN {
-      100% {
-        background-position: 200% center;
+  }
+
+  .block2 {
+    width: 100%;
+    margin-top: 30px;
+    .center_cont {
+      display: flex;
+      flex-direction: column;
+      .top_cont {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        .left_c {
+          font-family: "Manrope";
+          font-style: normal;
+          font-weight: 800;
+          font-size: 36px;
+          line-height: 108.6%;
+          color: #ffffff;
+        }
+        .right_c {
+          width: 137px;
+          height: 39px;
+          border: 2px solid #00ffc2;
+          border-radius: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: "Manrope";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20.0019px;
+          line-height: 27px;
+
+          color: #00ffc2;
+        }
+      }
+      .bottom_cont {
+        width: 632px;
+        height: 357px;
+        background: url("../../../assets/cnft/collection_bg.png") no-repeat center;
+        background-size: cover;
+        margin: 0 auto;
+        margin-top: 38px;
+        padding: 13px 11px;
+        position: relative;
+        z-index: 1;
+        img {
+          width: 610px;
+          height: 255px;
+        }
+        .coin_bg {
+          position: absolute;
+          z-index: 2;
+          bottom: 4px;
+          width: 180px;
+          height: 180px;
+          background: url("../../../assets/cnft/coin.png") no-repeat center;
+          background-size: cover;
+        }
+        .bottom_word {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          margin-top: 8px;
+          .top_c {
+            font-family: "Manrope";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 108.6%;
+            color: #ffffff;
+          }
+          .bottom_c {
+            margin-top: 14px;
+            font-family: "DM Sans";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 16px;
+            color: #a4a4a4;
+          }
+        }
+      }
+    }
+  }
+
+  .block3 {
+    margin-top: 77px;
+    margin-bottom: 112px;
+    .center_cont {
+      padding: 0 !important;
+    }
+    .arrvial_bottom_cont {
+      width: 100%;
+      ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 46px;
+        li {
+          width: 290px;
+          height: 390px;
+          background: url("../../../assets/cnft/arrvials_bg.png") no-repeat center;
+          padding: 10px 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-size: 100% 100%;
+          img {
+            width: 274px;
+            height: 274px;
+          }
+          .bottom {
+            margin-top: 9px;
+            .title {
+              font-family: "DM Sans";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 12px;
+              line-height: 16px;
+              color: #a4a4a4;
+            }
+            .num {
+              font-family: "Manrope";
+              font-style: normal;
+              font-weight: 600;
+              font-size: 20px;
+              line-height: 32px;
+              color: #ffffff;
+              border-bottom: 2px solid #a4a4a4;
+            }
+            .bottom_word {
+              font-family: "DM Sans";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 12px;
+              line-height: 16px;
+              color: #a4a4a4;
+              margin-top: 10px;
+            }
+          }
+        }
       }
     }
   }

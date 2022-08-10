@@ -26,6 +26,7 @@ import { getAllInverseBonds } from "./slices/InverseBondSlice";
 import { Home } from "./views/Home";
 import { CDog } from "./views/CDog";
 import { CNFT } from "./views/CNFT";
+import { MillionDogClub } from "./views/MillionDogClub";
 import { CommingSoon } from "./views/CommingSoon";
 import HomeLayout from "./components/HomeLayout";
 
@@ -229,7 +230,7 @@ function App() {
           <Route exact path="/home" component={Home}></Route>
           <Route exact path="/cdog" component={CDog}></Route>
           <Route exact path="/cnft" component={CNFT}></Route>
-
+          <Route exact path="/milliondogclub" component={MillionDogClub}></Route>
           <Route exact path="/commingsoon" component={CommingSoon}></Route>
         </Switch>
       </HomeLayout>
