@@ -9,9 +9,9 @@ import rightList4 from "../../../assets/home/med2.svg";
 
 export function Menu() {
   const mobileTopList = [
-    { name: "Home", url: "/" },
-    { name: "CDoge", url: "/cdog" },
-    { name: "CNFT", url: "/commingsoon" },
+    { name: "Home", url: "#/home" },
+    { name: "CDoge", url: "#/cdog" },
+    { name: "CNFT", url: "#/cnft" },
     // { name: "CSwap", url: "/commingsoon" },
     // { name: "Cerbs", url: "/commingsoon" },
     // { name: "Referral", url: "/commingsoon" },

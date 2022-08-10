@@ -32,6 +32,7 @@ export function CNFT() {
           playsInline={true}
           controls={false}
           className="coin-vedio"
+          style={{ width: "100%", height: "100%", objectFit: "fill" }}
         />
         <Container
           style={{

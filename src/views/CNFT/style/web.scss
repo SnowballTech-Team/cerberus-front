@@ -58,10 +58,16 @@
             }
           }
         }
-        .MuiInput-underline:after {
-          content: "";
-          border-bottom: none;
-        }
+        .MuiInput-underline{
+          &::after {
+            content: "";
+            border-bottom: none;
+          }
+          &::before {
+            content: "";
+            border-bottom: none;
+          }
+        } 
       }
     }
   }
@@ -97,7 +103,7 @@
           font-weight: 500;
           font-size: 20.0019px;
           line-height: 27px;
-
+          cursor: pointer;
           color: #00ffc2;
         }
       }
