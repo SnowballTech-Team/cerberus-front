@@ -2,6 +2,7 @@ import { useMediaQuery, Container, Typography, Box } from "@material-ui/core";
 import "./style/web.scss";
 import "./style/mobile.scss";
 import millionLogo from "../../assets/cnft/million_logo.png";
+import mobileMillionLogo from "../../assets/mobile/cnft/top_millionbg.png";
 import rank1 from "../../assets/cnft/rank1.png";
 import rank2 from "../../assets/cnft/rank2.png";
 import rank3 from "../../assets/cnft/rank3.png";
@@ -34,7 +35,7 @@ export function MillionDogClub() {
         className="center_cont"
       >
         <div className="top_content">
-          <img src={millionLogo} />
+          <img src={isSmallScreen || isVerySmallScreen ? mobileMillionLogo : millionLogo} />
           <Typography variant="h5" className="accord">
             Million Doge Club (MDC) is the official NFT collection released by Cerberus. MDC is not only a delicate NFT
             fine art but a certificate of being an honorable shareholder of Cerberus as well. Whoever owns MDC owns
@@ -42,9 +43,12 @@ export function MillionDogClub() {
           </Typography>
         </div>
         <div className="content_box">
-          <Typography variant="h3" className="title">
-            Honor & Ranking
-          </Typography>
+          <Box className="top_cont">
+            <Typography variant="h3" className="title">
+              Honor & Ranking
+            </Typography>
+            {isSmallScreen || isVerySmallScreen ? <button className="start_btn">START NOW</button> : null}
+          </Box>
           <ul>
             {rankList &&
               rankList.map((item, index) => {
@@ -78,7 +82,7 @@ export function MillionDogClub() {
                 );
               })}
           </ul>
-          <button className="start_btn">START NOW</button>
+          {isSmallScreen || isVerySmallScreen ? null : <button className="start_btn">START NOW</button>}
         </div>
       </Container>
     </div>

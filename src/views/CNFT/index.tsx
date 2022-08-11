@@ -25,14 +25,14 @@ export function CNFT() {
     <div className={isSmallScreen || isVerySmallScreen ? "cnft_box mobile_cnft_box" : "cnft_box"}>
       <div className="block1">
         <video
-          src={isSmallScreen || isVerySmallScreen ? "/mobile.mp4" : "/block1.mp4"}
+          src={isSmallScreen || isVerySmallScreen ? "/cnft_mobile.mp4" : "/block1.mp4"}
           muted
           autoPlay
           loop
           playsInline={true}
           controls={false}
           className="coin-vedio"
-          style={{ width: "100%", height: "100%", objectFit: "fill" }}
+          style={{ width: "100%", height: isSmallScreen || isVerySmallScreen ? "115%" : "100%", objectFit: "fill" }}
         />
         <Container
           style={{
@@ -60,6 +60,14 @@ export function CNFT() {
               onChange={e => handleChangeNum(e)}
             />
           </Box>
+          {isSmallScreen || isVerySmallScreen ? (
+            <Box className="top_cont new_topcont">
+              <Typography variant="h5" className="left_c">
+                Newest Collections
+              </Typography>
+              <Box className="right_c">View All &gt;</Box>
+            </Box>
+          ) : null}
         </Container>
       </div>
       <div className="block2">
@@ -69,12 +77,14 @@ export function CNFT() {
           }}
           className="center_cont"
         >
-          <Box className="top_cont">
-            <Typography variant="h5" className="left_c">
-              Newest Collections
-            </Typography>
-            <Box className="right_c">View All &gt;</Box>
-          </Box>
+          {isSmallScreen || isVerySmallScreen ? null : (
+            <Box className="top_cont">
+              <Typography variant="h5" className="left_c">
+                Newest Collections
+              </Typography>
+              <Box className="right_c">View All &gt;</Box>
+            </Box>
+          )}
           <Box className="bottom_cont">
             <img src={centerBg} />
             <div className="coin_bg"></div>
