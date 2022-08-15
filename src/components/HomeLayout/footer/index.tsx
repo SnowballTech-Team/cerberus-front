@@ -11,6 +11,7 @@ export function Footer() {
   const leftList = [
     { name: "Home", url: "/" },
     { name: "CDoge", url: "/commingsoon" },
+    { name: "Berus", url: "/commingsoon" },
     { name: "CNFT", url: "/commingsoon" },
     // { name: "CSwap", url: "/commingsoon" },
     // { name: "Cerbs", url: "/commingsoon" },

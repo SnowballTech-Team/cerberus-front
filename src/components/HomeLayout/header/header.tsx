@@ -16,6 +16,7 @@ export function Header({ openMenu }: { openMenu: () => void }) {
   const topList = [
     { name: "Home", url: "/home" },
     { name: "CDoge", url: "/cdog" },
+    { name: "Berus", url: "/berus" },
     { name: "CNFT", url: "/cnft" },
     // { name: "CSwap", url: "/commingsoon" },
     // { name: "Cerbs", url: "/commingsoon" },

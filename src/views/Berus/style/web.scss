@@ -1,0 +1,176 @@
+.berus_box {
+  width: 100%;
+  margin-top: 108px;
+  min-height: calc(100vh - 194px);
+  position: relative;
+  &::before {
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: url("../../../assets/berus/top_bg.png") no-repeat center;
+    background-size: 100% 100%;
+    position: absolute;
+    top: -130px;
+    left: -350px;
+  }
+  .block1 {
+    width: 100%;
+    padding-top: 50px;
+    height: 100vh;
+    .center_cont {
+      height: 100%;
+      .left_box {
+        position: relative;
+        width: 488px;
+        height: 100%;
+        .top_human {
+          width: 467px;
+          height: 631px;
+          background: url("../../../assets/berus/nft_top.png") no-repeat center;
+          background-size: cover;
+          // position: absolute;
+          // left: 0;
+          // top: 0;
+          z-index: 2;
+        }
+        .gif_box {
+          width: 488px;
+          z-index: -1;
+          height: 488px;
+          background: url("../../../assets/berus/top.gif") no-repeat center;
+          background-size: cover;
+          position: absolute;
+          left: -30px;
+          top: 550px;
+        }
+      }
+      .right_box {
+        margin-left: 40px;
+        .top_cont {
+          .top_tile {
+            font-family: "Manrope";
+            font-style: normal;
+            font-weight: 800;
+            font-size: 64.4px;
+            line-height: 88px;
+            color: #ffffff;
+          }
+          .bottom_content {
+            margin-top: 18px;
+            font-family: "Manrope";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 108.6%;
+            color: #ffffff;
+          }
+          .bottom_conten {
+            margin-top: 74px;
+            font-family: "DM Sans";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 22px;
+            color: #ffffff;
+          }
+        }
+        .bottom_cont {
+          margin-top: 124px;
+          width: 820px;
+          height: 229px;
+          background: linear-gradient(116.29deg, rgba(98, 98, 98, 0.28) -16.91%, rgba(0, 0, 0, 0.28) 101.76%);
+          backdrop-filter: blur(100px);
+          border-radius: 30px;
+          border: 2px solid #626262;
+          padding: 26px 40px;
+          box-sizing: border-box;
+          .top_con {
+            .top_tile {
+              font-family: "Manrope";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 24px;
+              line-height: 108.6%;
+              color: #ffffff;
+            }
+            .contaier_box {
+              margin-top: 12px;
+              display: flex;
+              align-items: center;
+              .tile_name {
+                font-family: "DM Sans";
+                font-style: normal;
+                font-weight: 500;
+                font-size: 17px;
+                line-height: 22px;
+                color: #ffffff;
+              }
+              .input_box {
+                width: 118px;
+                height: 30px;
+                background: linear-gradient(270deg, rgba(24, 200, 255, 0) 0%, rgba(147, 63, 254, 0.38) 91.1%);
+                border-radius: 10px;
+                padding-left: 10px;
+                margin-left: 5px;
+                .MuiInputBase-formControl {
+                  color: #fff;
+                  height: 100%;
+                }
+              }
+              .add_logo {
+                margin-left: 5px;
+              }
+              .add_margin {
+                margin-left: 5px;
+              }
+              .amount_box {
+                margin-left: 66px;
+                width: 309px;
+                background: #485470;
+              }
+            }
+          }
+          .bottom_con {
+            margin-top: 30px;
+            .btn_box {
+              margin-left: 66px;
+              display: flex;
+              button {
+                outline: none;
+                width: 146px;
+                height: 30px;
+                border-radius: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                font-family: "Manrope";
+                font-style: normal;
+                font-weight: 700;
+                font-size: 15px;
+              }
+              .collect {
+                background: linear-gradient(225deg, #18c8ff 14.89%, #933ffe 85.85%);
+              }
+              .deposit {
+                background: url("../../../assets/berus/btn_bg.png") no-repeat center;
+                background-size: cover;
+                margin-left: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.MuiInput-underline:hover:not(.Mui-disabled):before {
+  border-bottom: none !important;
+}
+.MuiInput-underline:before {
+  border-bottom: none;
+}
+.MuiInput-underline:after {
+  border-bottom: none !important;
+  transition: none !important;
+}

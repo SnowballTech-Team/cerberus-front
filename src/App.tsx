@@ -28,6 +28,7 @@ import { CDog } from "./views/CDog";
 import { CNFT } from "./views/CNFT";
 import { MillionDogClub } from "./views/MillionDogClub";
 import { CommingSoon } from "./views/CommingSoon";
+import { Berus } from "./views/Berus";
 import HomeLayout from "./components/HomeLayout";
 
 const DEBUG = false;
@@ -231,6 +232,7 @@ function App() {
           <Route exact path="/cdog" component={CDog}></Route>
           <Route exact path="/cnft" component={CNFT}></Route>
           <Route exact path="/milliondogclub" component={MillionDogClub}></Route>
+          <Route exact path="/berus" component={Berus}></Route>
           <Route exact path="/commingsoon" component={CommingSoon}></Route>
         </Switch>
       </HomeLayout>
