@@ -5,7 +5,7 @@
   position: relative;
   .big_bg {
     position: absolute;
-    top: -40rem;
+    top: -30%;
     left: -160%;
     width: 280%;
     height: 150%;
@@ -43,23 +43,23 @@
         justify-content: space-between;
         align-items: center;
         .title {
-          font-family: 'Manrope';
+          font-family: "Manrope";
           font-style: normal;
           font-weight: 800;
           font-size: 24px;
           line-height: 108.6%;
-          color: #FFFFFF;
+          color: #ffffff;
         }
         .start_btn {
           margin-top: 0;
           width: 121.27px;
           height: 29px;
-          font-family: 'Manrope';
+          font-family: "Manrope";
           font-style: normal;
           font-weight: 800;
           font-size: 15.8182px;
           line-height: 22px;
-          color: #FFFFFF;
+          color: #ffffff;
         }
       }
       ul {
