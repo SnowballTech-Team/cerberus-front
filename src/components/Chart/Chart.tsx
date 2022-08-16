@@ -18,6 +18,9 @@ import {
   Tooltip,
   XAxis,
   YAxis,
+  PieChart,
+  Pie,
+  Cell,
 } from "recharts";
 import { ReactComponent as Fullscreen } from "src/assets/icons/fullscreen.svg";
 import { formatCurrency, trim } from "src/helpers";
@@ -347,6 +350,35 @@ const renderBarChart = (
   </BarChart>
 );
 
+const renderPieChart = (
+  data: any[],
+  dataKey: string[],
+  stopColor: string[][],
+  stroke: string[],
+  dataFormat: string,
+  bulletpointColors: CSSProperties[],
+  itemNames: string[],
+  itemType: string,
+  isStaked: boolean,
+  isExpanded: boolean,
+  expandedGraphStrokeColor: string,
+  isPOL: boolean,
+) => (
+  <PieChart data={data}>
+    <defs>
+      <linearGradient id={`color-${dataKey[0]}`} x1="0" y1="0" x2="0" y2="1">
+        <stop offset="16%" stopColor={stopColor[0][0]} stopOpacity={0.8} />
+        <stop offset="84%" stopColor={stopColor[0][0]} stopOpacity={0} />
+      </linearGradient>
+    </defs>
+    <Pie data={data} cx="50%" cy="50%" labelLine={false} outerRadius={80} fill="#8884d8" dataKey="value">
+      {data.map((entry, index) => (
+        <Cell key={`cell-${index}`} fill={`url(#color-${dataKey[0]})`} fillOpacity={1} />
+      ))}
+    </Pie>
+  </PieChart>
+);
+
 function Chart({
   type,
   data,
@@ -412,6 +444,21 @@ function Chart({
       );
     if (type === "area")
       return renderAreaChart(
+        data,
+        dataKey,
+        stopColor,
+        stroke,
+        dataFormat,
+        bulletpointColors,
+        itemNames,
+        itemType,
+        isStaked,
+        isExpanded,
+        expandedGraphStrokeColor,
+        isPOL,
+      );
+    if (type === "pie")
+      return renderPieChart(
         data,
         dataKey,
         stopColor,

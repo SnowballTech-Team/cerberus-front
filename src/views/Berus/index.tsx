@@ -9,6 +9,18 @@ export function Berus() {
   const handleChangeCdogValue = (e: any) => {
     setCdogValue(e.target.value);
   };
+  const data = [
+    { name: "CerbsDAO Treasury", value: "5%" },
+    { name: "Community rewards and airdrops", value: "5%" },
+    {
+      name: "is time-locked then linearly released in 100 years to invest in Elon Musk's Mars projects.",
+      value: "42%",
+    },
+    { name: "Development team", value: "10%" },
+    { name: "Private investors", value: "15%" },
+    { name: "BERUS VPool for public investors", value: "22%" },
+  ];
+  const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
   return (
     <div className={isSmallScreen || isVerySmallScreen ? "berus_box mobile_berus_box" : "berus_box"}>
       <div className="block1">
@@ -18,6 +30,7 @@ export function Berus() {
             justifyContent: "space-between",
             // alignItems: "center",
             width: isSmallScreen || isVerySmallScreen ? "100%" : "1200px",
+            padding: 0,
           }}
           className="center_cont"
         >
@@ -93,6 +106,56 @@ export function Berus() {
               </div>
             </Box>
           </div>
+        </Container>
+      </div>
+      <div className="block2">
+        <Container
+          style={{
+            width: isSmallScreen || isVerySmallScreen ? "100%" : "1200px",
+            padding: 0,
+          }}
+          className="center_cont"
+        >
+          <Typography variant="h3" className="top_tile">
+            Tokenomics
+          </Typography>
+          <Box className="content_box">
+            <Box className="top_word">
+              <ul>
+                {data &&
+                  data.splice(0, 3).map((item, index) => {
+                    return (
+                      <li>
+                        <Typography variant="h3" className="top_num">
+                          {item.value}
+                        </Typography>
+                        <Typography variant="h5" className="top_name">
+                          {item.name}
+                        </Typography>
+                      </li>
+                    );
+                  })}
+              </ul>
+            </Box>
+            <Box className="center_chart"></Box>
+            <Box className="top_word bottom_word">
+              <ul>
+                {data &&
+                  data.map((item, index) => {
+                    return (
+                      <li>
+                        <Typography variant="h3" className="top_num">
+                          {item.value}
+                        </Typography>
+                        <Typography variant="h5" className="top_name">
+                          {item.name}
+                        </Typography>
+                      </li>
+                    );
+                  })}
+              </ul>
+            </Box>
+          </Box>
         </Container>
       </div>
     </div>
