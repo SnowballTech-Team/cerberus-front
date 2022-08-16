@@ -19,7 +19,7 @@ import { dark as darkTheme } from "./themes/dark.js";
 import { dark as lightTheme } from "./themes/dark.js";
 import { girth as gTheme } from "./themes/girth.js";
 import { useGoogleAnalytics } from "./hooks/useGoogleAnalytics";
-import { getAllBonds } from "./slices/BondSliceV2";
+// import { getAllBonds } from "./slices/BondSliceV2";
 import { NetworkId } from "./constants";
 import { trackGAEvent } from "./helpers/analytics";
 import { getAllInverseBonds } from "./slices/InverseBondSlice";
@@ -135,7 +135,7 @@ function App() {
             dispatch(calcBondDetails({ bond, value: "", provider: loadProvider, networkID: networkId }));
           }
         });
-        dispatch(getAllBonds({ provider: loadProvider, networkID: networkId, address }));
+        // dispatch(getAllBonds({ provider: loadProvider, networkID: networkId, address }));
         dispatch(getAllInverseBonds({ provider: loadProvider, networkID: networkId, address }));
       }
     },

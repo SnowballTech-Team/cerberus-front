@@ -12,7 +12,6 @@ function HomeLayout(props: any) {
   const isVerySmallScreen = useMediaQuery("(max-width: 379px)");
   const [menuStatus, setMenuStatus] = useState(false);
   const location = useLocation();
-  console.log(location, "location");
   const isShow = location.pathname == "/home";
   const openMenu = () => {
     setMenuStatus(!menuStatus);

@@ -7,6 +7,8 @@ import NFTStore from "./NFTStore.json";
 import MFuel from "./MFuel.json";
 import IERC20 from "./IERC20.json";
 import Mint from "./Mint.json";
+import VPool from "./Vpool.json";
+import ERC20 from "./ERC20.json";
 
 export const ERC721Pausable_ABI = ERC721Pausable.abi;
 export const MBTCStaking_ABI = MBTCStaking.abi;
@@ -17,6 +19,10 @@ export const NFTStore_ABI = NFTStore.abi;
 export const MFuel_ABI = MFuel.abi;
 export const IERC20_ABI = IERC20.abi;
 export const Mint_ABI = Mint.abi;
+
+// new
+export const VPOOL_ABI = VPool.abi;
+export const ERC20_ABI = ERC20;
 
 // production
 export const MBTCStaking_ADDRESS = "0x14bC11c85Dcd4b47CD15A8510B33b312140688B8";
@@ -29,7 +35,7 @@ export const mFuel_ADDRESS = "0x54C020fd58b112e185ab22B29012dBe1A3612695";
 export const BUSD_ADDRESS = "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56";
 export const factory_ADDRESS = "0xdaF107Cb6CBc9402F58C266E6632528d38C29612";
 export const Mint_ADDRESS = "0x55Ff3e6f223aaa82a6df6e94194fE3d1828183F1";
-export const ERC20_ADDRESS = "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56";
+// export const ERC20_ADDRESS = "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56";
 
 // test
 // export const MBTCStaking_ADDRESS = "0x56325DAC0CbFb7Fe6A120C8590f9aACcCf8E11D9";
@@ -41,5 +47,9 @@ export const ERC20_ADDRESS = "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56";
 // export const mFuel_ADDRESS = "0x7b3481A4980c1e3c99C769b378A643Fe38460B4e";
 // export const BUSD_ADDRESS = "0x78867BbEeF44f2326bF8DDd1941a4439382EF2A7";
 // export const factory_ADDRESS = "0xCb2776b7c68d8149f18bc63e387A8367e1EFbDEd";
+
+// new
+export const ERC20_ADDRESS = "0xeD24FC36d5Ee211Ea25A80239Fb8C4Cfd80f12Ee";
+export const VPOOL_ADDRESS = "0x8F389DD70bCd1F9425a33bf7b8217aD5d7775eAB";
 
 export const POOL_ID = "1";

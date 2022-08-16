@@ -1,14 +1,40 @@
-import { useMediaQuery, Container, Box, Typography, FormControl, Input } from "@material-ui/core";
-import { useState } from "react";
+import {
+  useMediaQuery,
+  Container,
+  Box,
+  Typography,
+  FormControl,
+  Input,
+  Backdrop,
+  CircularProgress,
+} from "@material-ui/core";
+import { useState, useEffect } from "react";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 import "./style/web.scss";
 import "./style/mobile.scss";
+import { useWeb3Context } from "src/hooks/web3Context";
+import { CUR_NETWORK_ID } from "src/constants/network";
+import { ethers } from "ethers";
+import { VPOOL_ADDRESS, VPOOL_ABI, ERC20_ADDRESS, ERC20_ABI } from "src/contract";
+import { error } from "../../slices/MessagesSlice";
+import { bnToNum } from "src/helpers";
+import { useDispatch } from "react-redux";
+import { t } from "@lingui/macro";
+import BN from "bignumber.js";
 export function Berus() {
+  const maxInt = new BN("2").pow(new BN("256").minus(new BN("1")));
   const isSmallScreen = useMediaQuery("(max-width: 650px)");
   const isVerySmallScreen = useMediaQuery("(max-width: 379px)");
-  const [cdogValue, setCdogValue] = useState<string>("");
-  const handleChangeCdogValue = (e: any) => {
-    setCdogValue(e.target.value);
+  const [cdogValue, setCdogValue] = useState<number>(0);
+  const { connected, provider, address, networkId } = useWeb3Context();
+  const [berusLevl, setBerusLevel] = useState<number>(0);
+  const [letBerusLevel, setLetBerusLevel] = useState<number>(0);
+  const [amountValue, setAmountValue] = useState<number>(0);
+  const dispatch = useDispatch();
+  const [loading, setLoading] = useState(false);
+  const signer = provider.getSigner();
+  const handleChangeAmountValue = (e: any) => {
+    setAmountValue(e.target.value);
   };
   const data = [
     { name: "CerbsDAO Treasury", value: 5 },
@@ -22,6 +48,45 @@ export function Berus() {
     { name: "BERUS VPool for public investors", value: 22 },
   ];
   const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#0088FE", "#FFBB28"];
+
+  // get level
+  const getCurrentLevel = async () => {
+    setLoading(true);
+    try {
+      const poolContract = new ethers.Contract(VPOOL_ADDRESS, VPOOL_ABI, signer);
+      const tx = await poolContract.getCurLevel();
+      const tx2 = await poolContract.getLeftToken();
+      setBerusLevel(bnToNum(tx));
+      setLetBerusLevel(bnToNum(tx2));
+      setCdogValue(bnToNum(tx2) / bnToNum(tx));
+      setLoading(false);
+    } catch (err) {
+      console.log({ err });
+      setLoading(false);
+      dispatch(error(t`Fail to getCurLevel`));
+    }
+  };
+
+  // deposit
+  const depositBerus = async () => {
+    setLoading(true);
+    try {
+      const approvalInfo = new ethers.Contract(ERC20_ADDRESS, ERC20_ABI, signer);
+      const txOne = await approvalInfo.approve(VPOOL_ADDRESS, maxInt.c?.join(""));
+      console.log(txOne, "123");
+      setLoading(false);
+    } catch (err) {
+      console.log({ err });
+      setLoading(false);
+      dispatch(error(t`Fail to getCurLevel`));
+    }
+  };
+
+  useEffect(() => {
+    if (provider && networkId === CUR_NETWORK_ID && address) {
+      getCurrentLevel();
+    }
+  }, [connected]);
   return (
     <div className={isSmallScreen || isVerySmallScreen ? "berus_box mobile_berus_box" : "berus_box"}>
       <div className="block1">
@@ -62,11 +127,11 @@ export function Berus() {
                     CDoge
                   </Typography>
                   <FormControl variant="standard" className="input_box">
-                    <Input id="component-simple" value={cdogValue} onChange={handleChangeCdogValue} />
+                    <Input id="component-simple" value={1} disabled />
                   </FormControl>
                   <span className="add_logo">:</span>
                   <FormControl variant="standard" className="input_box">
-                    <Input id="component-simple" value={cdogValue} onChange={handleChangeCdogValue} />
+                    <Input id="component-simple" value={berusLevl} disabled />
                   </FormControl>
                   <Typography variant="h4" className="tile_name add_margin">
                     Berus
@@ -75,8 +140,8 @@ export function Berus() {
                     <Input
                       placeholder="amount"
                       id="component-simple"
-                      value={cdogValue}
-                      onChange={handleChangeCdogValue}
+                      value={amountValue}
+                      onChange={handleChangeAmountValue}
                     />
                   </FormControl>
                 </div>
@@ -90,18 +155,20 @@ export function Berus() {
                     CDoge
                   </Typography>
                   <FormControl variant="standard" className="input_box">
-                    <Input id="component-simple" value={cdogValue} onChange={handleChangeCdogValue} />
+                    <Input id="component-simple" value={cdogValue} disabled />
                   </FormControl>
                   <span className="add_logo">:</span>
                   <FormControl variant="standard" className="input_box">
-                    <Input id="component-simple" value={cdogValue} onChange={handleChangeCdogValue} />
+                    <Input id="component-simple" value={letBerusLevel} disabled />
                   </FormControl>
                   <Typography variant="h4" className="tile_name add_margin">
                     Berus
                   </Typography>
                   <div className="btn_box">
                     <button className="collect">Connect Wallet</button>
-                    <button className="deposit">Deposite</button>
+                    <button className="deposit" onClick={depositBerus}>
+                      Deposite
+                    </button>
                   </div>
                 </div>
               </div>
@@ -149,7 +216,7 @@ export function Berus() {
                       <stop offset="84%" stopColor="#454545" stopOpacity={0.2} />
                     </linearGradient>
                   </defs> */}
-                  <Pie data={data} cx="50%" cy="50%" labelLine={false} outerRadius={400} fill="#8884d8" dataKey="value">
+                  <Pie data={data} cx="50%" cy="50%" labelLine={false} outerRadius={300} fill="#8884d8" dataKey="value">
                     {data.map((entry, index) => (
                       <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                     ))}
@@ -179,6 +246,12 @@ export function Berus() {
           </Box>
         </Container>
       </div>
+      <Backdrop open={loading} className="loading_box">
+        <CircularProgress color="inherit" />
+        <Typography variant="h5" style={{ marginLeft: "1rem" }}>
+          Communicating with blockchain nodes...
+        </Typography>
+      </Backdrop>
     </div>
   );
 }
