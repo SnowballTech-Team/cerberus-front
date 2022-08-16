@@ -1,5 +1,6 @@
 import { useMediaQuery, Container, Box, Typography, FormControl, Input } from "@material-ui/core";
 import { useState } from "react";
+import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 import "./style/web.scss";
 import "./style/mobile.scss";
 export function Berus() {
@@ -10,17 +11,17 @@ export function Berus() {
     setCdogValue(e.target.value);
   };
   const data = [
-    { name: "CerbsDAO Treasury", value: "5%" },
-    { name: "Community rewards and airdrops", value: "5%" },
+    { name: "CerbsDAO Treasury", value: 5 },
+    { name: "Community rewards and airdrops", value: 5 },
     {
       name: "is time-locked then linearly released in 100 years to invest in Elon Musk's Mars projects.",
-      value: "42%",
+      value: 42,
     },
-    { name: "Development team", value: "10%" },
-    { name: "Private investors", value: "15%" },
-    { name: "BERUS VPool for public investors", value: "22%" },
+    { name: "Development team", value: 10 },
+    { name: "Private investors", value: 15 },
+    { name: "BERUS VPool for public investors", value: 22 },
   ];
-  const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
+  const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#0088FE", "#FFBB28"];
   return (
     <div className={isSmallScreen || isVerySmallScreen ? "berus_box mobile_berus_box" : "berus_box"}>
       <div className="block1">
@@ -123,35 +124,55 @@ export function Berus() {
             <Box className="top_word">
               <ul>
                 {data &&
-                  data.splice(0, 3).map((item, index) => {
-                    return (
-                      <li>
-                        <Typography variant="h3" className="top_num">
-                          {item.value}
-                        </Typography>
-                        <Typography variant="h5" className="top_name">
-                          {item.name}
-                        </Typography>
-                      </li>
-                    );
+                  data.map((item, index) => {
+                    if (index < 3) {
+                      return (
+                        <li key={index}>
+                          <Typography variant="h3" className="top_num">
+                            {item.value}
+                          </Typography>
+                          <Typography variant="h5" className="top_name">
+                            {item.name}
+                          </Typography>
+                        </li>
+                      );
+                    }
                   })}
               </ul>
             </Box>
-            <Box className="center_chart"></Box>
+            <Box className="center_chart">
+              <ResponsiveContainer width={838} height={838}>
+                <PieChart width={838} height={838}>
+                  {/* <defs>
+                    <linearGradient id="splitColor" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="16%" stopColor="#979797" stopOpacity={0.2} />
+                      <stop offset="84%" stopColor="#454545" stopOpacity={0.2} />
+                    </linearGradient>
+                  </defs> */}
+                  <Pie data={data} cx="50%" cy="50%" labelLine={false} outerRadius={400} fill="#8884d8" dataKey="value">
+                    {data.map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    ))}
+                  </Pie>
+                </PieChart>
+              </ResponsiveContainer>
+            </Box>
             <Box className="top_word bottom_word">
               <ul>
                 {data &&
                   data.map((item, index) => {
-                    return (
-                      <li>
-                        <Typography variant="h3" className="top_num">
-                          {item.value}
-                        </Typography>
-                        <Typography variant="h5" className="top_name">
-                          {item.name}
-                        </Typography>
-                      </li>
-                    );
+                    if (index > 2) {
+                      return (
+                        <li key={index}>
+                          <Typography variant="h3" className="top_num">
+                            {item.value}
+                          </Typography>
+                          <Typography variant="h5" className="top_name">
+                            {item.name}
+                          </Typography>
+                        </li>
+                      );
+                    }
                   })}
               </ul>
             </Box>
