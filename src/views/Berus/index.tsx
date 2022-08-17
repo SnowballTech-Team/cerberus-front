@@ -51,6 +51,7 @@ export function Berus() {
 
   // get level
   const getCurrentLevel = async () => {
+    console.log("请求了111");
     setLoading(true);
     try {
       const poolContract = new ethers.Contract(VPOOL_ADDRESS, VPOOL_ABI, signer);
@@ -79,6 +80,11 @@ export function Berus() {
         const poolContract = new ethers.Contract(VPOOL_ADDRESS, VPOOL_ABI, signer);
         const submitValue = new BN(amountValue).multipliedBy(new BN(10).pow(18)).toString();
         const txThree = await poolContract.depositAnchor(submitValue);
+        const txCB2 = await txOne.wait();
+        console.log(txCB2, "[]===");
+        if (txCB2.status) {
+          getCurrentLevel();
+        }
         console.log(txThree, "234");
       }
       setLoading(false);
@@ -313,6 +319,8 @@ export function Berus() {
                     outerRadius={isSmallScreen || isVerySmallScreen ? 180 : 300}
                     fill="#8884d8"
                     dataKey="value"
+                    cornerRadius={10}
+                    innerRadius={0}
                   >
                     {data.map((entry, index) => (
                       <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
