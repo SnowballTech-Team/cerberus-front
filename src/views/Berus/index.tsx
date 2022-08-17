@@ -29,7 +29,7 @@ export function Berus() {
   const { connected, provider, address, networkId } = useWeb3Context();
   const [berusLevl, setBerusLevel] = useState<number>(0);
   const [letBerusLevel, setLetBerusLevel] = useState<number>(0);
-  const [amountValue, setAmountValue] = useState<number>(0);
+  const [amountValue, setAmountValue] = useState<number>(1);
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
   const signer = provider.getSigner();
@@ -73,12 +73,19 @@ export function Berus() {
     try {
       const approvalInfo = new ethers.Contract(ERC20_ADDRESS, ERC20_ABI, signer);
       const txOne = await approvalInfo.approve(VPOOL_ADDRESS, maxInt.c?.join(""));
-      console.log(txOne, "123");
+      const txCB = await txOne.wait();
+      if (txCB.status) {
+        console.log(txCB, "123");
+        const poolContract = new ethers.Contract(VPOOL_ADDRESS, VPOOL_ABI, signer);
+        const submitValue = new BN(amountValue).multipliedBy(new BN(10).pow(18)).toString();
+        const txThree = await poolContract.depositAnchor(submitValue);
+        console.log(txThree, "234");
+      }
       setLoading(false);
     } catch (err) {
       console.log({ err });
       setLoading(false);
-      dispatch(error(t`Fail to getCurLevel`));
+      dispatch(error(t`Fail to depositAnchor`));
     }
   };
 
@@ -112,30 +119,54 @@ export function Berus() {
               <Typography variant="h5" className="bottom_content">
                 Sir Berus helps Doge destroy the fiat order and become the people's currency.
               </Typography>
-              <Typography variant="h6" className="bottom_conten">
-                BERUS is the governance token in Cerberus ecosystem, having high potential to support the doge
-                multi-chain system. It can be acquired as an asset through VPool using CDOGE.
-              </Typography>
-            </Box>
-            <Box className="bottom_cont">
-              <div className="top_con">
-                <Typography variant="h3" className="top_tile">
-                  Exchange Rate
+              {isSmallScreen || isVerySmallScreen ? null : (
+                <Typography variant="h6" className="bottom_conten">
+                  BERUS is the governance token in Cerberus ecosystem, having high potential to support the doge
+                  multi-chain system. It can be acquired as an asset through VPool using CDOGE.
                 </Typography>
-                <div className="contaier_box">
-                  <Typography variant="h4" className="tile_name">
-                    CDoge
+              )}
+            </Box>
+            {isSmallScreen || isVerySmallScreen ? (
+              <Box className="bottom_cont">
+                <div className="top_con">
+                  <Typography variant="h3" className="top_tile">
+                    Exchange Rate
                   </Typography>
-                  <FormControl variant="standard" className="input_box">
-                    <Input id="component-simple" value={1} disabled />
-                  </FormControl>
-                  <span className="add_logo">:</span>
-                  <FormControl variant="standard" className="input_box">
-                    <Input id="component-simple" value={berusLevl} disabled />
-                  </FormControl>
-                  <Typography variant="h4" className="tile_name add_margin">
-                    Berus
+                  <div className="contaier_box">
+                    <Typography variant="h4" className="tile_name">
+                      CDoge
+                    </Typography>
+                    <FormControl variant="standard" className="input_box">
+                      <Input id="component-simple" value={1} disabled />
+                    </FormControl>
+                    <span className="add_logo">:</span>
+                    <FormControl variant="standard" className="input_box">
+                      <Input id="component-simple" value={berusLevl} disabled />
+                    </FormControl>
+                    <Typography variant="h4" className="tile_name add_margin">
+                      Berus
+                    </Typography>
+                  </div>
+                </div>
+                <div className="top_con bottom_con">
+                  <Typography variant="h3" className="top_tile">
+                    Remaining at current level
                   </Typography>
+                  <div className="contaier_box">
+                    <Typography variant="h4" className="tile_name">
+                      CDoge
+                    </Typography>
+                    <FormControl variant="standard" className="input_box">
+                      <Input id="component-simple" value={cdogValue} disabled />
+                    </FormControl>
+                    <span className="add_logo">:</span>
+                    <FormControl variant="standard" className="input_box">
+                      <Input id="component-simple" value={letBerusLevel} disabled />
+                    </FormControl>
+                    <Typography variant="h4" className="tile_name add_margin">
+                      Berus
+                    </Typography>
+                  </div>
                   <FormControl variant="standard" className="input_box amount_box">
                     <Input
                       placeholder="amount"
@@ -144,35 +175,84 @@ export function Berus() {
                       onChange={handleChangeAmountValue}
                     />
                   </FormControl>
-                </div>
-              </div>
-              <div className="top_con bottom_con">
-                <Typography variant="h3" className="top_tile">
-                  Remaining at current level
-                </Typography>
-                <div className="contaier_box">
-                  <Typography variant="h4" className="tile_name">
-                    CDoge
-                  </Typography>
-                  <FormControl variant="standard" className="input_box">
-                    <Input id="component-simple" value={cdogValue} disabled />
-                  </FormControl>
-                  <span className="add_logo">:</span>
-                  <FormControl variant="standard" className="input_box">
-                    <Input id="component-simple" value={letBerusLevel} disabled />
-                  </FormControl>
-                  <Typography variant="h4" className="tile_name add_margin">
-                    Berus
-                  </Typography>
                   <div className="btn_box">
-                    <button className="collect">Connect Wallet</button>
+                    {connected ? (
+                      <button className="deposit">{address.slice(0, 7) + "..." + address.slice(-4)}</button>
+                    ) : (
+                      <button className="collect">Connect Wallet</button>
+                    )}
                     <button className="deposit" onClick={depositBerus}>
                       Deposite
                     </button>
                   </div>
+                  <Typography variant="h6" className="bottom_conten">
+                    BERUS is the governance token in Cerberus ecosystem, having high potential to support the doge
+                    multi-chain system. It can be acquired as an asset through VPool using CDOGE.
+                  </Typography>
                 </div>
-              </div>
-            </Box>
+              </Box>
+            ) : (
+              <Box className="bottom_cont">
+                <div className="top_con">
+                  <Typography variant="h3" className="top_tile">
+                    Exchange Rate
+                  </Typography>
+                  <div className="contaier_box">
+                    <Typography variant="h4" className="tile_name">
+                      CDoge
+                    </Typography>
+                    <FormControl variant="standard" className="input_box">
+                      <Input id="component-simple" value={1} disabled />
+                    </FormControl>
+                    <span className="add_logo">:</span>
+                    <FormControl variant="standard" className="input_box">
+                      <Input id="component-simple" value={berusLevl} disabled />
+                    </FormControl>
+                    <Typography variant="h4" className="tile_name add_margin">
+                      Berus
+                    </Typography>
+                    <FormControl variant="standard" className="input_box amount_box">
+                      <Input
+                        placeholder="amount"
+                        id="component-simple"
+                        value={amountValue}
+                        onChange={handleChangeAmountValue}
+                      />
+                    </FormControl>
+                  </div>
+                </div>
+                <div className="top_con bottom_con">
+                  <Typography variant="h3" className="top_tile">
+                    Remaining at current level
+                  </Typography>
+                  <div className="contaier_box">
+                    <Typography variant="h4" className="tile_name">
+                      CDoge
+                    </Typography>
+                    <FormControl variant="standard" className="input_box">
+                      <Input id="component-simple" value={cdogValue} disabled />
+                    </FormControl>
+                    <span className="add_logo">:</span>
+                    <FormControl variant="standard" className="input_box">
+                      <Input id="component-simple" value={letBerusLevel} disabled />
+                    </FormControl>
+                    <Typography variant="h4" className="tile_name add_margin">
+                      Berus
+                    </Typography>
+                    <div className="btn_box">
+                      {connected ? (
+                        <button className="deposit">{address.slice(0, 7) + "..." + address.slice(-4)}</button>
+                      ) : (
+                        <button className="collect">Connect Wallet</button>
+                      )}
+                      <button className="deposit" onClick={depositBerus}>
+                        Deposite
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </Box>
+            )}
           </div>
         </Container>
       </div>
@@ -186,6 +266,9 @@ export function Berus() {
         >
           <Typography variant="h3" className="top_tile">
             Tokenomics
+          </Typography>
+          <Typography variant="h5" className="top_other">
+            Total Supply: 6,900,000,000,000
           </Typography>
           <Box className="content_box">
             <Box className="top_word">
@@ -208,15 +291,29 @@ export function Berus() {
               </ul>
             </Box>
             <Box className="center_chart">
-              <ResponsiveContainer width={838} height={838}>
-                <PieChart width={838} height={838}>
+              <ResponsiveContainer
+                width={isSmallScreen || isVerySmallScreen ? 360 : 838}
+                height={isSmallScreen || isVerySmallScreen ? 360 : 838}
+              >
+                <PieChart
+                  width={isSmallScreen || isVerySmallScreen ? 360 : 838}
+                  height={isSmallScreen || isVerySmallScreen ? 360 : 838}
+                >
                   {/* <defs>
                     <linearGradient id="splitColor" x1="0" y1="0" x2="0" y2="1">
                       <stop offset="16%" stopColor="#979797" stopOpacity={0.2} />
                       <stop offset="84%" stopColor="#454545" stopOpacity={0.2} />
                     </linearGradient>
                   </defs> */}
-                  <Pie data={data} cx="50%" cy="50%" labelLine={false} outerRadius={300} fill="#8884d8" dataKey="value">
+                  <Pie
+                    data={data}
+                    cx="50%"
+                    cy="50%"
+                    labelLine={false}
+                    outerRadius={isSmallScreen || isVerySmallScreen ? 180 : 300}
+                    fill="#8884d8"
+                    dataKey="value"
+                  >
                     {data.map((entry, index) => (
                       <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                     ))}
