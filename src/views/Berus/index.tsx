@@ -9,7 +9,7 @@ import {
   CircularProgress,
 } from "@material-ui/core";
 import { useState, useEffect } from "react";
-import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
+// import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 import "./style/web.scss";
 import "./style/mobile.scss";
 import { useWeb3Context } from "src/hooks/web3Context";
@@ -19,6 +19,7 @@ import { VPOOL_ADDRESS, VPOOL_ABI, ERC20_ADDRESS, ERC20_ABI } from "src/contract
 import { error } from "../../slices/MessagesSlice";
 import { bnToNum } from "src/helpers";
 import { useDispatch } from "react-redux";
+import BerusGif from "../../assets/berus/berus_gif.gif";
 import { t } from "@lingui/macro";
 import BN from "bignumber.js";
 export function Berus() {
@@ -37,15 +38,15 @@ export function Berus() {
     setAmountValue(e.target.value);
   };
   const data = [
-    { name: "CerbsDAO Treasury", value: 5 },
-    { name: "Community rewards and airdrops", value: 5 },
+    { name: "CerbsDAO Treasury", value: "5%" },
+    { name: "Community rewards and airdrops", value: "5%" },
     {
       name: "is time-locked then linearly released in 100 years to invest in Elon Musk's Mars projects.",
-      value: 42,
+      value: "42%",
     },
-    { name: "Development team", value: 10 },
-    { name: "Private investors", value: 15 },
-    { name: "BERUS VPool for public investors", value: 22 },
+    { name: "Development team", value: "10%" },
+    { name: "Private investors", value: "15%" },
+    { name: "BERUS VPool for public investors", value: "22%" },
   ];
   const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#0088FE", "#FFBB28"];
 
@@ -293,7 +294,7 @@ export function Berus() {
               </ul>
             </Box>
             <Box className="center_chart">
-              <ResponsiveContainer
+              {/* <ResponsiveContainer
                 width={isSmallScreen || isVerySmallScreen ? 360 : 838}
                 height={isSmallScreen || isVerySmallScreen ? 360 : 838}
               >
@@ -301,12 +302,6 @@ export function Berus() {
                   width={isSmallScreen || isVerySmallScreen ? 360 : 838}
                   height={isSmallScreen || isVerySmallScreen ? 360 : 838}
                 >
-                  {/* <defs>
-                    <linearGradient id="splitColor" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="16%" stopColor="#979797" stopOpacity={0.2} />
-                      <stop offset="84%" stopColor="#454545" stopOpacity={0.2} />
-                    </linearGradient>
-                  </defs> */}
                   <Pie
                     data={data}
                     cx="50%"
@@ -323,7 +318,8 @@ export function Berus() {
                     ))}
                   </Pie>
                 </PieChart>
-              </ResponsiveContainer>
+              </ResponsiveContainer> */}
+              <img src={BerusGif} />
             </Box>
             <Box className="top_word bottom_word">
               <ul>

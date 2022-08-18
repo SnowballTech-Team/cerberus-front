@@ -176,6 +176,10 @@
         }
         .center_chart {
           height: auto;
+          img {
+            width: 330px;
+            height: 330px;
+          }
         }
       }
     }
