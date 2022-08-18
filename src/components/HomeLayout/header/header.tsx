@@ -33,6 +33,9 @@ export function Header({ openMenu }: { openMenu: () => void }) {
     console.log(123);
     setCNFTStatus(!nftStatus);
   };
+  const toReferral = () => {
+    history.push("/referral");
+  };
   return (
     <div className={isSmallScreen || isVerySmallScreen ? "header_box mobile_header_box" : "header_box"}>
       {isSmallScreen || isVerySmallScreen ? (
@@ -96,7 +99,9 @@ export function Header({ openMenu }: { openMenu: () => void }) {
                 })}
             </ul>
             <div className="btn_box">
-              <button className="Referral_box">Referral</button>
+              <button className="Referral_box" onClick={toReferral}>
+                Referral
+              </button>
               <button className="Wallet_box">Wallet</button>
             </div>
           </div>

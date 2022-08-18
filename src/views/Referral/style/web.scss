@@ -1,0 +1,13 @@
+.referral_box {
+  width: 100%;
+  margin-top: 108px;
+  height: calc(100vh - 194px);
+  background: url("../../../assets/referral/backk.png") no-repeat center;
+  background-size: 100% 100%;
+  .center_cont {
+    height: 100%;
+  }
+}
+.MuiInput-underline:hover:not(.Mui-disabled):before {
+  border-bottom: none !important;
+}

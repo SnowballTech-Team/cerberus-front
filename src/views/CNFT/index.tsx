@@ -11,7 +11,6 @@ export function CNFT() {
   const isSmallScreen = useMediaQuery("(max-width: 650px)");
   const isVerySmallScreen = useMediaQuery("(max-width: 379px)");
   const [address, setAddress] = useState<string>("");
-  console.log(isSmallScreen, isVerySmallScreen, "isVerySmallScreen");
   const handleChangeNum = (e: any) => {
     setAddress(e.target.value);
   };

@@ -1,0 +1,100 @@
+.referral_address {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "PingFang SC";
+  .input_box {
+    width: 533px;
+    height: 549px;
+    background: linear-gradient(116.29deg, rgba(98, 98, 98, 0.28) -16.91%, rgba(0, 0, 0, 0.28) 101.76%);
+    backdrop-filter: blur(100px);
+    border-radius: 30px;
+    border: 2px solid rgba(98, 98, 98, 0.28);
+    padding: 32px 0;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    .top_tile {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 108.6%;
+      text-align: center;
+      color: #ffffff;
+    }
+    .top_subtile {
+      margin: 40px 0;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      color: #ffffff;
+    }
+    .input_container {
+      width: 100%;
+      // margin-top: 80px;
+      padding: 0 66px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 32px;
+      border-bottom: 2px solid rgba(98, 98, 98, 0.28);
+      .input_cont {
+        height: 76px;
+        width: 100%;
+        background: #485470;
+        border-radius: 20px;
+        .MuiInput-underline {
+          height: 100%;
+          text-align: center;
+          input {
+            height: 100%;
+            color: #a4a4a4;
+            text-align: center;
+            font-weight: 600;
+            font-size: 16px;
+          }
+        }
+      }
+      .confirm_btn {
+        width: 192px;
+        height: 55px;
+        border-radius: 30px;
+        outline: none;
+        cursor: pointer;
+        text-align: center;
+        line-height: 55px;
+        background: linear-gradient(225deg, #18c8ff 14.89%, #933ffe 85.85%);
+        font-weight: 700;
+        font-size: 24px;
+        color: #ffffff;
+        margin-top: 32px;
+      }
+    }
+    .bottom_cont {
+      margin-top: 32px;
+      .top_tile {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 108.6%;
+        text-align: center;
+        color: #ffffff;
+        margin-bottom: 23px;
+      }
+      .sub_cont {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 22px;
+        color: #ffffff;
+      }
+    }
+  }
+}
+.MuiInput-underline:hover:not(.Mui-disabled):before {
+  border-bottom: none !important;
+}

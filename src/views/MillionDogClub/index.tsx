@@ -14,7 +14,6 @@ import rank8 from "../../assets/cnft/rank8.png";
 export function MillionDogClub() {
   const isSmallScreen = useMediaQuery("(max-width: 650px)");
   const isVerySmallScreen = useMediaQuery("(max-width: 379px)");
-  console.log(isSmallScreen, isVerySmallScreen, "isVerySmallScreen");
   const rankList = [
     { name: "Doge Soldier", codge: "0-1,000", berus: "1k-10k", imgUrl: rank1 },
     { name: "Doge General", codge: "1,001-2,000", berus: "10k-20k", imgUrl: rank2 },

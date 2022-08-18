@@ -30,7 +30,7 @@ import { MillionDogClub } from "./views/MillionDogClub";
 import { CommingSoon } from "./views/CommingSoon";
 import { Berus } from "./views/Berus";
 import HomeLayout from "./components/HomeLayout";
-
+import { Referral } from "./views/Referral";
 const DEBUG = false;
 
 // 🛰 providers
@@ -233,6 +233,7 @@ function App() {
           <Route exact path="/cnft" component={CNFT}></Route>
           <Route exact path="/milliondogclub" component={MillionDogClub}></Route>
           <Route exact path="/berus" component={Berus}></Route>
+          <Route exact path="/referral" component={Referral}></Route>
           <Route exact path="/commingsoon" component={CommingSoon}></Route>
         </Switch>
       </HomeLayout>

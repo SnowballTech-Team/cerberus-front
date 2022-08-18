@@ -32,7 +32,6 @@ import partnerList6 from "../../assets/home/Binance-Logo.png";
 export function Home() {
   const isSmallScreen = useMediaQuery("(max-width: 650px)");
   const isVerySmallScreen = useMediaQuery("(max-width: 379px)");
-  console.log(isSmallScreen, isVerySmallScreen, "isVerySmallScreen");
   const history = useHistory();
   const list = [
     {
