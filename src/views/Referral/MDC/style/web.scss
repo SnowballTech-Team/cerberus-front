@@ -457,6 +457,7 @@
             border-radius: 16.4617px;
             padding: 9px;
             box-sizing: border-box;
+            cursor: pointer;
             img {
               width: 100%;
               height: auto;
@@ -477,4 +478,143 @@
 }
 .MuiInput-underline:hover:not(.Mui-disabled):before {
   border-bottom: none !important;
+}
+.modal_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .content_box {
+    width: 473px;
+    height: 754px;
+    background: linear-gradient(112.19deg, rgba(94, 94, 94, 0.28) 2.52%, rgba(92, 92, 92, 0.28) 101.54%);
+    backdrop-filter: blur(116.916px);
+    border-radius: 23.3832px;
+    border: 2px solid rgba(94, 94, 94, 0.28);
+    padding: 19px 26px;
+    .top_close {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 20px;
+      img {
+        width: 22px;
+        height: 22px;
+        cursor: pointer;
+      }
+    }
+    .middle_img {
+      img {
+        width: 421px;
+        height: 421px;
+      }
+    }
+    .number_box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      .nft_name {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 23.7154px;
+        line-height: 108.6%;
+        color: #ffffff;
+        font-family: "Manrope";
+      }
+      button {
+        font-family: "Manrope";
+        width: 113px;
+        height: 34px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        cursor: pointer;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 34px;
+        color: #ffffff;
+        background: linear-gradient(225deg, #18c8ff 14.89%, #933ffe 85.85%);
+        border-radius: 20px;
+      }
+    }
+    .content_cont {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      padding-left: 54px;
+      padding-right: 44px;
+      width: 100%;
+      .left {
+        .top_title {
+          font-family: "Manrope";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 27px;
+
+          color: #ffffff;
+        }
+        .honer_box {
+          font-family: "Manrope";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18.6177px;
+          line-height: 25px;
+          color: #ffffff;
+          // margin-top: 10px;
+          span {
+            background: linear-gradient(225deg, #18c8ff 14.89%, #c191ff 85.85%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+          }
+        }
+      }
+    }
+    .input_container {
+      width: 100%;
+      margin-top: 23px;
+      .input_cont {
+        height: 38px;
+        width: 100%;
+        background: #485470;
+        border-radius: 20px;
+        .MuiInput-underline {
+          height: 100%;
+          text-align: center;
+          input {
+            height: 100%;
+            color: #a4a4a4;
+            text-align: center;
+            font-weight: 600;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .bottom_btn {
+      display: flex;
+      margin-top: 23px;
+      justify-content: center;
+      button {
+        font-family: "Manrope";
+        width: 158px;
+        height: 34px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        cursor: pointer;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 34px;
+        color: #ffffff;
+        background: linear-gradient(225deg, #18c8ff 14.89%, #933ffe 85.85%);
+        border-radius: 20px;
+      }
+    }
+  }
 }

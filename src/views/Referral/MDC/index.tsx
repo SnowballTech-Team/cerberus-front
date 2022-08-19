@@ -1,17 +1,20 @@
-import { useMediaQuery, Box, Container, Typography } from "@material-ui/core";
+import { useMediaQuery, Box, Container, Typography, Modal, FormControl, Input } from "@material-ui/core";
 import "./style/web.scss";
 import "./style/mobile.scss";
 import nftImages from "../../../assets/referral/nft_logo.png";
 import stakeImg from "../../../assets/referral/stake_bg.png";
 import stakedImg from "../../../assets/referral/nft_img.png";
 import CopyIcon from "../../../assets/icons/Copy.png";
+import CloseIcon from "../../../assets/referral/close.png";
 import copy from "copy-to-clipboard";
 import { useDispatch } from "react-redux";
 import { error, info } from "../../../slices/MessagesSlice";
+import { useState } from "react";
 export function MDC() {
   const isSmallScreen = useMediaQuery("(max-width: 650px)");
   const isVerySmallScreen = useMediaQuery("(max-width: 379px)");
   const dispatch = useDispatch();
+  const [open, setOpen] = useState<boolean>(false);
   const nftList = [
     { num: "#0001", imgUrl: nftImages },
     { num: "#0002", imgUrl: nftImages },
@@ -40,6 +43,12 @@ export function MDC() {
     } else {
       dispatch(error("Failed, please click to Copy!"));
     }
+  };
+  const showModal = async () => {
+    setOpen(true);
+  };
+  const handleClose = async () => {
+    setOpen(false);
   };
   return (
     <div className={isSmallScreen || isVerySmallScreen ? "mdc_box mobile_mdc_box" : "mdc_box"}>
@@ -184,7 +193,7 @@ export function MDC() {
               Staked NFTs
             </Typography>
             <Box className="nft_box">
-              <Box className="nft_container">
+              <Box className="nft_container" onClick={showModal}>
                 <img src={stakedImg} alt="" />
                 <Typography variant="h5" className="nft_name">
                   MDC NFT #0008
@@ -194,6 +203,59 @@ export function MDC() {
           </Box>
         </Box>
       </Container>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+        className="modal_box"
+      >
+        <Box className="content_box">
+          <Box className="top_close">
+            <img src={CloseIcon} onClick={handleClose} />
+          </Box>
+          <Box className="middle_img">
+            <img src={stakedImg} />
+          </Box>
+          <Box className="number_box">
+            <Typography variant="h5" className="nft_name">
+              MDC NFT #0008
+            </Typography>
+            <button>STAKE</button>
+          </Box>
+          <Box className="content_cont">
+            <Box className="left">
+              <Typography variant="h5" className="top_title">
+                MDC Honor:
+              </Typography>
+              <Typography variant="h5" className="honer_box">
+                <span>0000</span> Berus
+              </Typography>
+            </Box>
+            <Box className="left">
+              <Typography variant="h5" className="top_title">
+                Doge Alien
+              </Typography>
+              <Typography variant="h5" className="honer_box">
+                <span>0000</span> CDoge
+              </Typography>
+            </Box>
+          </Box>
+          <Box className="input_container">
+            <FormControl variant="standard" className="input_cont">
+              <Input
+                id="component-simple"
+                // placeholder="Please put in your referral's address"
+                // value={referralValue}
+                // onChange={changeReferralValue}
+              />
+            </FormControl>
+          </Box>
+          <Box className="bottom_btn">
+            <button>Deposite Berus </button>
+          </Box>
+        </Box>
+      </Modal>
     </div>
   );
 }
