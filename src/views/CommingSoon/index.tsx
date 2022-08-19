@@ -5,7 +5,7 @@ export function CommingSoon() {
   const isSmallScreen = useMediaQuery("(max-width: 650px)");
   const isVerySmallScreen = useMediaQuery("(max-width: 379px)");
   return (
-    <div className={isSmallScreen || isVerySmallScreen ? "dog_box mobile_dog_box" : "dog_box"}>
+    <div className={isSmallScreen || isVerySmallScreen ? "comming_box mobile_comming_box" : "comming_box"}>
       <div className="big_bg">
         {/* <p className="title_box">
           <p>COMING SOON</p>

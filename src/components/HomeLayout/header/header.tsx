@@ -18,7 +18,7 @@ export function Header({ openMenu }: { openMenu: () => void }) {
     { name: "CDoge", url: "/cdog" },
     { name: "Berus", url: "/berus" },
     { name: "CNFT", url: "/cnft" },
-    // { name: "CSwap", url: "/commingsoon" },
+    { name: "CSwap", url: "/cswap" },
     // { name: "Cerbs", url: "/commingsoon" },
   ];
 

@@ -31,6 +31,7 @@ import { CommingSoon } from "./views/CommingSoon";
 import { Berus } from "./views/Berus";
 import HomeLayout from "./components/HomeLayout";
 import { Referral } from "./views/Referral";
+import { CSwap } from "./views/CSwap";
 const DEBUG = false;
 
 // 🛰 providers
@@ -234,6 +235,7 @@ function App() {
           <Route exact path="/milliondogclub" component={MillionDogClub}></Route>
           <Route exact path="/berus" component={Berus}></Route>
           <Route exact path="/referral" component={Referral}></Route>
+          <Route exact path="/cswap" component={CSwap}></Route>
           <Route exact path="/commingsoon" component={CommingSoon}></Route>
         </Switch>
       </HomeLayout>

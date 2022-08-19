@@ -1,0 +1,68 @@
+.mobile_swap_box {
+  width: 100%;
+  margin-top: 4rem;
+  position: relative;
+  padding: 0 20px;
+  .big_bg {
+    position: absolute;
+    top: -85%;
+    left: -130%;
+    width: 242%;
+    height: 242%;
+    background: url("../../../assets/mobile/phone_back.png") no-repeat center;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+  }
+  .center_box {
+    width: 90%;
+    .top_container {
+      padding: 8px 18px;
+      .left_cont {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 17.3809px;
+        font-family: "PingFang SC";
+      }
+    }
+    .input_container {
+      padding: 0 40px;
+      margin-top: 30px;
+      .input_box {
+        height: 55px;
+        border-radius: 20px;
+        .MuiInput-formControl {
+          height: 100%;
+          padding: 10px;
+          input {
+            height: 100%;
+            font-family: "PingFang SC";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 42px;
+            color: #c0cae1;
+          }
+        }
+      }
+    }
+    .bottom_btn {
+      padding: 0 50px;
+      margin-top: 100px;
+      button {
+        outline: none;
+        border: none;
+        background: none;
+        width: 100%;
+        background: linear-gradient(225deg, #18c8ff 14.89%, #933ffe 85.85%);
+        border-radius: 20px;
+        height: 55px;
+        font-weight: 500;
+        font-size: 20px;
+        color: #fff;
+      }
+    }
+  }
+}

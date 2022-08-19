@@ -1,4 +1,20 @@
 .mobile_dog_box {
+  width: 100%;
+  margin-top: 4rem;
+  position: relative;
+  .big_bg {
+    position: absolute;
+    top: -85%;
+    left: -130%;
+    width: 242%;
+    height: 242%;
+    background: url("../../../assets/mobile/phone_back.png") no-repeat center;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+  }
   .center_box {
     width: 373px;
     height: 460px;
